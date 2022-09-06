@@ -13,7 +13,6 @@ public static class ConeCast
         {
             for (int i = 0; i < sphereCastHits.Length; i++)
             {
-                sphereCastHits[i].collider.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f);
                 Vector3 hitPoint = sphereCastHits[i].point;
                 Vector3 directionToHit = hitPoint - origin;
                 float angleToHit = Vector3.Angle(direction, directionToHit);

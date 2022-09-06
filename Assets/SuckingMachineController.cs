@@ -14,7 +14,7 @@ public class SuckingMachineController : MonoBehaviour
     public InputActionProperty enableSuck;
     public InputActionProperty suckPowerInput;
     public TextMeshPro powerText;
-    List<GameObject> suckedObjects;
+    public List<GameObject> suckedObjects;
 
     private Physics physics;
 
@@ -29,7 +29,7 @@ public class SuckingMachineController : MonoBehaviour
         if (enableSuck.action.ReadValue<float>() > 0.5f || disableSuckButton)
         {
             float triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
-            triggerValue *= 10;
+            triggerValue *= 100;
             powerText.text = $"{triggerValue}";
             Debug.Log(triggerValue);
             RaycastHit[] coneHits = physics.ConeCastAll(transform.position, radius, transform.forward, depth, angle);
@@ -57,16 +57,6 @@ public class SuckingMachineController : MonoBehaviour
         Debug.DrawLine(transform.position, transform.position + transform.forward * depth);
         Gizmos.DrawWireSphere(transform.position + transform.position * depth, radius);
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (!suckedObjects.Contains(other.gameObject) && other.gameObject.tag == "Suckable")
-        {
-            other.gameObject.transform.parent = this.transform;
-            Destroy(other.GetComponent<Rigidbody>());
-            other.gameObject.GetComponent<Suckable>().isShrinking = true;
-            suckedObjects.Add(other.gameObject);
-        }
-        
-    }
+   
 
 }

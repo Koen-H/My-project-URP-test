@@ -27,8 +27,10 @@ public static class ConeCast
 
         RaycastHit[] coneCastHits = new RaycastHit[coneCastHitList.Count];
         coneCastHits = coneCastHitList.ToArray();
+
         return coneCastHits;
-        
+
     }
+
 
 }

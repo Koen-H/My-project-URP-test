@@ -30,6 +30,7 @@ public class Suckable : MonoBehaviour
     public void Shrink()
     {
         this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * shrinkSpeed;
+        if (transform.localScale.x < 0.1) Destroy(this.gameObject);
     }
 
 }

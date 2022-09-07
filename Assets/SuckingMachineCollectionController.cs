@@ -6,7 +6,6 @@ public class SuckingMachineCollectionController : MonoBehaviour
 {
     SuckingMachineController suckingMachineController;
 
-
     private void Start()
     {
         suckingMachineController = this.GetComponentInParent<SuckingMachineController>();

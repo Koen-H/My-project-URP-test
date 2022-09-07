@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     }
 
     public float timerInSeconds;
+    public TextMeshPro timerText;
     private float timer;
 
     void Awake()
@@ -33,10 +35,12 @@ public class GameManager : MonoBehaviour
         while (timerInSeconds > timer)
         {
             timer++;
+            timerText.text = $"Timer: {timer}";
             yield return new WaitForSeconds(1f);
         }
         Debug.Log("The timer is finished");
-        
+        timerText.text = $"The timer is finished";
+
 
     }
 }

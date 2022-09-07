@@ -9,19 +9,22 @@ public class GrapplingHookShoot : MonoBehaviour
     public HookController hookController;
     public GameObject objectHit;
     public InputActionProperty shootButton;
+    Haptic haptic;
 
     public GameObject hookObj;
     public GameObject hookEndpoint;
     private void Start()
     {
+        haptic = Haptic.Instance;
         lineRenderer = this.GetComponent<LineRenderer>();
         hookController = hookObj.GetComponent<HookController>();
+
     }
 
     private void Shoot()
     {
         isShot = true;
-
+        haptic.SendHapticsLeftController(0.5f,0.5f);
         hookObj.transform.parent = null;
         hookController.isShooting = true;
 
@@ -62,15 +65,16 @@ public class GrapplingHookShoot : MonoBehaviour
             hookObj.transform.parent = this.transform.parent;
             hookObj.transform.position = hookEndpoint.transform.position;
             isShot = false;
+            hookController.isRetrieving = false;
+            hookController.isShooting = false;
+            hookObj.transform.localRotation = Quaternion.Euler(0,0,0);
+            haptic.SendHapticsLeftController(0.5f, 0.5f);
         }
     }
 
     private void LateUpdate()
     {
-        if (isShot)
-        {
-            DrawRope();
-        }
+        DrawRope();//Always draw the rope.
     }
 
     private void DrawRope()
@@ -84,10 +88,12 @@ public class GrapplingHookShoot : MonoBehaviour
     /// </summary>
     public void Pull(float _pullStrength)
     {
+        haptic.SendHapticsLeftController(0.5f, 0.5f);
         Vector3 pullVelocity = (hookEndpoint.transform.position - hookObj.transform.position).normalized * _pullStrength;
         hookController.attachedObj.GetComponent<Rigidbody>().AddForce(pullVelocity);
         hookObj.transform.parent = null;
         hookController.isRetrieving = true;
+        hookController.attachedObj = null;
     }
 }
 

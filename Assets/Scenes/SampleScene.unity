@@ -22494,7 +22494,7 @@ GameObject:
   - component: {fileID: 1884223793}
   - component: {fileID: 1884223792}
   - component: {fileID: 1884223791}
-  - component: {fileID: 1884223794}
+  - component: {fileID: 1884223795}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -22611,7 +22611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 1884223789}
---- !u!114 &1884223794
+--- !u!114 &1884223795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22620,13 +22620,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884223788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd43c9476c50024f9d311f25668d191, type: 3}
+  m_Script: {fileID: 11500000, guid: bb3b0ebabfa57a94fab6307744f4efcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftController: {fileID: 166141544}
   rightController: {fileID: 151288880}
-  defaultAmplitude: 0.2
-  defaultDuration: 0.5
 --- !u!1 &1886481222
 GameObject:
   m_ObjectHideFlags: 0

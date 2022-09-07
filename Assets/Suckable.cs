@@ -7,7 +7,8 @@ public class Suckable : MonoBehaviour
     Rigidbody rigidbody;
     public bool sucked;
     public float shrinkSpeed;//Needs to be below 1
-    SuckingMachineController suckMachine; 
+    public GarbageProperty garbageProperty;
+    SuckingMachineController suckMachine;
 
     private void Start()
     {
@@ -48,4 +49,10 @@ public class Suckable : MonoBehaviour
         }
     }
 
+    public enum GarbageProperty
+    {
+        General_Waste,
+        Glass,
+        Plastic,
+    }
 }

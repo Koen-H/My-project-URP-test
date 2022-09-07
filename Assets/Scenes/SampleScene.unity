@@ -153,8 +153,8 @@ Rigidbody:
   m_GameObject: {fileID: 4102021}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &4102024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -252,89 +252,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
---- !u!1 &5896009
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5896010}
-  - component: {fileID: 5896012}
-  - component: {fileID: 5896011}
-  m_Layer: 0
-  m_Name: Cube (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5896010
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896009}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.94, y: 14.98, z: 1.96}
-  m_LocalScale: {x: 2.7243, y: 1.3663744, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1961946219}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &5896011
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896009}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &5896012
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5896009}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &21883845
 GameObject:
   m_ObjectHideFlags: 0
@@ -365,8 +282,8 @@ Rigidbody:
   m_GameObject: {fileID: 21883845}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -384,8 +301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &21883848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -494,8 +411,8 @@ Rigidbody:
   m_GameObject: {fileID: 34376670}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -513,8 +430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &34376673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -623,8 +540,8 @@ Rigidbody:
   m_GameObject: {fileID: 36372884}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -642,8 +559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &36372887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -752,8 +669,8 @@ Rigidbody:
   m_GameObject: {fileID: 44909520}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -771,8 +688,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &44909523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -881,8 +798,8 @@ Rigidbody:
   m_GameObject: {fileID: 52984251}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -900,8 +817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &52984254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1010,8 +927,8 @@ Rigidbody:
   m_GameObject: {fileID: 111232125}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1029,8 +946,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &111232128
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1139,8 +1056,8 @@ Rigidbody:
   m_GameObject: {fileID: 114729385}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1158,8 +1075,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &114729388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1268,8 +1185,8 @@ Rigidbody:
   m_GameObject: {fileID: 132771105}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1287,8 +1204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &132771108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1397,8 +1314,8 @@ Rigidbody:
   m_GameObject: {fileID: 138675734}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1416,8 +1333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &138675737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1526,8 +1443,8 @@ Rigidbody:
   m_GameObject: {fileID: 139568588}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1545,8 +1462,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &139568591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1655,8 +1572,8 @@ Rigidbody:
   m_GameObject: {fileID: 147200946}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1674,8 +1591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &147200949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2307,8 +2224,8 @@ Rigidbody:
   m_GameObject: {fileID: 153385867}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2326,8 +2243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &153385870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2436,8 +2353,8 @@ Rigidbody:
   m_GameObject: {fileID: 161176236}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2455,8 +2372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &161176239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2565,8 +2482,8 @@ Rigidbody:
   m_GameObject: {fileID: 163393952}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2584,8 +2501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &163393955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3217,8 +3134,8 @@ Rigidbody:
   m_GameObject: {fileID: 166731191}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3236,8 +3153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &166731194
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3346,8 +3263,8 @@ Rigidbody:
   m_GameObject: {fileID: 210783590}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3365,8 +3282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &210783593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3475,8 +3392,8 @@ Rigidbody:
   m_GameObject: {fileID: 222794276}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3494,8 +3411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &222794279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3604,8 +3521,8 @@ Rigidbody:
   m_GameObject: {fileID: 237485012}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3623,8 +3540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &237485015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3733,8 +3650,8 @@ Rigidbody:
   m_GameObject: {fileID: 249358154}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -3752,8 +3669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &249358157
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4070,8 +3987,8 @@ Rigidbody:
   m_GameObject: {fileID: 267178606}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4089,8 +4006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &267178609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4199,8 +4116,8 @@ Rigidbody:
   m_GameObject: {fileID: 322352158}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4218,8 +4135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &322352161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4328,8 +4245,8 @@ Rigidbody:
   m_GameObject: {fileID: 323613991}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4347,8 +4264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &323613994
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4575,8 +4492,8 @@ Rigidbody:
   m_GameObject: {fileID: 331501039}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4594,8 +4511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &331501042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4789,10 +4706,10 @@ MonoBehaviour:
   radius: 1
   depth: 5
   angle: 50
-  suckPower: 0
+  suckPower: 30
   disableSuckButton: 1
   enableSuck:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Enable Suck
       m_Type: 0
@@ -4817,7 +4734,35 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  shootTriggerInput:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Shoot Trigger Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 1640c287-13e7-47a9-a997-6c0e2136e93f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
+  suckingMachineModeInput:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Sucking Machine Mode Input
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6cd04ea8-7314-46e4-bc24-6f0b5d73e3e4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -2283684445721794425, guid: c348712bda248c246b8c49b3db54643f,
+      type: 3}
   powerText: {fileID: 1220819456}
+  suckingModeText: {fileID: 922555867}
+  suckedItemsCountText: {fileID: 1471753755}
   suckedObjects: []
 --- !u!1 &353043217
 GameObject:
@@ -4849,8 +4794,8 @@ Rigidbody:
   m_GameObject: {fileID: 353043217}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4868,8 +4813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &353043220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4978,8 +4923,8 @@ Rigidbody:
   m_GameObject: {fileID: 358378163}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -4997,8 +4942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &358378166
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5107,8 +5052,8 @@ Rigidbody:
   m_GameObject: {fileID: 384070852}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5126,8 +5071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &384070855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5236,8 +5181,8 @@ Rigidbody:
   m_GameObject: {fileID: 387965808}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5255,8 +5200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &387965811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5365,8 +5310,8 @@ Rigidbody:
   m_GameObject: {fileID: 390369743}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5384,8 +5329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &390369746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5494,8 +5439,8 @@ Rigidbody:
   m_GameObject: {fileID: 394681425}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5513,8 +5458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &394681428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5623,8 +5568,8 @@ Rigidbody:
   m_GameObject: {fileID: 402298252}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5642,8 +5587,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &402298255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5867,8 +5812,8 @@ Rigidbody:
   m_GameObject: {fileID: 411305074}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -5886,8 +5831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &411305077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5996,8 +5941,8 @@ Rigidbody:
   m_GameObject: {fileID: 413795675}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6015,8 +5960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &413795678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6125,8 +6070,8 @@ Rigidbody:
   m_GameObject: {fileID: 416586430}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6144,8 +6089,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &416586433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6254,8 +6199,8 @@ Rigidbody:
   m_GameObject: {fileID: 435082369}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6273,8 +6218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &435082372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6383,8 +6328,8 @@ Rigidbody:
   m_GameObject: {fileID: 437026245}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6402,8 +6347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &437026248
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6512,8 +6457,8 @@ Rigidbody:
   m_GameObject: {fileID: 455787423}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6531,8 +6476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &455787426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6641,8 +6586,8 @@ Rigidbody:
   m_GameObject: {fileID: 467510837}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6660,8 +6605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &467510840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6770,8 +6715,8 @@ Rigidbody:
   m_GameObject: {fileID: 483443278}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6789,8 +6734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &483443281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6899,8 +6844,8 @@ Rigidbody:
   m_GameObject: {fileID: 486576586}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -6918,8 +6863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &486576589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7028,8 +6973,8 @@ Rigidbody:
   m_GameObject: {fileID: 498140225}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7047,8 +6992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &498140228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7157,8 +7102,8 @@ Rigidbody:
   m_GameObject: {fileID: 522541765}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7176,8 +7121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &522541768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7286,8 +7231,8 @@ Rigidbody:
   m_GameObject: {fileID: 528545662}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7305,8 +7250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &528545665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7415,8 +7360,8 @@ Rigidbody:
   m_GameObject: {fileID: 541794983}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7434,8 +7379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &541794986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7544,8 +7489,8 @@ Rigidbody:
   m_GameObject: {fileID: 547028759}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7563,8 +7508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &547028762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7673,8 +7618,8 @@ Rigidbody:
   m_GameObject: {fileID: 547472243}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7692,8 +7637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &547472246
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7802,8 +7747,8 @@ Rigidbody:
   m_GameObject: {fileID: 552406659}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7821,8 +7766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &552406662
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7931,8 +7876,8 @@ Rigidbody:
   m_GameObject: {fileID: 602676141}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -7950,8 +7895,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &602676144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8060,8 +8005,8 @@ Rigidbody:
   m_GameObject: {fileID: 605757194}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8079,8 +8024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &605757197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8189,8 +8134,8 @@ Rigidbody:
   m_GameObject: {fileID: 615658938}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8208,8 +8153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &615658941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8318,8 +8263,8 @@ Rigidbody:
   m_GameObject: {fileID: 619050106}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8337,8 +8282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &619050109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8447,8 +8392,8 @@ Rigidbody:
   m_GameObject: {fileID: 632871355}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8466,8 +8411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &632871358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8576,8 +8521,8 @@ Rigidbody:
   m_GameObject: {fileID: 649356989}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8595,8 +8540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &649356992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8705,8 +8650,8 @@ Rigidbody:
   m_GameObject: {fileID: 653791880}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8724,8 +8669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &653791883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8834,8 +8779,8 @@ Rigidbody:
   m_GameObject: {fileID: 659027633}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8853,8 +8798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &659027636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8963,8 +8908,8 @@ Rigidbody:
   m_GameObject: {fileID: 671957001}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -8982,8 +8927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &671957004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9173,8 +9118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!54 &673512207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9184,8 +9129,8 @@ Rigidbody:
   m_GameObject: {fileID: 673512201}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9221,8 +9166,8 @@ Rigidbody:
   m_GameObject: {fileID: 740673797}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9240,8 +9185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &740673800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9350,8 +9295,8 @@ Rigidbody:
   m_GameObject: {fileID: 759638206}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9369,8 +9314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &759638209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9479,8 +9424,8 @@ Rigidbody:
   m_GameObject: {fileID: 775869269}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9498,8 +9443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &775869272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9608,8 +9553,8 @@ Rigidbody:
   m_GameObject: {fileID: 787963665}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9627,8 +9572,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &787963668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9737,8 +9682,8 @@ Rigidbody:
   m_GameObject: {fileID: 790309060}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9756,8 +9701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &790309063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9866,8 +9811,8 @@ Rigidbody:
   m_GameObject: {fileID: 792486314}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -9885,8 +9830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &792486317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9995,8 +9940,8 @@ Rigidbody:
   m_GameObject: {fileID: 804482148}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10014,8 +9959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &804482151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10124,8 +10069,8 @@ Rigidbody:
   m_GameObject: {fileID: 811453062}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10143,8 +10088,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &811453065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10253,8 +10198,8 @@ Rigidbody:
   m_GameObject: {fileID: 814837787}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10272,8 +10217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &814837790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10431,8 +10376,8 @@ Rigidbody:
   m_GameObject: {fileID: 844801338}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10450,8 +10395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &844801341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10560,8 +10505,8 @@ Rigidbody:
   m_GameObject: {fileID: 871104265}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10579,8 +10524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &871104268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10787,8 +10732,8 @@ Rigidbody:
   m_GameObject: {fileID: 895279910}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10806,8 +10751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &895279913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10916,8 +10861,8 @@ Rigidbody:
   m_GameObject: {fileID: 920879570}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10935,8 +10880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &920879573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11015,6 +10960,178 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &922555865
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 922555866}
+  - component: {fileID: 922555868}
+  - component: {fileID: 922555867}
+  m_Layer: 0
+  m_Name: PowerText (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &922555866
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922555865}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2.5363395}
+  m_LocalScale: {x: 0.692208, y: 0.692208, z: 0.692208}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961946219}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -16.106, y: 6.7}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &922555867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922555865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 2.0168288, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 922555868}
+  m_maskType: 0
+--- !u!23 &922555868
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922555865}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &930361469
 GameObject:
   m_ObjectHideFlags: 0
@@ -11045,8 +11162,8 @@ Rigidbody:
   m_GameObject: {fileID: 930361469}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11064,8 +11181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &930361472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11144,89 +11261,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 152
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
---- !u!1 &930371285
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 930371286}
-  - component: {fileID: 930371288}
-  - component: {fileID: 930371287}
-  m_Layer: 0
-  m_Name: Cube (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &930371286
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930371285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.94, y: 2, z: 1.96}
-  m_LocalScale: {x: 2.7243, y: 1.3663744, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1961946219}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &930371287
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930371285}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &930371288
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930371285}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &936416870
 GameObject:
   m_ObjectHideFlags: 0
@@ -11257,8 +11291,8 @@ Rigidbody:
   m_GameObject: {fileID: 936416870}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11276,8 +11310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &936416873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11386,8 +11420,8 @@ Rigidbody:
   m_GameObject: {fileID: 949384554}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11405,8 +11439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &949384557
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11515,8 +11549,8 @@ Rigidbody:
   m_GameObject: {fileID: 956401962}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11534,8 +11568,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &956401965
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11644,8 +11678,8 @@ Rigidbody:
   m_GameObject: {fileID: 968358155}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11663,8 +11697,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &968358158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11773,8 +11807,8 @@ Rigidbody:
   m_GameObject: {fileID: 970115082}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11792,8 +11826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &970115085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11902,8 +11936,8 @@ Rigidbody:
   m_GameObject: {fileID: 989545465}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -11921,8 +11955,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &989545468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12031,8 +12065,8 @@ Rigidbody:
   m_GameObject: {fileID: 995894503}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12050,8 +12084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &995894506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12160,8 +12194,8 @@ Rigidbody:
   m_GameObject: {fileID: 1003377193}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12179,8 +12213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1003377196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12289,8 +12323,8 @@ Rigidbody:
   m_GameObject: {fileID: 1010166805}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12308,8 +12342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1010166808
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12528,8 +12562,8 @@ Rigidbody:
   m_GameObject: {fileID: 1032575221}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12547,8 +12581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1032575224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12657,8 +12691,8 @@ Rigidbody:
   m_GameObject: {fileID: 1037587848}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12676,8 +12710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1037587851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12786,8 +12820,8 @@ Rigidbody:
   m_GameObject: {fileID: 1055721077}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12805,8 +12839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1055721080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12915,8 +12949,8 @@ Rigidbody:
   m_GameObject: {fileID: 1058142912}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -12934,8 +12968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1058142915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13141,8 +13175,8 @@ Rigidbody:
   m_GameObject: {fileID: 1069777294}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13160,8 +13194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1069777297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13270,8 +13304,8 @@ Rigidbody:
   m_GameObject: {fileID: 1074545553}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13289,8 +13323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1074545556
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13399,8 +13433,8 @@ Rigidbody:
   m_GameObject: {fileID: 1080961867}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13418,8 +13452,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1080961870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13609,8 +13643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!54 &1099947395
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13620,8 +13654,8 @@ Rigidbody:
   m_GameObject: {fileID: 1099947389}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13657,8 +13691,8 @@ Rigidbody:
   m_GameObject: {fileID: 1103618549}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13676,8 +13710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1103618552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13786,8 +13820,8 @@ Rigidbody:
   m_GameObject: {fileID: 1111837428}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13805,8 +13839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1111837431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13915,8 +13949,8 @@ Rigidbody:
   m_GameObject: {fileID: 1124207529}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -13934,8 +13968,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1124207532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14044,8 +14078,8 @@ Rigidbody:
   m_GameObject: {fileID: 1139742456}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -14063,8 +14097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1139742459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14232,8 +14266,8 @@ Rigidbody:
   m_GameObject: {fileID: 1163248299}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -14251,8 +14285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1163248302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14361,8 +14395,8 @@ Rigidbody:
   m_GameObject: {fileID: 1171427740}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -14380,8 +14414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1171427743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14490,8 +14524,8 @@ Rigidbody:
   m_GameObject: {fileID: 1178421578}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -14509,8 +14543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1178421581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14619,8 +14653,8 @@ Rigidbody:
   m_GameObject: {fileID: 1184366060}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -14638,8 +14672,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1184366063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14748,8 +14782,8 @@ Rigidbody:
   m_GameObject: {fileID: 1209382534}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -14767,8 +14801,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1209382537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14878,7 +14912,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1961946219}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15049,8 +15083,8 @@ Rigidbody:
   m_GameObject: {fileID: 1245148486}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15068,8 +15102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1245148489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15178,8 +15212,8 @@ Rigidbody:
   m_GameObject: {fileID: 1249518381}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15197,8 +15231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1249518384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15307,8 +15341,8 @@ Rigidbody:
   m_GameObject: {fileID: 1263730997}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15326,8 +15360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1263731000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15406,89 +15440,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
---- !u!1 &1264049696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1264049697}
-  - component: {fileID: 1264049699}
-  - component: {fileID: 1264049698}
-  m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1264049697
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264049696}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.3, y: 8.5, z: 1.96}
-  m_LocalScale: {x: 1, y: 14.524, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1961946219}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1264049698
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264049696}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1264049699
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264049696}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1275229879
 GameObject:
   m_ObjectHideFlags: 0
@@ -15633,8 +15584,8 @@ Rigidbody:
   m_GameObject: {fileID: 1289179803}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15652,8 +15603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1289179806
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15762,8 +15713,8 @@ Rigidbody:
   m_GameObject: {fileID: 1290079520}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15781,8 +15732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1290079523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15891,8 +15842,8 @@ Rigidbody:
   m_GameObject: {fileID: 1295173014}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15910,8 +15861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1295173017
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16020,8 +15971,8 @@ Rigidbody:
   m_GameObject: {fileID: 1308349403}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16039,8 +15990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1308349406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16149,8 +16100,8 @@ Rigidbody:
   m_GameObject: {fileID: 1310239030}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16168,8 +16119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1310239033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16278,8 +16229,8 @@ Rigidbody:
   m_GameObject: {fileID: 1332659881}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16297,8 +16248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1332659884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16407,8 +16358,8 @@ Rigidbody:
   m_GameObject: {fileID: 1351638202}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16426,8 +16377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1351638205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16536,8 +16487,8 @@ Rigidbody:
   m_GameObject: {fileID: 1358062229}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16555,8 +16506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1358062232
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16665,8 +16616,8 @@ Rigidbody:
   m_GameObject: {fileID: 1361945437}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16684,8 +16635,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1361945440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16794,8 +16745,8 @@ Rigidbody:
   m_GameObject: {fileID: 1372249410}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16813,8 +16764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1372249413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16923,8 +16874,8 @@ Rigidbody:
   m_GameObject: {fileID: 1381801609}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16942,8 +16893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1381801612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17052,8 +17003,8 @@ Rigidbody:
   m_GameObject: {fileID: 1407648649}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17071,8 +17022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1407648652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17181,8 +17132,8 @@ Rigidbody:
   m_GameObject: {fileID: 1423377358}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17200,8 +17151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1423377361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17310,8 +17261,8 @@ Rigidbody:
   m_GameObject: {fileID: 1423996575}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17329,8 +17280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1423996578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17439,8 +17390,8 @@ Rigidbody:
   m_GameObject: {fileID: 1452409527}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17458,8 +17409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1452409530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17568,8 +17519,8 @@ Rigidbody:
   m_GameObject: {fileID: 1458738123}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17587,8 +17538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1458738126
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17697,8 +17648,8 @@ Rigidbody:
   m_GameObject: {fileID: 1462089392}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17716,8 +17667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1462089395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17826,8 +17777,8 @@ Rigidbody:
   m_GameObject: {fileID: 1469663005}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17845,8 +17796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1469663008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17925,6 +17876,178 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1471753753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471753754}
+  - component: {fileID: 1471753756}
+  - component: {fileID: 1471753755}
+  m_Layer: 0
+  m_Name: PowerText (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1471753754
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471753753}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2.5363395}
+  m_LocalScale: {x: 0.692208, y: 0.692208, z: 0.692208}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1961946219}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -16.106, y: 3.56}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1471753755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471753753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 2.0168288, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1471753756}
+  m_maskType: 0
+--- !u!23 &1471753756
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471753753}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1475836575
 GameObject:
   m_ObjectHideFlags: 0
@@ -17955,8 +18078,8 @@ Rigidbody:
   m_GameObject: {fileID: 1475836575}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17974,8 +18097,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1475836578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18084,8 +18207,8 @@ Rigidbody:
   m_GameObject: {fileID: 1488412257}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18103,8 +18226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1488412260
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18213,8 +18336,8 @@ Rigidbody:
   m_GameObject: {fileID: 1493765669}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18232,8 +18355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1493765672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18342,8 +18465,8 @@ Rigidbody:
   m_GameObject: {fileID: 1506388140}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18361,8 +18484,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1506388143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18471,8 +18594,8 @@ Rigidbody:
   m_GameObject: {fileID: 1519778774}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18490,8 +18613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1519778777
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18600,8 +18723,8 @@ Rigidbody:
   m_GameObject: {fileID: 1529649289}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18619,8 +18742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1529649292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18729,8 +18852,8 @@ Rigidbody:
   m_GameObject: {fileID: 1535610471}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18748,8 +18871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1535610474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18858,8 +18981,8 @@ Rigidbody:
   m_GameObject: {fileID: 1543825352}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18877,8 +19000,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1543825355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18987,8 +19110,8 @@ Rigidbody:
   m_GameObject: {fileID: 1561460488}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19006,8 +19129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1561460491
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19116,8 +19239,8 @@ Rigidbody:
   m_GameObject: {fileID: 1565016138}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19135,8 +19258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1565016141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19245,8 +19368,8 @@ Rigidbody:
   m_GameObject: {fileID: 1582197361}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19264,8 +19387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1582197364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19374,8 +19497,8 @@ Rigidbody:
   m_GameObject: {fileID: 1584178703}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19393,8 +19516,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1584178706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19503,8 +19626,8 @@ Rigidbody:
   m_GameObject: {fileID: 1605692848}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19522,8 +19645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1605692851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19602,89 +19725,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
---- !u!1 &1636333786
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1636333787}
-  - component: {fileID: 1636333789}
-  - component: {fileID: 1636333788}
-  m_Layer: 0
-  m_Name: Cube (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1636333787
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636333786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.94, y: 8.5, z: 1.96}
-  m_LocalScale: {x: 2.7243, y: 0.4406557, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1961946219}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1636333788
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636333786}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1636333789
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636333786}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1645124971
 GameObject:
   m_ObjectHideFlags: 0
@@ -19715,8 +19755,8 @@ Rigidbody:
   m_GameObject: {fileID: 1645124971}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19734,8 +19774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1645124974
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19844,8 +19884,8 @@ Rigidbody:
   m_GameObject: {fileID: 1668160241}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19863,8 +19903,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1668160244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19973,8 +20013,8 @@ Rigidbody:
   m_GameObject: {fileID: 1669427324}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19992,8 +20032,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1669427327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20102,8 +20142,8 @@ Rigidbody:
   m_GameObject: {fileID: 1675958363}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20121,8 +20161,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1675958366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20231,8 +20271,8 @@ Rigidbody:
   m_GameObject: {fileID: 1687363836}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20250,8 +20290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1687363839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20360,8 +20400,8 @@ Rigidbody:
   m_GameObject: {fileID: 1709950507}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20379,8 +20419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1709950510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20489,8 +20529,8 @@ Rigidbody:
   m_GameObject: {fileID: 1723773748}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20508,8 +20548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1723773751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20618,8 +20658,8 @@ Rigidbody:
   m_GameObject: {fileID: 1734832742}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20637,8 +20677,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1734832745
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20747,8 +20787,8 @@ Rigidbody:
   m_GameObject: {fileID: 1744291853}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20766,8 +20806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1744291856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20846,89 +20886,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
---- !u!1 &1765487989
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1765487990}
-  - component: {fileID: 1765487992}
-  - component: {fileID: 1765487991}
-  m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1765487990
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765487989}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9, y: 8.5, z: 1.96}
-  m_LocalScale: {x: 1, y: 14.524, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1961946219}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1765487991
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765487989}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1765487992
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765487989}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1781496681
 GameObject:
   m_ObjectHideFlags: 0
@@ -20959,8 +20916,8 @@ Rigidbody:
   m_GameObject: {fileID: 1781496681}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -20978,8 +20935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1781496684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21088,8 +21045,8 @@ Rigidbody:
   m_GameObject: {fileID: 1789956275}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -21107,8 +21064,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1789956278
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21217,8 +21174,8 @@ Rigidbody:
   m_GameObject: {fileID: 1796898450}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -21236,8 +21193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1796898453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21346,8 +21303,8 @@ Rigidbody:
   m_GameObject: {fileID: 1810076072}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -21365,8 +21322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1810076075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21475,8 +21432,8 @@ Rigidbody:
   m_GameObject: {fileID: 1840442208}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -21494,8 +21451,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1840442211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21604,8 +21561,8 @@ Rigidbody:
   m_GameObject: {fileID: 1871782450}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -21623,8 +21580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1871782453
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21733,8 +21690,8 @@ Rigidbody:
   m_GameObject: {fileID: 1883229503}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -21752,8 +21709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1883229506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21991,8 +21948,8 @@ Rigidbody:
   m_GameObject: {fileID: 1886481222}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22010,8 +21967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1886481225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22120,8 +22077,8 @@ Rigidbody:
   m_GameObject: {fileID: 1889253341}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22139,8 +22096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1889253344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22249,8 +22206,8 @@ Rigidbody:
   m_GameObject: {fileID: 1900981974}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22268,8 +22225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1900981977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22378,8 +22335,8 @@ Rigidbody:
   m_GameObject: {fileID: 1901072799}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22397,8 +22354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1901072802
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22507,8 +22464,8 @@ Rigidbody:
   m_GameObject: {fileID: 1905242227}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22526,8 +22483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1905242230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22636,8 +22593,8 @@ Rigidbody:
   m_GameObject: {fileID: 1909569360}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22655,8 +22612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1909569363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22765,8 +22722,8 @@ Rigidbody:
   m_GameObject: {fileID: 1912145765}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -22784,8 +22741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1912145768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23098,8 +23055,8 @@ Rigidbody:
   m_GameObject: {fileID: 1974103280}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23117,8 +23074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1974103283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23227,8 +23184,8 @@ Rigidbody:
   m_GameObject: {fileID: 1981137486}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23246,8 +23203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &1981137489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23356,8 +23313,8 @@ Rigidbody:
   m_GameObject: {fileID: 2011144511}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23375,8 +23332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2011144514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23485,8 +23442,8 @@ Rigidbody:
   m_GameObject: {fileID: 2016311612}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23504,8 +23461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2016311615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23614,8 +23571,8 @@ Rigidbody:
   m_GameObject: {fileID: 2022595120}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23633,8 +23590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2022595123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23743,8 +23700,8 @@ Rigidbody:
   m_GameObject: {fileID: 2030939334}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23762,8 +23719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2030939337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23872,8 +23829,8 @@ Rigidbody:
   m_GameObject: {fileID: 2044267138}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -23891,8 +23848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2044267141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24001,8 +23958,8 @@ Rigidbody:
   m_GameObject: {fileID: 2047676758}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24020,8 +23977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2047676761
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24130,8 +24087,8 @@ Rigidbody:
   m_GameObject: {fileID: 2057458982}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24149,8 +24106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2057458985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24293,8 +24250,8 @@ Rigidbody:
   m_GameObject: {fileID: 2069863327}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 20
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24312,8 +24269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2069863330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24422,8 +24379,8 @@ Rigidbody:
   m_GameObject: {fileID: 2075905630}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24441,8 +24398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2075905633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24551,8 +24508,8 @@ Rigidbody:
   m_GameObject: {fileID: 2080035179}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24570,8 +24527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2080035182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24680,8 +24637,8 @@ Rigidbody:
   m_GameObject: {fileID: 2084493911}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24699,8 +24656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2084493914
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24809,8 +24766,8 @@ Rigidbody:
   m_GameObject: {fileID: 2093329594}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24828,8 +24785,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2093329597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24938,8 +24895,8 @@ Rigidbody:
   m_GameObject: {fileID: 2106548373}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -24957,8 +24914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2106548376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25067,8 +25024,8 @@ Rigidbody:
   m_GameObject: {fileID: 2108351340}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 10
-  m_AngularDrag: 0.05
+  m_Drag: 3.5
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -25086,8 +25043,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb4381e8243d544ca046706f7944cc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isShrinking: 0
-  shrinkSpeed: 0.75
+  sucked: 0
+  shrinkSpeed: 0.85
 --- !u!65 &2108351343
 BoxCollider:
   m_ObjectHideFlags: 0

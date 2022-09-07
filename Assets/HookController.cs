@@ -47,7 +47,7 @@ public class HookController : MonoBehaviour
     }
 
     //Check if the hook is attached on to something.
-    bool IsAttached()
+    public bool IsAttached()
     {
         if (attachedObj != null) return true;
         return false;

@@ -7,6 +7,7 @@ using System.Linq;
 
 public class SuckingMachineController : MonoBehaviour
 {
+    Haptic haptic;
     public float radius;
     public float depth;
     public float angle;
@@ -16,6 +17,9 @@ public class SuckingMachineController : MonoBehaviour
     public InputActionProperty suckPowerInput;
     public InputActionProperty shootTriggerInput;
     public InputActionProperty suckingMachineModeInput;
+
+    public float maxBattery = 10f;//The max seconds the battery can be
+    public float suckBatteryPower = 100;//Percentage of maxBattery
 
 
     float shootTrigger;
@@ -35,7 +39,7 @@ public class SuckingMachineController : MonoBehaviour
 
     private void Start()
     {
-        
+        haptic = Haptic.Instance;
     }
 
     private void Update()
@@ -62,7 +66,9 @@ public class SuckingMachineController : MonoBehaviour
     {
         if (enableSuck.action.ReadValue<float>() > 0.5f || disableSuckButton)
         {
+            
             float triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
+            haptic.SendHapticsRightController(-triggerValue, 0.5f);
             triggerValue *= -suckPower;
             powerText.text = $"{triggerValue}";
             suckingModeText.text = $"{machineModeSucking}";
@@ -79,8 +85,8 @@ public class SuckingMachineController : MonoBehaviour
                     //do something with collider information
                     if (coneHits[i].collider.gameObject.tag == "Suckable")
                     {
-
                         coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin, triggerValue, this);
+                        
                         //suckableScript.Suck(origin);
                         //suckableScript.Blow();
                     }
@@ -108,6 +114,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItem.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
             suckedItem.gameObject.GetComponent<Rigidbody>().velocity = (transform.forward * 20);
             suckedObjects.Remove(suckedItem);
+            haptic.SendHapticsRightController(0.75f, 0.25f);
         }
     }
    

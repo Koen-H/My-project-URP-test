@@ -4857,6 +4857,8 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -2283684445721794425, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
+  maxBattery: 10
+  suckBatteryPower: 100
   powerText: {fileID: 1220819456}
   suckingModeText: {fileID: 922555867}
   suckedItemsCountText: {fileID: 1471753755}
@@ -8825,6 +8827,7 @@ GameObject:
   - component: {fileID: 649853062}
   - component: {fileID: 649853063}
   - component: {fileID: 649853064}
+  - component: {fileID: 649853065}
   m_Layer: 0
   m_Name: Physics
   m_TagString: Untagged
@@ -8861,6 +8864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ropeLength: 10
   isShot: 0
+  hookController: {fileID: 0}
   objectHit: {fileID: 0}
   shootButton:
     m_UseReference: 1
@@ -8984,6 +8988,23 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &649853065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649853061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ef0d9df64a2218438b752b0cc35a69b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startGizmos: {fileID: 0}
+  endGizmos: {fileID: 0}
+  shaftGizmos: {fileID: 0}
+  hookGun: {fileID: 0}
+  pullFactorText: {fileID: 0}
 --- !u!1 &653791880
 GameObject:
   m_ObjectHideFlags: 0
@@ -22494,7 +22515,7 @@ GameObject:
   - component: {fileID: 1884223793}
   - component: {fileID: 1884223792}
   - component: {fileID: 1884223791}
-  - component: {fileID: 1884223794}
+  - component: {fileID: 1884223795}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -22611,7 +22632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Timeout: 10
   m_XROrigin: {fileID: 1884223789}
---- !u!114 &1884223794
+--- !u!114 &1884223795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22620,13 +22641,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884223788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd43c9476c50024f9d311f25668d191, type: 3}
+  m_Script: {fileID: 11500000, guid: bb3b0ebabfa57a94fab6307744f4efcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   leftController: {fileID: 166141544}
   rightController: {fileID: 151288880}
-  defaultAmplitude: 0.2
-  defaultDuration: 0.5
 --- !u!1 &1886481222
 GameObject:
   m_ObjectHideFlags: 0

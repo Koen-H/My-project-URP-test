@@ -6,7 +6,7 @@ public class GrapplingHookShoot : MonoBehaviour
     public float ropeLength = 50;
     public bool isShot = false;
     LineRenderer lineRenderer;
-    HookController hookController;
+    public HookController hookController;
     public GameObject objectHit;
     public InputActionProperty shootButton;
 
@@ -82,9 +82,9 @@ public class GrapplingHookShoot : MonoBehaviour
     /// <summary>
     /// Pull as in, add velocity to the suckable object.
     /// </summary>
-    private void Pull(float _pullStrength)
+    public void Pull(float _pullStrength)
     {
-        Vector3 pullVelocity = (hookObj.transform.position - hookEndpoint.transform.position).normalized * _pullStrength;
+        Vector3 pullVelocity = (hookEndpoint.transform.position - hookObj.transform.position).normalized * _pullStrength;
         hookController.attachedObj.GetComponent<Rigidbody>().AddForce(pullVelocity);
         hookObj.transform.parent = null;
         hookController.isRetrieving = true;

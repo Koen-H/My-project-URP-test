@@ -104,7 +104,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItem.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             suckedItem.transform.rotation = this.transform.rotation;  
             suckedItem.transform.position = this.transform.position + (this.transform.forward * 0.3f);
-            suckedObjects[0].gameObject.SetActive(true);
+            suckedItem.gameObject.SetActive(true);
             suckedItem.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
             suckedItem.gameObject.GetComponent<Rigidbody>().velocity = (transform.forward * 20);
             suckedObjects.Remove(suckedItem);

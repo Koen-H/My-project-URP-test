@@ -10,6 +10,10 @@ public class Suckable : MonoBehaviour
     public GarbageProperty garbageProperty;
     SuckingMachineController suckMachine;
 
+    public Vector3 flowDirection = Vector3.zero;
+    public float flowSpeed = 0; 
+
+
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
@@ -19,6 +23,11 @@ public class Suckable : MonoBehaviour
         if (sucked) Shrink();
     }
 
+
+    private void FixedUpdate()
+    {
+        Flow(); 
+    }
 
     public void Suck(Vector3 _origin, float _suckPower, SuckingMachineController _suckMachine)
     {
@@ -42,8 +51,7 @@ public class Suckable : MonoBehaviour
 
         if (transform.localScale.x < 0.1)
         {
-            GameObject suckedItem = this.gameObject;
-            suckMachine.suckedObjects.Add(suckedItem);
+            GameObject suckedItem = this.gameObject;            
             this.gameObject.SetActive(false);
             sucked = false; 
         }
@@ -55,4 +63,11 @@ public class Suckable : MonoBehaviour
         Glass,
         Plastic,
     }
+    void Flow()
+    {
+        rigidbody.AddForce(flowDirection * flowSpeed);
+
+
+    }
+
 }

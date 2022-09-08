@@ -5,6 +5,7 @@ using UnityEngine;
 public class SuckingMachineCollectionController : MonoBehaviour
 {
     SuckingMachineController suckingMachineController;
+    
 
     private void Start()
     {

@@ -17,6 +17,8 @@ public class SuckingMachineController : MonoBehaviour
     public InputActionProperty shootTriggerInput;
     public InputActionProperty suckingMachineModeInput;
 
+    Haptic haptic;
+
 
     float shootTrigger;
     bool machineModeSucking;
@@ -35,7 +37,7 @@ public class SuckingMachineController : MonoBehaviour
 
     private void Start()
     {
-
+        haptic = Haptic.Instance;
     }
 
     private void Update()
@@ -87,12 +89,6 @@ public class SuckingMachineController : MonoBehaviour
             }
         }
     }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Debug.DrawLine(transform.position, transform.position + transform.forward * depth);
-        Gizmos.DrawWireSphere(transform.position + transform.position * depth, radius);
-    }
 
     void Shoot()
     {
@@ -108,6 +104,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItem.gameObject.GetComponent<Suckable>().flowDirection = transform.forward;
             suckedItem.gameObject.GetComponent<Suckable>().flowSpeed = 1;
             suckedObjects.Remove(suckedItem);
+            haptic.SendHapticsRightController(1,0.25f);
         }
     }
 }

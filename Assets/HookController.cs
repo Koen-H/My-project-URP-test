@@ -11,6 +11,8 @@ public class HookController : MonoBehaviour
     public GameObject attachedObj;
     public float hookPower;
 
+    public float pullBackSpeed; 
+
     private void Start()
     {
     }
@@ -26,7 +28,7 @@ public class HookController : MonoBehaviour
     }
     private void Retrieve()
     {
-        this.transform.position = Vector3.MoveTowards(transform.position, grapplingHookObj.transform.position,0.1f);
+        this.transform.position = Vector3.MoveTowards(transform.position, grapplingHookObj.transform.position, pullBackSpeed);
     }
     private void Move()
     {

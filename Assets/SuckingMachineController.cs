@@ -74,7 +74,6 @@ public class SuckingMachineController : MonoBehaviour
             suckingModeText.text = $"{machineModeSucking}";
             suckedItemsCountText.text = suckedObjects.Count.ToString(); 
 
-            Debug.Log(triggerValue);
             RaycastHit[] coneHits = physics.ConeCastAll(transform.position, radius, transform.forward, depth, angle);
             Vector3 origin = this.transform.position;
 
@@ -113,6 +112,8 @@ public class SuckingMachineController : MonoBehaviour
             suckedItem.gameObject.SetActive(true);
             suckedItem.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
             suckedItem.gameObject.GetComponent<Rigidbody>().velocity = (transform.forward * 20);
+            suckedItem.gameObject.GetComponent<Suckable>().flowDirection = transform.forward;
+            suckedItem.gameObject.GetComponent<Suckable>().flowSpeed = 1;
             suckedObjects.Remove(suckedItem);
             haptic.SendHapticsRightController(0.75f, 0.25f);
         }

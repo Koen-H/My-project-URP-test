@@ -16,7 +16,7 @@ public class SuckingMachineCollectionController : MonoBehaviour
         if (!suckingMachineController.suckedObjects.Contains(other.gameObject) && other.gameObject.tag == "Suckable")
         {
             other.gameObject.GetComponent<Suckable>().sucked = true;
-
+            suckingMachineController.suckedObjects.Add(other.gameObject);
         }
 
     }

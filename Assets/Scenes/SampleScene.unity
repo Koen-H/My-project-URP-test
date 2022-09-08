@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &4102024
@@ -305,6 +306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &21883848
@@ -436,6 +438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &34376673
@@ -567,6 +570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &36372887
@@ -698,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &44909523
@@ -829,6 +834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &52984254
@@ -960,6 +966,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &111232128
@@ -1091,6 +1098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &114729388
@@ -1222,6 +1230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &132771108
@@ -1353,6 +1362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &138675737
@@ -1484,6 +1494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &139568591
@@ -1615,6 +1626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &147200949
@@ -2269,6 +2281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &153385870
@@ -2400,6 +2413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &161176239
@@ -2531,6 +2545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &163393955
@@ -3185,6 +3200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &166731194
@@ -3265,6 +3281,104 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &198419026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 198419027}
+  - component: {fileID: 198419030}
+  - component: {fileID: 198419029}
+  - component: {fileID: 198419028}
+  m_Layer: 0
+  m_Name: Cube (174)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &198419027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198419026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09, y: 3.72, z: 4.4}
+  m_LocalScale: {x: 4.3493834, y: 1.0265, z: 0.02249472}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 349854726}
+  m_Father: {fileID: 0}
+  m_RootOrder: 182
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &198419028
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198419026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &198419029
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198419026}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &198419030
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198419026}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &210783590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3316,6 +3430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &210783593
@@ -3509,6 +3624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!54 &221700918
@@ -3578,6 +3694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &222794279
@@ -3709,6 +3826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &237485015
@@ -3937,6 +4055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &249358157
@@ -4276,6 +4395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &267178609
@@ -4407,6 +4527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &322352161
@@ -4538,6 +4659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &323613994
@@ -4787,6 +4909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &331501042
@@ -5036,12 +5159,182 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: -2283684445721794425, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
-  maxBattery: 10
-  suckBatteryPower: 100
   powerText: {fileID: 1220819456}
   suckingModeText: {fileID: 922555867}
   suckedItemsCountText: {fileID: 1471753755}
   suckedObjects: []
+--- !u!1 &349854723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 349854726}
+  - component: {fileID: 349854725}
+  - component: {fileID: 349854724}
+  m_Layer: 0
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &349854724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349854723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Timer
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 349854725}
+  m_maskType: 0
+--- !u!23 &349854725
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349854723}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!224 &349854726
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349854723}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 0.042955514, y: 0.18200682, z: 8.305504}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 198419027}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &353043217
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &353043220
@@ -5321,6 +5615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &358378166
@@ -5452,6 +5747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &384070855
@@ -5583,6 +5879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &387965811
@@ -5714,6 +6011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &390369746
@@ -5845,6 +6143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &394681428
@@ -5976,6 +6275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &402298255
@@ -6222,6 +6522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &411305077
@@ -6353,6 +6654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &413795678
@@ -6484,6 +6786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &416586433
@@ -6615,6 +6918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &435082372
@@ -6746,6 +7050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &437026248
@@ -6877,6 +7182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &455787426
@@ -7008,6 +7314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &467510840
@@ -7139,6 +7446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &483443281
@@ -7270,6 +7578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &486576589
@@ -7401,6 +7710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &498140228
@@ -7532,6 +7842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &522541768
@@ -7663,6 +7974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &528545665
@@ -7794,6 +8106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &541794986
@@ -7925,6 +8238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &547028762
@@ -8056,6 +8370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &547472246
@@ -8187,6 +8502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &552406662
@@ -8318,6 +8634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &602676144
@@ -8449,6 +8766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &605757197
@@ -8580,6 +8898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &615658941
@@ -8711,6 +9030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &619050109
@@ -8842,6 +9162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &632871358
@@ -8973,6 +9294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &649356992
@@ -9293,6 +9615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &653791883
@@ -9424,6 +9747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &659027636
@@ -9555,6 +9879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &671957004
@@ -9748,6 +10073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!54 &673512207
@@ -9817,6 +10143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &740673800
@@ -9948,6 +10275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &759638209
@@ -10079,6 +10407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &775869272
@@ -10210,6 +10539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &787963668
@@ -10341,6 +10671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &790309063
@@ -10472,6 +10803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &792486317
@@ -10636,6 +10968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &804482151
@@ -10767,6 +11100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &811453065
@@ -10898,6 +11232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &814837790
@@ -11078,6 +11413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &844801341
@@ -11277,6 +11613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &871104268
@@ -11506,6 +11843,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &895279913
@@ -11735,6 +12073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &920879573
@@ -12038,6 +12377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &930361472
@@ -12169,6 +12509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &936416873
@@ -12300,6 +12641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &949384557
@@ -12431,6 +12773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &956401965
@@ -12562,6 +12905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &968358158
@@ -12693,6 +13037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &970115085
@@ -12824,6 +13169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &989545468
@@ -12955,6 +13301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &995894506
@@ -13086,6 +13433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1003377196
@@ -13217,6 +13565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1010166808
@@ -13458,6 +13807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1032575224
@@ -13589,6 +13939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1037587851
@@ -13720,6 +14071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1055721080
@@ -13851,6 +14203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1058142915
@@ -13982,6 +14335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1069777297
@@ -14113,6 +14467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1074545556
@@ -14244,6 +14599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1080961870
@@ -14437,6 +14793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!54 &1099947395
@@ -14506,6 +14863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1103618552
@@ -14637,6 +14995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1111837431
@@ -14768,6 +15127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1124207532
@@ -14899,6 +15259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1139742459
@@ -15089,6 +15450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1163248302
@@ -15317,6 +15679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1171427743
@@ -15448,6 +15811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1178421581
@@ -15579,6 +15943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1184366063
@@ -15710,6 +16075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1209382537
@@ -16013,6 +16379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1245148489
@@ -16144,6 +16511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1249518384
@@ -16275,6 +16643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1263731000
@@ -16520,6 +16889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1289179806
@@ -16651,6 +17021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1290079523
@@ -16782,6 +17153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1295173017
@@ -16913,6 +17285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1308349406
@@ -17044,6 +17417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1310239033
@@ -17237,6 +17611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!54 &1327417476
@@ -17306,6 +17681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1332659884
@@ -17437,6 +17813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1351638205
@@ -17568,6 +17945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1358062232
@@ -17699,6 +18077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1361945440
@@ -17830,6 +18209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1372249413
@@ -17961,6 +18341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1381801612
@@ -18092,6 +18473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1407648652
@@ -18223,6 +18605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1423377361
@@ -18354,6 +18737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1423996578
@@ -18485,6 +18869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1452409530
@@ -18616,6 +19001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1458738126
@@ -18747,6 +19133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1462089395
@@ -18878,6 +19265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1469663008
@@ -19181,6 +19569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1475836578
@@ -19312,6 +19701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1488412260
@@ -19443,6 +19833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1493765672
@@ -19574,6 +19965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1506388143
@@ -19803,6 +20195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1519778777
@@ -19934,6 +20327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1529649292
@@ -20065,6 +20459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1535610474
@@ -20196,6 +20591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1543825355
@@ -20327,6 +20723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1561460491
@@ -20458,6 +20855,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1565016141
@@ -20589,6 +20987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1582197364
@@ -20720,6 +21119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1584178706
@@ -20851,6 +21251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1605692851
@@ -20982,6 +21383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1645124974
@@ -21113,6 +21515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1668160244
@@ -21244,6 +21647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1669427327
@@ -21375,6 +21779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1675958366
@@ -21606,6 +22011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1687363839
@@ -21737,6 +22143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1709950510
@@ -21868,6 +22275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1723773751
@@ -21999,6 +22407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1734832745
@@ -22130,6 +22539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1744291856
@@ -22261,6 +22671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1781496684
@@ -22392,6 +22803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1789956278
@@ -22523,6 +22935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1796898453
@@ -22654,6 +23067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1810076075
@@ -22847,6 +23261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!54 &1834634997
@@ -22916,6 +23331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1840442211
@@ -23047,6 +23463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1871782453
@@ -23178,6 +23595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1883229506
@@ -23453,6 +23871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1886481225
@@ -23584,6 +24003,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1889253344
@@ -23846,6 +24266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1900981977
@@ -23977,6 +24398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1901072802
@@ -24108,6 +24530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1905242230
@@ -24239,6 +24662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1909569363
@@ -24370,6 +24794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1912145768
@@ -24450,6 +24875,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1918523782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918523784}
+  - component: {fileID: 1918523783}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1918523783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918523782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc9fd391623b27845b419faf644669e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerInSeconds: 5
+  timerText: {fileID: 349854724}
+--- !u!4 &1918523784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918523782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 183
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1941255256
 GameObject:
   m_ObjectHideFlags: 0
@@ -24735,6 +25206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1974103283
@@ -24866,6 +25338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &1981137489
@@ -24997,6 +25470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2011144514
@@ -25128,6 +25602,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2016311615
@@ -25259,6 +25734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2022595123
@@ -25390,6 +25866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2030939337
@@ -25521,6 +25998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2044267141
@@ -25652,6 +26130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2047676761
@@ -25783,6 +26262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2057458985
@@ -25948,6 +26428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2069863330
@@ -26079,6 +26560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2075905633
@@ -26210,6 +26692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2080035182
@@ -26341,6 +26824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2084493914
@@ -26472,6 +26956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2093329597
@@ -26603,6 +27088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2106548376
@@ -26734,6 +27220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sucked: 0
   shrinkSpeed: 0.85
+  garbageProperty: 0
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
 --- !u!65 &2108351343

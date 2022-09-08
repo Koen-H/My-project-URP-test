@@ -9,6 +9,7 @@ public class Suckable : MonoBehaviour
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
     SuckingMachineController suckMachine;
+    Haptic haptic;
 
     public Vector3 flowDirection = Vector3.zero;
     public float flowSpeed = 0; 
@@ -17,6 +18,7 @@ public class Suckable : MonoBehaviour
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        haptic = Haptic.Instance;
     }
     private void Update()
     {
@@ -53,7 +55,8 @@ public class Suckable : MonoBehaviour
         {
             GameObject suckedItem = this.gameObject;            
             this.gameObject.SetActive(false);
-            sucked = false; 
+            sucked = false;
+            haptic.SendHapticsRightController(0.25f,0.25f);
         }
     }
 

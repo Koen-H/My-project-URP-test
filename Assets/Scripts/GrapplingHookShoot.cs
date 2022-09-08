@@ -9,7 +9,10 @@ public class GrapplingHookShoot : MonoBehaviour
     public HookController hookController;
     public GameObject objectHit;
     public InputActionProperty shootButton;
+    public float letGoDistance = 6f;
     Haptic haptic;
+    private float pullStrength;
+    bool resetButtonPress;
 
     public GameObject hookObj;
     public GameObject hookEndpoint;
@@ -27,6 +30,7 @@ public class GrapplingHookShoot : MonoBehaviour
         haptic.SendHapticsLeftController(0.5f,0.5f);
         hookObj.transform.parent = null;
         hookController.isShooting = true;
+        resetButtonPress = false;
 
 
         //Aimbot
@@ -43,12 +47,13 @@ public class GrapplingHookShoot : MonoBehaviour
                 Debug.Log($"Hit an object{rayObjectHit.collider.name}");
             }
         }*/
-
+            
     }
 
     private void Update()
     {
-        if(!isShot && shootButton.action.IsPressed()) Shoot();
+        if (!shootButton.action.IsPressed()) resetButtonPress = true;
+        if(!isShot && shootButton.action.IsPressed() && resetButtonPress) Shoot();
         if (isShot) CheckForRetrieve();
 
     }
@@ -58,18 +63,20 @@ public class GrapplingHookShoot : MonoBehaviour
         if (Vector3.Distance(transform.position, hookObj.transform.position) > ropeLength)//Return if it is too far away
         {
             hookController.isRetrieving = true;
-            
+            LetGo();
         }
-        else if (Vector3.Distance(transform.position, hookObj.transform.position) < 1 && hookController.isRetrieving)//Once it's close enough, return the hook in to the slot.
+        if(hookController.IsAttached() && hookController.isRetrieving){
+            if (Vector3.Distance(transform.position, hookObj.transform.position) < letGoDistance)
+            {
+                
+                LetGo();
+            }
+        }
+        if (Vector3.Distance(transform.position, hookObj.transform.position) < 1 && hookController.isRetrieving)//Once it's close enough, return the hook in to the slot.
         {
-            hookObj.transform.parent = this.transform.parent;
-            hookObj.transform.position = hookEndpoint.transform.position;
-            isShot = false;
-            hookController.isRetrieving = false;
-            hookController.isShooting = false;
-            hookObj.transform.localRotation = Quaternion.Euler(0,0,0);
-            haptic.SendHapticsLeftController(0.5f, 0.5f);
+            ReturnInGun();
         }
+
     }
 
     private void LateUpdate()
@@ -88,12 +95,35 @@ public class GrapplingHookShoot : MonoBehaviour
     /// </summary>
     public void Pull(float _pullStrength)
     {
+        pullStrength = _pullStrength;
+       // Debug.Log($"Testing:{pullStrength}");
         haptic.SendHapticsLeftController(0.5f, 0.5f);
-        Vector3 pullVelocity = (hookEndpoint.transform.position - hookObj.transform.position).normalized * _pullStrength;
-        hookController.attachedObj.GetComponent<Rigidbody>().AddForce(pullVelocity);
-        hookObj.transform.parent = null;
+        //hookController.pullBackSpeed = pullStrength;
         hookController.isRetrieving = true;
+        
+    }
+
+    public void LetGo()
+    {
+        Debug.Log("Letting go...");
+        if (hookController.IsAttached())
+        {
+            Vector3 pullVelocity = (hookEndpoint.transform.position - hookObj.transform.position).normalized * (2.75f);
+            hookController.attachedObj.GetComponent<Suckable>().flowDirection = pullVelocity;
+        }
+        hookObj.transform.parent = null;
         hookController.attachedObj = null;
+    }
+    private void ReturnInGun()
+    {
+        hookObj.transform.parent = this.transform.parent;
+        hookObj.transform.position = hookEndpoint.transform.position;
+        isShot = false;
+        hookController.isRetrieving = false;
+        hookController.isShooting = false;
+        hookObj.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        haptic.SendHapticsLeftController(0.5f, 0.5f);
+        
     }
 }
 

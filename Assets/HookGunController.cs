@@ -65,9 +65,9 @@ public class HookGunController : MonoBehaviour
         if (grapplingHookScript.hookController.IsAttached() && maxPullFactor != 0)
         {
             Debug.Log("Puleed and max factor was : " + maxPullFactor);
-            grapplingHookScript.hookController.pullBackSpeed = 1 - (1 / (maxPullFactor/10));
+           // grapplingHookScript.hookController.pullBackSpeed = 1 - (1 / (maxPullFactor/10));
             Debug.Log("Pull back speed : " + (1 - (1 / (maxPullFactor/10))));
-            grapplingHookScript.Pull(maxPullFactor * 10); 
+            grapplingHookScript.Pull(maxPullFactor); 
         }
 
 

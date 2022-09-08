@@ -11361,8 +11361,8 @@ MonoBehaviour:
   spawnRate: 13.01
   randomHorizontalOffsetRange: {x: 0, y: 0}
   randomVerticalOffsetRange: {x: 0, y: 0}
-  randomSpeedRange: {x: 3.39, y: 13.77}
-  spread: 0
+  randomSpeedRange: {x: 1, y: 5}
+  spread: 0.1
   generalTrash:
   - {fileID: 221700912}
   plasticTrash:

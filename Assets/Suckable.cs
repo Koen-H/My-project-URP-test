@@ -7,7 +7,8 @@ public class Suckable : MonoBehaviour
     Rigidbody rigidbody;
     public bool sucked;
     public float shrinkSpeed;//Needs to be below 1
-    SuckingMachineController suckMachine; 
+    public GarbageProperty garbageProperty;
+    SuckingMachineController suckMachine;
 
     public Vector3 flowDirection = Vector3.zero;
     public float flowSpeed = 0; 
@@ -56,6 +57,12 @@ public class Suckable : MonoBehaviour
         }
     }
 
+    public enum GarbageProperty
+    {
+        General_Waste,
+        Glass,
+        Plastic,
+    }
     void Flow()
     {
         rigidbody.AddForce(flowDirection * flowSpeed);

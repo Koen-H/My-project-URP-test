@@ -7,7 +7,6 @@ using System.Linq;
 
 public class SuckingMachineController : MonoBehaviour
 {
-    Haptic haptic;
     public float radius;
     public float depth;
     public float angle;
@@ -18,15 +17,12 @@ public class SuckingMachineController : MonoBehaviour
     public InputActionProperty shootTriggerInput;
     public InputActionProperty suckingMachineModeInput;
 
-    public float maxBattery = 10f;//The max seconds the battery can be
-    public float suckBatteryPower = 100;//Percentage of maxBattery
-
 
     float shootTrigger;
     bool machineModeSucking;
     bool modeButtonBeingPressed;
 
-    bool shooting; 
+    bool shooting;
 
     public TextMeshPro powerText;
     public TextMeshPro suckingModeText;
@@ -39,7 +35,7 @@ public class SuckingMachineController : MonoBehaviour
 
     private void Start()
     {
-        haptic = Haptic.Instance;
+
     }
 
     private void Update()
@@ -49,7 +45,7 @@ public class SuckingMachineController : MonoBehaviour
         if (suckingMachineModeInput.action.IsPressed() && !modeButtonBeingPressed)
         {
             modeButtonBeingPressed = true;
-            machineModeSucking = machineModeSucking? false : true;
+            machineModeSucking = machineModeSucking ? false : true;
         }
         else if (!suckingMachineModeInput.action.IsPressed()) modeButtonBeingPressed = false;
 
@@ -58,7 +54,7 @@ public class SuckingMachineController : MonoBehaviour
             shooting = true;
             Shoot();
         }
-        else if(shootTrigger < 1) shooting = false;
+        else if (shootTrigger < 1) shooting = false;
     }
 
 
@@ -66,13 +62,11 @@ public class SuckingMachineController : MonoBehaviour
     {
         if (enableSuck.action.ReadValue<float>() > 0.5f || disableSuckButton)
         {
-            
             float triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
-            haptic.SendHapticsRightController(-triggerValue, 0.5f);
             triggerValue *= -suckPower;
             powerText.text = $"{triggerValue}";
             suckingModeText.text = $"{machineModeSucking}";
-            suckedItemsCountText.text = suckedObjects.Count.ToString(); 
+            suckedItemsCountText.text = suckedObjects.Count.ToString();
 
             RaycastHit[] coneHits = physics.ConeCastAll(transform.position, radius, transform.forward, depth, angle);
             Vector3 origin = this.transform.position;
@@ -84,8 +78,8 @@ public class SuckingMachineController : MonoBehaviour
                     //do something with collider information
                     if (coneHits[i].collider.gameObject.tag == "Suckable")
                     {
+
                         coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin, triggerValue, this);
-                        
                         //suckableScript.Suck(origin);
                         //suckableScript.Blow();
                     }
@@ -102,22 +96,18 @@ public class SuckingMachineController : MonoBehaviour
 
     void Shoot()
     {
-        
-        if(suckedObjects.Count > 0)
+        if (suckedObjects.Count > 0)
         {
             GameObject suckedItem = suckedObjects.Last();
             suckedItem.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
-            suckedItem.transform.rotation = this.transform.rotation;  
+            suckedItem.transform.rotation = this.transform.rotation;
             suckedItem.transform.position = this.transform.position + (this.transform.forward * 0.3f);
             suckedItem.gameObject.SetActive(true);
-            suckedItem.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero; 
+            suckedItem.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             suckedItem.gameObject.GetComponent<Rigidbody>().velocity = (transform.forward * 20);
             suckedItem.gameObject.GetComponent<Suckable>().flowDirection = transform.forward;
             suckedItem.gameObject.GetComponent<Suckable>().flowSpeed = 1;
             suckedObjects.Remove(suckedItem);
-            haptic.SendHapticsRightController(0.75f, 0.25f);
         }
     }
-   
-
 }

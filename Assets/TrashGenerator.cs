@@ -7,6 +7,9 @@ public class TrashGenerator : MonoBehaviour
 
 
     [SerializeField]
+    Vector2 spawnAngle; 
+
+    [SerializeField]
     float radius;
 
     [SerializeField]
@@ -21,7 +24,7 @@ public class TrashGenerator : MonoBehaviour
     [SerializeField]
     Vector2 randomSpeedRange;
 
-
+    [Range(0.0f, 0.5f)]
     [SerializeField]
     float spread;
 
@@ -35,7 +38,7 @@ public class TrashGenerator : MonoBehaviour
     List<GameObject> wasteTrash = new List<GameObject>();
 
 
-    [Range(0.0f, 2f)]
+    [Range(0.0f, 1.5f)]
     [SerializeField]
     float trashTypeSpread;
 
@@ -43,6 +46,13 @@ public class TrashGenerator : MonoBehaviour
     [SerializeField]
     float trashType;
 
+    [Range(0.0f, 20f)]
+    [SerializeField]
+    float trashSwooshIntensity;
+
+    [Range(0.0f, 0.5f)]
+    [SerializeField]
+    float trashSwooshFrequency;
 
     float time;
 
@@ -71,7 +81,7 @@ public class TrashGenerator : MonoBehaviour
 
     void SpawnItem()
     {
-        float randomAngle = Random.Range(0, 360); 
+        float randomAngle = Random.Range(spawnAngle.x, spawnAngle.y); 
         float randomOffsetH = Random.Range(randomHorizontalOffsetRange.x, randomHorizontalOffsetRange.y);
         float randomOffsetV = Random.Range(randomVerticalOffsetRange.x, randomVerticalOffsetRange.y);
         float randomSpeed = Random.Range(randomSpeedRange.x, randomSpeedRange.y);
@@ -88,6 +98,8 @@ public class TrashGenerator : MonoBehaviour
         trashItem.transform.RotateAround(transform.position, Vector3.up, randomAngle);
         trashItem.GetComponent<Suckable>().flowDirection = -trashItem.transform.position.normalized + CalculateSpread(spread);
         trashItem.GetComponent<Suckable>().flowSpeed = randomSpeed;
+        trashItem.GetComponent<Suckable>().SwooshIntensity = trashSwooshIntensity;
+        trashItem.GetComponent<Suckable>().SwooshFrequency = trashSwooshFrequency;
 
 
         GameObject newTrashItem = Instantiate(trashItem);

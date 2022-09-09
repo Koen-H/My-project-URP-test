@@ -12,23 +12,48 @@ public class Suckable : MonoBehaviour
     Haptic haptic;
 
     public Vector3 flowDirection = Vector3.zero;
-    public float flowSpeed = 0; 
+    public float flowSpeed = 0;
+
+    public float SwooshIntensity;
+
+    public float SwooshFrequency;
+
+
+    Vector3 oldSwoosh; 
+
+    float sX;
+    float sY;
+    float sZ;
 
 
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         haptic = Haptic.Instance;
+
+        sX = Random.Range(0, 10);
+        sY = Random.Range(0, 10);
+        sZ = Random.Range(0, 10);
     }
     private void Update()
     {
         if (sucked) Shrink();
+        DeleteItem();
+
     }
 
 
     private void FixedUpdate()
     {
-        Flow(); 
+        Flow();
+
+        Swooshes(SwooshIntensity, SwooshFrequency);
+    }
+
+
+    void DeleteItem()
+    {
+        if (transform.position.magnitude > 20) Destroy(this.gameObject);
     }
 
     public void Suck(Vector3 _origin, float _suckPower, SuckingMachineController _suckMachine)
@@ -68,9 +93,31 @@ public class Suckable : MonoBehaviour
     }
     void Flow()
     {
+        transform.position += oldSwoosh; 
         rigidbody.AddForce(flowDirection * flowSpeed);
+    }
+
+
+    void Swooshes(float _intensity = 0, float _frequency = 1)
+    {
+        _frequency /= 10;
+        _intensity /= 100; 
+        sX += Random.Range(0.5f, 1f);
+        sY += Random.Range(0.5f, 1f);
+        sZ += Random.Range(0.5f, 1f);
+
+        float sinX = _intensity * Mathf.Sin(sX* _frequency);
+        float sinY = _intensity * Mathf.Sin(sY* _frequency);
+        float sinZ = _intensity * Mathf.Sin(sZ* _frequency);
+
+        Vector3 swoosh = new Vector3(sinX, sinY, sinZ);
+
+        oldSwoosh = swoosh;
+
+        rigidbody.AddTorque(swoosh/50);
+
+        transform.position -= swoosh; 
 
 
     }
-
 }

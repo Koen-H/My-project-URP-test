@@ -20,6 +20,17 @@ public class SuckingMachineController : MonoBehaviour
     Haptic haptic;
 
 
+    [SerializeField]
+    float capacity;
+    [SerializeField]
+    GameObject bar;
+    float triggerValue;
+    bool charging;
+    float barMult;
+
+
+
+
     float shootTrigger;
     bool machineModeSucking;
     bool modeButtonBeingPressed;
@@ -31,6 +42,8 @@ public class SuckingMachineController : MonoBehaviour
     public TextMeshPro suckedItemsCountText;
 
 
+    float charge; 
+
     public List<GameObject> suckedObjects;
 
     private Physics physics;
@@ -38,11 +51,21 @@ public class SuckingMachineController : MonoBehaviour
     private void Start()
     {
         haptic = Haptic.Instance;
+
+
+        CalculateBarCapacity();
+    }
+
+    void CalculateBarCapacity()
+    {
+        barMult = bar.transform.localScale.x / capacity;
+        charge = capacity;
     }
 
     private void Update()
     {
         shootTrigger = shootTriggerInput.action.ReadValue<float>();
+
 
         if (suckingMachineModeInput.action.IsPressed() && !modeButtonBeingPressed)
         {
@@ -51,20 +74,43 @@ public class SuckingMachineController : MonoBehaviour
         }
         else if (!suckingMachineModeInput.action.IsPressed()) modeButtonBeingPressed = false;
 
+
         if (machineModeSucking && shootTrigger == 1 && !shooting)
         {
             shooting = true;
             Shoot();
         }
         else if (shootTrigger < 1) shooting = false;
+
+        UpdateCapacityBar();
+
+
+    }
+
+    void UpdateCapacityBar()
+    {
+        float barX = charge * barMult;
+
+        bar.transform.localScale = new Vector3(barX, bar.transform.localScale.y, bar.transform.localScale.z); 
     }
 
 
     void FixedUpdate()
     {
-        if (enableSuck.action.ReadValue<float>() > 0.5f || disableSuckButton)
+
+        Sucking();
+
+        CooldownMechanics();
+
+
+    }
+
+    void Sucking()
+    {
+
+        if (enableSuck.action.ReadValue<float>() > 0.5f || disableSuckButton && !charging)
         {
-            float triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
+            triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
             triggerValue *= -suckPower;
             powerText.text = $"{triggerValue}";
             suckingModeText.text = $"{machineModeSucking}";
@@ -77,18 +123,39 @@ public class SuckingMachineController : MonoBehaviour
             {
                 for (int i = 0; i < coneHits.Length; i++)
                 {
-                    //do something with collider information
                     if (coneHits[i].collider.gameObject.tag == "Suckable")
                     {
 
                         coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin, triggerValue, this);
-                        //suckableScript.Suck(origin);
-                        //suckableScript.Blow();
                     }
                 }
             }
-        }
+        }    
     }
+
+
+
+    void CooldownMechanics()
+    {
+        charge -= Mathf.Abs(triggerValue / 300);
+        if (charge < 0) charging = true; 
+
+
+
+        charge += 0.05f;
+        if(charging) charge += 0.15f;
+
+        Debug.Log(charge); 
+
+        if(charge > capacity)
+        {
+            charging = false;
+            charge = capacity; 
+        }
+
+
+    }
+
 
     void Shoot()
     {
@@ -103,6 +170,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItem.gameObject.GetComponent<Rigidbody>().velocity = (transform.forward * 20);
             suckedItem.gameObject.GetComponent<Suckable>().flowDirection = transform.forward;
             suckedItem.gameObject.GetComponent<Suckable>().flowSpeed = 1;
+            suckedItem.gameObject.GetComponent<Suckable>().SwooshIntensity = 0; 
             suckedObjects.Remove(suckedItem);
             haptic.SendHapticsRightController(1,0.25f);
         }

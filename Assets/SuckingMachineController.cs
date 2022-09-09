@@ -128,6 +128,11 @@ public class SuckingMachineController : MonoBehaviour
 
                         coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin, triggerValue, this);
                     }
+                    if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
+                    {
+
+                        coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
+                    }
                 }
             }
         }    

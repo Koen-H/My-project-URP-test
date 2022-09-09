@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Suckable : MonoBehaviour
 {
-    Rigidbody rigidbody;
+    public Rigidbody rigidbody;
     public bool sucked;
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
     SuckingMachineController suckMachine;
     Haptic haptic;
+    public bool canBeVacuumed = true;
+    public bool canBeSucked = true;
 
     public Vector3 flowDirection = Vector3.zero;
     public float flowSpeed = 0;
+    public bool isFlowing = true;
 
     public float SwooshIntensity;
 
     public float SwooshFrequency;
+    public bool isSwooshing = true;
 
 
     Vector3 oldSwoosh; 
@@ -45,9 +49,9 @@ public class Suckable : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Flow();
+        if(isFlowing) Flow();
 
-        Swooshes(SwooshIntensity, SwooshFrequency);
+        if(isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
     }
 
 
@@ -58,15 +62,19 @@ public class Suckable : MonoBehaviour
 
     public void Suck(Vector3 _origin, float _suckPower, SuckingMachineController _suckMachine)
     {
-        suckMachine = _suckMachine;
-        if(rigidbody != null) { 
-            Vector3 direction = (_origin - this.transform.position);
-            if(direction.magnitude != 0)
+        if (canBeSucked)
+        {
+            suckMachine = _suckMachine;
+            if (rigidbody != null)
             {
-                Vector3 velocity = direction.normalized;
-                velocity /=  direction.magnitude*3;
-                velocity *= _suckPower;
-                rigidbody.AddForce(velocity);
+                Vector3 direction = (_origin - this.transform.position);
+                if (direction.magnitude != 0)
+                {
+                    Vector3 velocity = direction.normalized;
+                    velocity /= direction.magnitude * 3;
+                    velocity *= _suckPower;
+                    rigidbody.AddForce(velocity);
+                }
             }
         }
     }

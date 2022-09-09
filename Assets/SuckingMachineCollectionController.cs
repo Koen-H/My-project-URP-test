@@ -5,7 +5,7 @@ using UnityEngine;
 public class SuckingMachineCollectionController : MonoBehaviour
 {
     SuckingMachineController suckingMachineController;
-    
+
 
     private void Start()
     {
@@ -16,8 +16,11 @@ public class SuckingMachineCollectionController : MonoBehaviour
     {
         if (!suckingMachineController.suckedObjects.Contains(other.gameObject) && other.gameObject.tag == "Suckable")
         {
-            other.gameObject.GetComponent<Suckable>().sucked = true;
-            suckingMachineController.suckedObjects.Add(other.gameObject);
+            if (other.gameObject.GetComponent<Suckable>().canBeVacuumed)
+            {
+                other.gameObject.GetComponent<Suckable>().sucked = true;
+                suckingMachineController.suckedObjects.Add(other.gameObject);
+            }
         }
 
     }

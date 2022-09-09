@@ -10,8 +10,9 @@ public class HookController : MonoBehaviour
     public bool isShooting = false;
     public GameObject attachedObj;
     public float hookPower;
+    bool moveParent = true;
 
-    public float pullBackSpeed; 
+    public float pullBackSpeed = 0.4f; 
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class HookController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!IsAttached())
+        if (!IsAttached() && isShooting)
         {
             attachedObj = other.gameObject;
             this.transform.parent = attachedObj.transform;
@@ -28,7 +29,13 @@ public class HookController : MonoBehaviour
     }
     private void Retrieve()
     {
-        this.transform.position = Vector3.MoveTowards(transform.position, grapplingHookObj.transform.position, pullBackSpeed);
+        // Using MoveTowards
+        if(!moveParent || !IsAttached()) this.transform.position = Vector3.MoveTowards(transform.position, grapplingHookObj.transform.position, pullBackSpeed);
+        else attachedObj.transform.position = Vector3.MoveTowards(attachedObj.transform.position, grapplingHookObj.transform.position, pullBackSpeed);
+        
+
+        /*if (!moveParent || !IsAttached()) this.transform.position = this.transform.position + (grapplingHookObj.transform.position - transform.position).normalized * (pullBackSpeed/10);
+        else attachedObj.transform.position = attachedObj.transform.position + (attachedObj.transform.position - grapplingHookObj.transform.position).normalized * pullBackSpeed;*/
     }
     private void Move()
     {
@@ -36,12 +43,6 @@ public class HookController : MonoBehaviour
         transform.position += (fwd * hookPower);
     }
 
-    private void Update()
-    {
-        
-        
-
-    }
     private void FixedUpdate()
     {
         if (isRetrieving) Retrieve();

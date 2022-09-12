@@ -172,7 +172,13 @@ public class SuckingMachineController : MonoBehaviour
 
                             coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin + transform.forward * -0.5f, suckValue, this);
                         }
+                        else if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
+                        {
+
+                            coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
+                        }
                     }
+
                 }
             }
         }   
@@ -204,6 +210,7 @@ public class SuckingMachineController : MonoBehaviour
 
     void Shoot()
     {
+        
         if (suckedObjects.Count > 0)
         {
             GameObject suckedItem = suckedObjects.Last();

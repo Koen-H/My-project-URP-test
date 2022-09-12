@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public TextMeshPro timerText;
     private float timer;
 
+    public TextMeshPro trashPointsText;
+    public float trashPoints = 0;
+
     void Awake()
     {
         _instance = this;
@@ -42,5 +45,11 @@ public class GameManager : MonoBehaviour
         timerText.text = $"The timer is finished";
 
 
+    }
+
+    public void AddTrashPoints(float _trashPoints)
+    {
+        trashPoints += _trashPoints;
+        trashPointsText.text = $"Trashpoints: {trashPoints}";
     }
 }

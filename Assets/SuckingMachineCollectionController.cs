@@ -39,6 +39,8 @@ public class SuckingMachineCollectionController : MonoBehaviour
     {
         if (!suckingMachineController.suckedObjects.Contains(other.gameObject) && other.gameObject.tag == "Suckable" && suckingMachineController.triggerValue > 0.5f && !suckingMachineController.coolingDown && !suckingMachineController.storageFull)
         {
+            if (other.gameObject.GetComponent<Suckable>().canBeVacuumed)
+            {
             Debug.Log("Object SHould be sucked " + other.gameObject.name);
             Suckable suckable = other.gameObject.GetComponent<Suckable>();
             suckable.sucked = true;
@@ -46,6 +48,7 @@ public class SuckingMachineCollectionController : MonoBehaviour
 
             suckingMachineController.suckedObjects.Add(other.gameObject);
             suckingMachineController.ChangeTrashItemAmount(1);
+            }
         }
 
     }

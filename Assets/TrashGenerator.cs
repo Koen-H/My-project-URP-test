@@ -54,7 +54,12 @@ public class TrashGenerator : MonoBehaviour
     [SerializeField]
     float trashSwooshFrequency;
 
+    [SerializeField]
+    List<Vector3> waves = new List<Vector3>();
+
     float time;
+
+    float t; 
 
 
 
@@ -75,6 +80,25 @@ public class TrashGenerator : MonoBehaviour
         {
             item.SetActive(false);
         }
+
+
+    }
+
+    void BakeWaveValues()
+    {
+        foreach(Vector3 wave in waves)
+        {
+            
+        }
+    }
+
+    void WaveCalculations()
+    {
+        t += Time.deltaTime;
+
+
+        float spawnRate; 
+
 
 
     }

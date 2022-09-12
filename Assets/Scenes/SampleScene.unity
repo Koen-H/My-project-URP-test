@@ -177,6 +177,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -311,6 +312,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -445,6 +447,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -579,6 +582,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -713,6 +717,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -847,6 +852,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -1064,6 +1070,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -1198,6 +1205,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -1332,6 +1340,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -1466,6 +1475,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -1600,6 +1610,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -1734,6 +1745,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -2391,6 +2403,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -2525,6 +2538,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -2659,6 +2673,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -3316,6 +3331,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -3548,6 +3564,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -3744,6 +3761,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 21300000, guid: c204cb51770ac66478353f03e1c6a68c, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -3816,6 +3834,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -3950,6 +3969,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -4167,6 +4187,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -4509,6 +4530,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -4602,7 +4624,6 @@ GameObject:
   - component: {fileID: 297650539}
   - component: {fileID: 297650542}
   - component: {fileID: 297650541}
-  - component: {fileID: 297650540}
   m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -4623,21 +4644,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 332635738}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &297650540
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 297650538}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &297650541
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4740,6 +4748,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -4874,6 +4883,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5008,6 +5018,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5320,6 +5331,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5454,6 +5466,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5588,6 +5601,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5722,6 +5736,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5856,6 +5871,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -5990,6 +6006,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -6124,6 +6141,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -6373,6 +6391,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -6507,6 +6526,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -6641,6 +6661,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -6775,6 +6796,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -6909,6 +6931,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -7043,6 +7066,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -7177,6 +7201,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -7408,6 +7433,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -7542,6 +7568,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -7676,6 +7703,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -7876,6 +7904,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -8010,6 +8039,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -8334,6 +8364,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -8468,6 +8499,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -8602,6 +8634,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -8736,6 +8769,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -8870,6 +8904,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9004,6 +9039,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9138,6 +9174,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9220,6 +9257,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &617935835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617935836}
+  - component: {fileID: 617935838}
+  - component: {fileID: 617935837}
+  m_Layer: 6
+  m_Name: Cube (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &617935836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617935835}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.247, y: 1.3750002, z: -1.431}
+  m_LocalScale: {x: 1.1803, y: 0.07335252, z: 0.14141}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 332635738}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &617935837
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617935835}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &617935838
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617935835}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &619050106
 GameObject:
   m_ObjectHideFlags: 0
@@ -9272,6 +9392,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9406,6 +9527,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9540,6 +9662,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9674,6 +9797,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9808,6 +9932,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -9942,6 +10067,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -10138,6 +10264,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -10169,7 +10296,6 @@ GameObject:
   - component: {fileID: 713315742}
   - component: {fileID: 713315745}
   - component: {fileID: 713315744}
-  - component: {fileID: 713315743}
   m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
@@ -10190,21 +10316,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 332635738}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &713315743
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713315741}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &713315744
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10307,6 +10420,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -10486,6 +10600,47 @@ Transform:
   m_Father: {fileID: 2081566464}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &758018803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758018804}
+  - component: {fileID: 758018805}
+  m_Layer: 6
+  m_Name: CapacityBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &758018804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758018803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.265, y: 1.2980003, z: -1.431}
+  m_LocalScale: {x: 1, y: 0.080093, z: 0.14141}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1832024183}
+  m_Father: {fileID: 332635738}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &758018805
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758018803}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &759638206
 GameObject:
   m_ObjectHideFlags: 0
@@ -10538,6 +10693,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -10672,6 +10828,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -10843,6 +11000,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -10977,6 +11135,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -11111,6 +11270,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -11245,6 +11405,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -11379,6 +11540,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -11513,6 +11675,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -11696,6 +11859,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -11901,6 +12065,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -12133,6 +12298,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -12267,6 +12433,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -12349,6 +12516,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 170
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &924097956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 924097957}
+  - component: {fileID: 924097959}
+  - component: {fileID: 924097958}
+  m_Layer: 6
+  m_Name: Cube (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &924097957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924097956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.247, y: 1.206, z: -1.431}
+  m_LocalScale: {x: 1.1803, y: 0.07335252, z: 0.14141}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 332635738}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &924097958
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924097956}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &924097959
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924097956}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &930361469
 GameObject:
   m_ObjectHideFlags: 0
@@ -12401,6 +12651,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -12535,6 +12786,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -12669,6 +12921,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -12803,6 +13056,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13020,6 +13274,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13154,6 +13409,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13322,6 +13578,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13456,6 +13713,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13590,6 +13848,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13724,6 +13983,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13858,6 +14118,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -13992,6 +14253,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -14126,6 +14388,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -14260,6 +14523,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -14477,6 +14741,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -14611,6 +14876,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -14745,6 +15011,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -14941,6 +15208,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15013,6 +15281,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15147,6 +15416,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15281,6 +15551,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15415,6 +15686,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15608,6 +15880,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15742,6 +16015,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -15876,6 +16150,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -16010,6 +16285,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -16103,7 +16379,6 @@ GameObject:
   - component: {fileID: 1187704019}
   - component: {fileID: 1187704022}
   - component: {fileID: 1187704021}
-  - component: {fileID: 1187704020}
   m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -16124,21 +16399,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 332635738}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1187704020
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187704018}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1187704021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16324,6 +16586,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -16458,6 +16721,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -16592,6 +16856,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -16726,6 +16991,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -16974,6 +17240,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17108,6 +17375,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17190,6 +17458,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!114 &1290210295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2287524056597003568, guid: eba1f31ee903c2e419acd6170a5841be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2287524055718267013}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989c7afe1cdc4ce458d7f876c795ee59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1295173014
 GameObject:
   m_ObjectHideFlags: 0
@@ -17242,6 +17522,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17376,6 +17657,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17510,6 +17792,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17706,6 +17989,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 21300000, guid: b258af4e9a1acac498b0106b2984a6b0, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17778,6 +18062,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -17912,6 +18197,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18046,6 +18332,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18180,6 +18467,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18262,6 +18550,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 161
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1371633599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371633600}
+  - component: {fileID: 1371633602}
+  - component: {fileID: 1371633601}
+  m_Layer: 6
+  m_Name: Cube (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1371633600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371633599}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.7966, y: 1.2800003, z: -1.431}
+  m_LocalScale: {x: 0.079848476, y: 0.13097826, z: 0.14141}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 332635738}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1371633601
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371633599}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1371633602
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371633599}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1372249410
 GameObject:
   m_ObjectHideFlags: 0
@@ -18314,6 +18685,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18407,7 +18779,6 @@ GameObject:
   - component: {fileID: 1376568161}
   - component: {fileID: 1376568164}
   - component: {fileID: 1376568163}
-  - component: {fileID: 1376568162}
   m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -18428,21 +18799,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 332635738}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1376568162
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1376568160}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1376568163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18545,6 +18903,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18679,6 +19038,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18813,6 +19173,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -18947,6 +19308,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -19040,7 +19402,6 @@ GameObject:
   - component: {fileID: 1435316031}
   - component: {fileID: 1435316034}
   - component: {fileID: 1435316033}
-  - component: {fileID: 1435316032}
   m_Layer: 6
   m_Name: Bar (1)
   m_TagString: Untagged
@@ -19063,19 +19424,6 @@ Transform:
   m_Father: {fileID: 1638854957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1435316032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1435316030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1435316033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19276,6 +19624,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -19410,6 +19759,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -19544,6 +19894,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -19678,6 +20029,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -19812,6 +20164,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -19946,6 +20299,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20080,6 +20434,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20214,6 +20569,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20296,6 +20652,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 119
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1507859233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8009361657844231558, guid: eba1f31ee903c2e419acd6170a5841be,
+    type: 3}
+  m_PrefabInstance: {fileID: 2287524055718267013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1519778774
 GameObject:
   m_ObjectHideFlags: 0
@@ -20348,6 +20710,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20482,6 +20845,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20713,6 +21077,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20847,6 +21212,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -20929,6 +21295,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1552124904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552124905}
+  - component: {fileID: 1552124907}
+  - component: {fileID: 1552124906}
+  m_Layer: 6
+  m_Name: Cube (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552124905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552124904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.301, y: 1.2800003, z: -1.431}
+  m_LocalScale: {x: 0.079848476, y: 0.13097826, z: 0.14141}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 332635738}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1552124906
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552124904}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1552124907
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552124904}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1561460488
 GameObject:
   m_ObjectHideFlags: 0
@@ -20981,6 +21430,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21115,6 +21565,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21249,6 +21700,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21383,6 +21835,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21465,6 +21918,74 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1587881205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587881208}
+  - component: {fileID: 1587881207}
+  - component: {fileID: 1587881206}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1587881206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587881205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1587881207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587881205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1587881208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587881205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 184
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1605692848
 GameObject:
   m_ObjectHideFlags: 0
@@ -21517,6 +22038,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21610,7 +22132,7 @@ GameObject:
   - component: {fileID: 1638854957}
   - component: {fileID: 1638854958}
   m_Layer: 6
-  m_Name: Bar
+  m_Name: TempBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21630,7 +22152,7 @@ Transform:
   m_Children:
   - {fileID: 1435316031}
   m_Father: {fileID: 332635738}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1638854958
 MeshFilter:
@@ -21692,6 +22214,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21826,6 +22349,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -21960,6 +22484,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22094,6 +22619,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22228,6 +22754,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22362,6 +22889,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22496,6 +23024,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22630,6 +23159,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22764,6 +23294,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -22898,6 +23429,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23115,6 +23647,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23249,6 +23782,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23383,6 +23917,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23465,6 +24000,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1832024182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1832024183}
+  - component: {fileID: 1832024185}
+  - component: {fileID: 1832024184}
+  m_Layer: 6
+  m_Name: Bar (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1832024183
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832024182}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.51, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 758018804}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1832024184
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832024182}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 462c277b1606f9f4793c69728f4c7178, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1832024185
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832024182}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1834634991
 GameObject:
   m_ObjectHideFlags: 0
@@ -23579,6 +24197,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 21300000, guid: 4d19022779a83054998c70ab7d0ab77c, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23651,6 +24270,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23785,6 +24405,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -23919,6 +24540,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -24224,6 +24846,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -24358,6 +24981,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -24589,6 +25213,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -24723,6 +25348,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -24857,6 +25483,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -24991,6 +25618,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -25125,6 +25753,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -25419,6 +26048,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -25553,6 +26183,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -25635,6 +26266,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 97.215, z: 0}
+--- !u!1 &1986689414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986689415}
+  - component: {fileID: 1986689416}
+  m_Layer: 0
+  m_Name: Display
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1986689415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986689414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.72072107, y: 0.15921997, z: -2.411377}
+  m_LocalScale: {x: 0.23585711, y: 0.23585711, z: 0.23585708}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 332635738}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1986689416
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986689414}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c2de2262aabce5842bbb7eda4f59e97f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2011144511
 GameObject:
   m_ObjectHideFlags: 0
@@ -25687,6 +26402,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -25821,6 +26537,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -25955,6 +26672,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26089,6 +26807,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26223,6 +26942,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26357,6 +27077,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26491,6 +27212,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26659,6 +27381,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26793,6 +27516,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -26927,6 +27651,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -27094,6 +27819,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -27262,6 +27988,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -27396,6 +28123,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -27530,6 +28258,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
   SwooshIntensity: 0
@@ -27717,6 +28446,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 151288876}
     m_Modifications:
+    - target: {fileID: 504331287696953656, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 504331287696953656, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 504331287696953656, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.328
+      objectReference: {fileID: 0}
+    - target: {fileID: 504331287696953656, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1404985455082101182, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056048342738, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2287524056048342739, guid: eba1f31ee903c2e419acd6170a5841be,
         type: 3}
       propertyPath: m_Name
@@ -27729,9 +28488,55 @@ PrefabInstance:
       objectReference: {fileID: 1638854956}
     - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
         type: 3}
+      propertyPath: pivot
+      value: 
+      objectReference: {fileID: 1507859233}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: display
+      value: 
+      objectReference: {fileID: 1986689416}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: tempBar
+      value: 
+      objectReference: {fileID: 1638854956}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
       propertyPath: capacity
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: notFound
+      value: 
+      objectReference: {fileID: 2800000, guid: a59b3d7c36df09d488fcfa7f35ca5aa5, type: 3}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: maxOpTemp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: capacityBar
+      value: 
+      objectReference: {fileID: 758018803}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: maxCapacity
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: spriteNotFound
+      value: 
+      objectReference: {fileID: 21300000, guid: a59b3d7c36df09d488fcfa7f35ca5aa5,
+        type: 3}
+    - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: collectionController
+      value: 
+      objectReference: {fileID: 1290210295}
     - target: {fileID: 2287524056048342751, guid: eba1f31ee903c2e419acd6170a5841be,
         type: 3}
       propertyPath: m_RootOrder
@@ -27787,5 +28592,84 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2287524056597003568, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: display
+      value: 
+      objectReference: {fileID: 1986689416}
+    - target: {fileID: 2287524056597003568, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: notFound
+      value: 
+      objectReference: {fileID: 21300000, guid: a59b3d7c36df09d488fcfa7f35ca5aa5,
+        type: 3}
+    - target: {fileID: 2287524056597003568, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c2de2262aabce5842bbb7eda4f59e97f,
+        type: 3}
+    - target: {fileID: 2287524056597003568, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: spriteNotFound
+      value: 
+      objectReference: {fileID: 21300000, guid: a59b3d7c36df09d488fcfa7f35ca5aa5,
+        type: 3}
+    - target: {fileID: 2287524056597003572, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003572, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.111
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003572, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003572, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003575, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.8602144
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003575, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.118162
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003575, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1.3206842
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003575, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0029272677
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003575, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.051317386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2287524056597003575, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.16034204
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304917374603476904, guid: eba1f31ee903c2e419acd6170a5841be,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2287524056048342738, guid: eba1f31ee903c2e419acd6170a5841be, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eba1f31ee903c2e419acd6170a5841be, type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using System.Linq;
+using UnityEngine.Sprites;
 
 public class SuckingMachineController : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class SuckingMachineController : MonoBehaviour
     public float depth;
     public float angle;
     [SerializeField] float suckPower;
-    public bool disableSuckButton = true;
+   // public float suckingTriggerValue;
+    bool disableSuckButton = false;
     public InputActionProperty enableSuck;
     public InputActionProperty suckPowerInput;
     public InputActionProperty shootTriggerInput;
@@ -21,17 +23,34 @@ public class SuckingMachineController : MonoBehaviour
 
 
     [SerializeField]
-    float capacity;
+    GameObject pivot;
+
+
+
     [SerializeField]
-    GameObject bar;
-    float triggerValue;
-    bool charging;
-    float barMult;
+    float maxOpTemp;
+    [SerializeField]
+    GameObject tempBar;
+    public bool coolingDown;
+    float tempBarMult;
+    float temp;
+
+    [SerializeField]
+    SuckingMachineCollectionController collectionController;
+
+
+    [SerializeField]
+    float maxCapacity;
+    [SerializeField]
+    GameObject capacityBar;
+    float capacityBarMult;
+    public float trashItemAmount;
+    public bool storageFull;
 
 
 
 
-    float shootTrigger;
+    public float triggerValue;
     bool machineModeSucking;
     bool modeButtonBeingPressed;
 
@@ -42,7 +61,6 @@ public class SuckingMachineController : MonoBehaviour
     public TextMeshPro suckedItemsCountText;
 
 
-    float charge; 
 
     public List<GameObject> suckedObjects;
 
@@ -53,18 +71,35 @@ public class SuckingMachineController : MonoBehaviour
         haptic = Haptic.Instance;
 
 
-        CalculateBarCapacity();
+
+
+        CalculateBarMult();
     }
 
-    void CalculateBarCapacity()
+    void CalculateBarMult()
     {
-        barMult = bar.transform.localScale.x / capacity;
-        charge = capacity;
+        tempBarMult = tempBar.transform.localScale.x / maxOpTemp;
+        temp = 0;
+
+        capacityBarMult = capacityBar.transform.localScale.x / maxCapacity;
+        trashItemAmount = 0; 
+    }
+
+    public void ChangeTrashItemAmount(float amount)
+    {
+        trashItemAmount += amount; 
+        if (trashItemAmount < 0) trashItemAmount = 0;
+        if (trashItemAmount > maxCapacity) storageFull = true;
+        else storageFull = false;
+
     }
 
     private void Update()
     {
-        shootTrigger = shootTriggerInput.action.ReadValue<float>();
+        triggerValue = shootTriggerInput.action.ReadValue<float>();
+       // suckingTriggerValue = enableSuck.action.ReadValue<float>();
+
+        //Debug.Log("Sucking trigger value : " + triggerValue);
 
 
         if (suckingMachineModeInput.action.IsPressed() && !modeButtonBeingPressed)
@@ -75,23 +110,30 @@ public class SuckingMachineController : MonoBehaviour
         else if (!suckingMachineModeInput.action.IsPressed()) modeButtonBeingPressed = false;
 
 
-        if (machineModeSucking && shootTrigger == 1 && !shooting)
+        if (machineModeSucking && triggerValue == 1 && !shooting)
         {
             shooting = true;
             Shoot();
         }
-        else if (shootTrigger < 1) shooting = false;
+        else if (triggerValue < 1) shooting = false;
 
-        UpdateCapacityBar();
+
+
+        UpdateBars();
 
 
     }
 
-    void UpdateCapacityBar()
+    void UpdateBars()
     {
-        float barX = charge * barMult;
+        float tempBarX = temp * tempBarMult;
+        tempBar.transform.localScale = new Vector3(tempBarX, tempBar.transform.localScale.y, tempBar.transform.localScale.z); 
 
-        bar.transform.localScale = new Vector3(barX, bar.transform.localScale.y, bar.transform.localScale.z); 
+        float capacityBarX = trashItemAmount * capacityBarMult;
+        capacityBar.transform.localScale = new Vector3(capacityBarX, capacityBar.transform.localScale.y, capacityBar.transform.localScale.z);
+
+
+
     }
 
 
@@ -108,49 +150,52 @@ public class SuckingMachineController : MonoBehaviour
     void Sucking()
     {
 
-        if (enableSuck.action.ReadValue<float>() > 0.5f || disableSuckButton && !charging)
+        if (triggerValue > 0.5f && !disableSuckButton)
         {
-            triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
-            triggerValue *= -suckPower;
-            powerText.text = $"{triggerValue}";
-            suckingModeText.text = $"{machineModeSucking}";
-            suckedItemsCountText.text = suckedObjects.Count.ToString();
-
-            RaycastHit[] coneHits = physics.ConeCastAll(transform.position, radius, transform.forward, depth, angle);
-            Vector3 origin = this.transform.position;
-
-            if (coneHits.Length > 0)
+            if (!coolingDown && !storageFull)
             {
-                for (int i = 0; i < coneHits.Length; i++)
-                {
-                    if (coneHits[i].collider.gameObject.tag == "Suckable")
-                    {
+                //triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
+                float suckValue = triggerValue * suckPower; 
+                powerText.text = $"{triggerValue}";
+                suckingModeText.text = $"{machineModeSucking}";
+                suckedItemsCountText.text = suckedObjects.Count.ToString();
 
-                        coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin, triggerValue, this);
+                Vector3 origin = pivot.transform.position;
+                RaycastHit[] coneHits = physics.ConeCastAll(origin, radius, transform.forward, depth, angle);
+
+                if (coneHits.Length > 0)
+                {
+                    for (int i = 0; i < coneHits.Length; i++)
+                    {
+                        if (coneHits[i].collider.gameObject.tag == "Suckable")
+                        {
+
+                            coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin + transform.forward * -0.5f, suckValue, this);
+                        }
                     }
                 }
             }
-        }    
+        }   
     }
 
 
 
     void CooldownMechanics()
     {
-        charge -= Mathf.Abs(triggerValue / 300);
-        if (charge < 0) charging = true; 
+        temp += coolingDown? 0 : storageFull? 0 : triggerValue / 10;
+        if (temp > maxOpTemp) coolingDown = true; 
 
 
 
-        charge += 0.05f;
-        if(charging) charge += 0.15f;
+        temp -= 0.05f;
+        if(coolingDown) temp -= 0.15f;
 
-        Debug.Log(charge); 
+       //Debug.Log(charge); 
 
-        if(charge > capacity)
+        if(temp < 0)
         {
-            charging = false;
-            charge = capacity; 
+            coolingDown = false;
+            temp = 0; 
         }
 
 
@@ -166,12 +211,17 @@ public class SuckingMachineController : MonoBehaviour
             suckedItem.transform.rotation = this.transform.rotation;
             suckedItem.transform.position = this.transform.position + (this.transform.forward * 0.3f);
             suckedItem.gameObject.SetActive(true);
-            suckedItem.gameObject.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
-            suckedItem.gameObject.GetComponent<Rigidbody>().velocity = (transform.forward * 20);
-            suckedItem.gameObject.GetComponent<Suckable>().flowDirection = transform.forward;
-            suckedItem.gameObject.GetComponent<Suckable>().flowSpeed = 1;
-            suckedItem.gameObject.GetComponent<Suckable>().SwooshIntensity = 0; 
+            Rigidbody suckedItemRigidbody = suckedItem.gameObject.GetComponent<Rigidbody>();
+            suckedItemRigidbody.angularVelocity = Vector3.zero;
+            suckedItemRigidbody.velocity = (transform.forward * 20);
+            Suckable suckedItemSuckable = suckedItem.gameObject.GetComponent<Suckable>();
+            suckedItemSuckable.flowDirection = transform.forward;
+            suckedItemSuckable.flowSpeed = 1;
+            suckedItemSuckable.SwooshIntensity = 0;
             suckedObjects.Remove(suckedItem);
+            if(suckedObjects.Count > 0) collectionController.UpdateDisplay(suckedObjects.Last().GetComponent<Suckable>());
+            else collectionController.UpdateDisplay(null);
+            ChangeTrashItemAmount(-1);
             haptic.SendHapticsRightController(1,0.25f);
         }
     }

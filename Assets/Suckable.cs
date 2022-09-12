@@ -11,6 +11,9 @@ public class Suckable : MonoBehaviour
     SuckingMachineController suckMachine;
     Haptic haptic;
 
+    public Sprite thumbnail; 
+
+
     public Vector3 flowDirection = Vector3.zero;
     public float flowSpeed = 0;
 

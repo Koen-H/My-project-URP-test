@@ -13,6 +13,9 @@ public class Suckable : MonoBehaviour
     public bool canBeVacuumed = true;
     public bool canBeSucked = true;
 
+    public Sprite thumbnail; 
+
+
     public Vector3 flowDirection = Vector3.zero;
     public float flowSpeed = 0;
     public bool isFlowing = true;
@@ -123,6 +126,14 @@ public class Suckable : MonoBehaviour
 
 
     }
+
+}
+
+public enum GarbageProperty
+{
+    General_Waste,
+    Glass,
+    Plastic,
 }
 public enum GarbageProperty
 {

@@ -92,14 +92,13 @@ public class TrashGenerator : MonoBehaviour
         if (randomTrash < 2 && trashType + randomTrash > 1) trashItem = plasticTrash[Random.Range(0, plasticTrash.Count - 1)];
         if (randomTrash < 1) trashItem = wasteTrash[Random.Range(0, wasteTrash.Count - 1)];
 
-
-
         trashItem.transform.position = transform.position + Vector3.right * (radius + randomOffsetH) + Vector3.up * randomOffsetV;
         trashItem.transform.RotateAround(transform.position, Vector3.up, randomAngle);
-        trashItem.GetComponent<Suckable>().flowDirection = -trashItem.transform.position.normalized + CalculateSpread(spread);
-        trashItem.GetComponent<Suckable>().flowSpeed = randomSpeed;
-        trashItem.GetComponent<Suckable>().SwooshIntensity = trashSwooshIntensity;
-        trashItem.GetComponent<Suckable>().SwooshFrequency = trashSwooshFrequency;
+        Suckable trashItemSuckable = trashItem.GetComponent<Suckable>();
+        trashItemSuckable.flowDirection = -trashItem.transform.position.normalized + CalculateSpread(spread);
+        trashItemSuckable.flowSpeed = randomSpeed;
+        trashItemSuckable.SwooshIntensity = trashSwooshIntensity;
+        trashItemSuckable.SwooshFrequency = trashSwooshFrequency;
 
 
         GameObject newTrashItem = Instantiate(trashItem);

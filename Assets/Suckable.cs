@@ -93,12 +93,7 @@ public class Suckable : MonoBehaviour
         }
     }
 
-    public enum GarbageProperty
-    {
-        General_Waste,
-        Glass,
-        Plastic,
-    }
+
     void Flow()
     {
         transform.position += oldSwoosh; 
@@ -128,4 +123,10 @@ public class Suckable : MonoBehaviour
 
 
     }
+}
+public enum GarbageProperty
+{
+    General_Waste,
+    Glass,
+    Plastic,
 }

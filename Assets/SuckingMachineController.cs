@@ -164,6 +164,7 @@ public class SuckingMachineController : MonoBehaviour
 
     void Shoot()
     {
+        
         if (suckedObjects.Count > 0)
         {
             GameObject suckedItem = suckedObjects.Last();

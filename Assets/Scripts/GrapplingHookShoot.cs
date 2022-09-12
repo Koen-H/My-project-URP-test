@@ -117,13 +117,14 @@ public class GrapplingHookShoot : MonoBehaviour
     private void ReturnInGun()
     {
         hookObj.transform.parent = this.transform.parent;
-        hookObj.transform.position = hookEndpoint.transform.position;
+        
         isShot = false;
         hookController.isRetrieving = false;
         hookController.isShooting = false;
         hookObj.transform.localRotation = Quaternion.Euler(0, 0, 0);
         haptic.SendHapticsLeftController(0.5f, 0.5f);
-        
+        hookObj.transform.localPosition = new Vector3(0.0009f, -0.0954f, -0.0025f);
+
     }
 }
 

@@ -13,7 +13,13 @@ public class TrashChute : MonoBehaviour
     Transform ejectTransform; 
 
     [SerializeField]
-    float ejectForce; 
+    float ejectForce;
+    GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+    }
 
     private void FixedUpdate()
     {
@@ -37,8 +43,12 @@ public class TrashChute : MonoBehaviour
         if (other.gameObject.tag == "Suckable")
         {
 
-            if(other.gameObject.GetComponent<Suckable>().garbageProperty != garbageProperty) EjectItem(other.gameObject);
-            else Destroy(other.gameObject);
+            if (other.gameObject.GetComponent<Suckable>().garbageProperty != garbageProperty) EjectItem(other.gameObject);
+            else
+            {
+                gameManager.AddTrashPoints(1);
+                Destroy(other.gameObject);
+            }
 
         }
     }

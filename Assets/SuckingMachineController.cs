@@ -172,12 +172,13 @@ public class SuckingMachineController : MonoBehaviour
 
                             coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin + transform.forward * -0.5f, suckValue, this);
                         }
-                    }
-                    if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
-                    {
+                        else if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
+                        {
 
-                        coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
+                            coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
+                        }
                     }
+
                 }
             }
         }   

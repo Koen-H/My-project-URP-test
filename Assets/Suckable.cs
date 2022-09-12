@@ -135,9 +135,3 @@ public enum GarbageProperty
     Glass,
     Plastic,
 }
-public enum GarbageProperty
-{
-    General_Waste,
-    Glass,
-    Plastic,
-}

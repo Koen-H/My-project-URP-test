@@ -210,7 +210,7 @@ PrefabInstance:
     - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
         type: 3}
       propertyPath: maxCapacity
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2287524056048342750, guid: eba1f31ee903c2e419acd6170a5841be,
         type: 3}
@@ -3013,9 +3013,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0128993c8e8164f96e8b639f978231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnAngle: {x: 0, y: 360}
-  radius: 15
-  spawnRate: 3
+  spawnAngle: {x: 170, y: 370}
+  radius: 10.7
+  spawnRate: 0.6
   randomHorizontalOffsetRange: {x: -2, y: 2}
   randomVerticalOffsetRange: {x: -2, y: 2}
   randomSpeedRange: {x: 1, y: 3}
@@ -3027,7 +3027,7 @@ MonoBehaviour:
   wasteTrash:
   - {fileID: 1327417470}
   trashTypeSpread: 2
-  trashType: 1.46
+  trashType: 1.06
   trashSwooshIntensity: 8
   trashSwooshFrequency: 0.2
 --- !u!33 &845875306

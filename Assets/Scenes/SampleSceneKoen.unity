@@ -683,11 +683,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -837,7 +839,7 @@ GameObject:
   - component: {fileID: 43123866}
   - component: {fileID: 43123865}
   - component: {fileID: 43123864}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube (3)
   m_TagString: Suckable
   m_Icon: {fileID: 0}
@@ -876,11 +878,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 2
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 21300000, guid: c204cb51770ac66478353f03e1c6a68c, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -997,7 +1001,7 @@ Transform:
   m_Children:
   - {fileID: 952580549}
   m_Father: {fileID: 18192074}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &46254228
 MeshFilter:
@@ -1287,7 +1291,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &131968907
 MeshRenderer:
@@ -1635,7 +1639,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &230607511
 MeshRenderer:
@@ -2476,7 +2480,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 4
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &606735431
 MeshRenderer:
@@ -3019,7 +3023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0128993c8e8164f96e8b639f978231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnAngle: {x: 170, y: 370}
+  spawnAngle: {x: 170, y: 360}
   radius: 10.7
   spawnRate: 0.6
   randomHorizontalOffsetRange: {x: -2, y: 2}
@@ -3036,6 +3040,8 @@ MonoBehaviour:
   trashType: 1.06
   trashSwooshIntensity: 8
   trashSwooshFrequency: 0.2
+  maxGameTimeMinute: 1
+  waves: []
 --- !u!33 &845875306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3090,7 +3096,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &864316431
 SpriteRenderer:
@@ -3367,7 +3373,8 @@ GameObject:
   - component: {fileID: 893397295}
   - component: {fileID: 893397294}
   - component: {fileID: 893397293}
-  m_Layer: 0
+  - component: {fileID: 893397297}
+  m_Layer: 11
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3453,6 +3460,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &893397297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893397292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &912547935
 GameObject:
   m_ObjectHideFlags: 0
@@ -4591,11 +4611,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
   flowDirection: {x: 0, y: 0, z: 0}
   flowSpeed: 0
@@ -4608,6 +4630,8 @@ MonoBehaviour:
   - {fileID: 1430947304}
   - {fileID: 1780813130}
   - {fileID: 36907553}
+  maxTrashAllowed: 5
+  attachCollider: {fileID: 1673580234}
   swimSpeed: 2
   rotateSpeed: 1.3
 --- !u!4 &1209841745
@@ -4662,7 +4686,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 11
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1264912435
 MeshRenderer:
@@ -5022,7 +5046,7 @@ GameObject:
   - component: {fileID: 1327417471}
   - component: {fileID: 1327417475}
   - component: {fileID: 1327417476}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube (4)
   m_TagString: Suckable
   m_Icon: {fileID: 0}
@@ -5123,11 +5147,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 1
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 21300000, guid: b258af4e9a1acac498b0106b2984a6b0, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -5307,7 +5333,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 6
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1409129223
 MeshRenderer:
@@ -5396,11 +5422,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -5533,7 +5561,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1508665862
 MeshRenderer:
@@ -6805,7 +6833,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 10
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1718316108
 MeshRenderer:
@@ -6894,11 +6922,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -7620,7 +7650,7 @@ GameObject:
   - component: {fileID: 1834634992}
   - component: {fileID: 1834634996}
   - component: {fileID: 1834634997}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube (2)
   m_TagString: Suckable
   m_Icon: {fileID: 0}
@@ -7721,11 +7751,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 21300000, guid: 4d19022779a83054998c70ab7d0ab77c, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -7922,7 +7954,7 @@ Transform:
   m_Children:
   - {fileID: 219027131}
   m_Father: {fileID: 18192074}
-  m_RootOrder: 7
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1858712492
 MeshFilter:
@@ -8363,7 +8395,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 18192074}
-  m_RootOrder: 9
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1981776016
 MeshRenderer:
@@ -8452,11 +8484,13 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1

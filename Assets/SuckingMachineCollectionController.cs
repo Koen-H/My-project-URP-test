@@ -45,7 +45,9 @@ public class SuckingMachineCollectionController : MonoBehaviour
             Suckable suckable = other.gameObject.GetComponent<Suckable>();
             suckable.sucked = true;
             UpdateDisplay(suckable);
-
+                GameManager gamemanager = GameManager.Instance;
+                gamemanager.cleannessLevel++;
+                gamemanager.UpdateBars(); 
             suckingMachineController.suckedObjects.Add(other.gameObject);
             suckingMachineController.ChangeTrashItemAmount(1);
             }

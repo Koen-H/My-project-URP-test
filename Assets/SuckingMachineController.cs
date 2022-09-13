@@ -230,6 +230,9 @@ public class SuckingMachineController : MonoBehaviour
             suckedObjects.Remove(suckedItem);
             if(suckedObjects.Count > 0) collectionController.UpdateDisplay(suckedObjects.Last().GetComponent<Suckable>());
             else collectionController.UpdateDisplay(null);
+            GameManager gamemanager = GameManager.Instance;
+            gamemanager.cleannessLevel--;
+            gamemanager.UpdateBars();
             ChangeTrashItemAmount(-1);
             haptic.SendHapticsRightController(1,0.25f);
         }

@@ -47,6 +47,8 @@ public class TrashChute : MonoBehaviour
             else
             {
                 gameManager.AddTrashPoints(1);
+                gameManager.cleannessLevel++;
+                gameManager.UpdateBars();
                 Destroy(other.gameObject);
             }
 

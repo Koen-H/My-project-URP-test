@@ -19,8 +19,19 @@ public class GameManager : MonoBehaviour
     public TextMeshPro timerText;
     private float timer;
 
+
+    public float cleannessLevel = 100; 
+
     public TextMeshPro trashPointsText;
     public float trashPoints = 0;
+
+    [SerializeField]
+    GameObject cleannessBar;
+    float cleannessBarMult;
+    [SerializeField]
+    float maxCleanness; 
+
+
 
     void Awake()
     {
@@ -30,7 +41,23 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartTimer());
+        CalculateBarMult();
     }
+
+
+
+
+    void CalculateBarMult()
+    {
+        cleannessBarMult = cleannessBar.transform.localScale.x / cleannessLevel;
+    }
+
+    public void UpdateBars()
+    {
+        float cleanBarX = cleannessLevel * cleannessBarMult;
+        cleannessBar.transform.localScale = new Vector3(cleanBarX, cleannessBar.transform.localScale.y, cleannessBar.transform.localScale.z);
+    }
+
 
     IEnumerator StartTimer()
     {
@@ -43,8 +70,6 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("The timer is finished");
         timerText.text = $"The timer is finished";
-
-
     }
 
     public void AddTrashPoints(float _trashPoints)

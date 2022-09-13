@@ -194,6 +194,10 @@ public class TrashGenerator : MonoBehaviour
         trashItemSuckable.SwooshFrequency = trashSwooshFrequency;
 
 
+        GameManager gamemanager = GameManager.Instance;
+        gamemanager.cleannessLevel--;
+        gamemanager.UpdateBars();
+
         GameObject newTrashItem = Instantiate(trashItem);
 
         newTrashItem.SetActive(true); 

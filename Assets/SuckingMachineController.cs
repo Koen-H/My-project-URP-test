@@ -51,7 +51,7 @@ public class SuckingMachineController : MonoBehaviour
 
 
     public float triggerValue;
-    bool machineModeSucking;
+    public bool machineModeSucking;
     bool modeButtonBeingPressed;
 
     bool shooting;
@@ -106,6 +106,7 @@ public class SuckingMachineController : MonoBehaviour
         {
             modeButtonBeingPressed = true;
             machineModeSucking = machineModeSucking ? false : true;
+            suckingModeText.text = $"{machineModeSucking}";
         }
         else if (!suckingMachineModeInput.action.IsPressed()) modeButtonBeingPressed = false;
 
@@ -150,14 +151,13 @@ public class SuckingMachineController : MonoBehaviour
     void Sucking()
     {
 
-        if (triggerValue > 0.5f && !disableSuckButton)
+        if (triggerValue > 0.5f && !disableSuckButton && !machineModeSucking)
         {
             if (!coolingDown && !storageFull)
             {
                 //triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
                 float suckValue = triggerValue * suckPower; 
                 powerText.text = $"{triggerValue}";
-                suckingModeText.text = $"{machineModeSucking}";
                 suckedItemsCountText.text = suckedObjects.Count.ToString();
 
                 Vector3 origin = pivot.transform.position;
@@ -188,7 +188,7 @@ public class SuckingMachineController : MonoBehaviour
 
     void CooldownMechanics()
     {
-        temp += coolingDown? 0 : storageFull? 0 : triggerValue / 10;
+        temp += coolingDown ? 0 : storageFull ? 0 : machineModeSucking ? 0 : triggerValue / 10;
         if (temp > maxOpTemp) coolingDown = true; 
 
 

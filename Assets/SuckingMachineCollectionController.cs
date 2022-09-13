@@ -37,7 +37,7 @@ public class SuckingMachineCollectionController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!suckingMachineController.suckedObjects.Contains(other.gameObject) && other.gameObject.tag == "Suckable" && suckingMachineController.triggerValue > 0.5f && !suckingMachineController.coolingDown && !suckingMachineController.storageFull)
+        if (!suckingMachineController.suckedObjects.Contains(other.gameObject) && other.gameObject.tag == "Suckable" && suckingMachineController.triggerValue > 0.5f && !suckingMachineController.coolingDown && !suckingMachineController.storageFull && !suckingMachineController.machineModeSucking)
         {
             if (other.gameObject.GetComponent<Suckable>().canBeVacuumed)
             {

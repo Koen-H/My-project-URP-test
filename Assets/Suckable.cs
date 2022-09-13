@@ -17,6 +17,8 @@ public class Suckable : MonoBehaviour
     public bool wasAttached = false;
     public bool isHooked = false;
 
+    public Vector3 originalScale;
+
     public Sprite thumbnail;
 
 
@@ -43,6 +45,7 @@ public class Suckable : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody>();
         haptic = Haptic.Instance;
+        originalScale = this.transform.localScale;
 
         sX = Random.Range(0, 10);
         sY = Random.Range(0, 10);

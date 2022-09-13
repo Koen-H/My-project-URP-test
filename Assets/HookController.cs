@@ -23,7 +23,7 @@ public class HookController : MonoBehaviour
     {
         if (!IsAttached() && isShooting)
         {
-            if (other.tag == "Suckable")
+            if (other.tag == "Suckable" || other.tag == "SuckableAnimal")
             {
                 Suckable suckController = other.GetComponent<Suckable>();
                 if (suckController.canBeHooked)
@@ -34,6 +34,17 @@ public class HookController : MonoBehaviour
                     isShooting = false;
                 }
             }
+            /*if (other.tag == "SuckableAnimal")
+            {
+                SuckableAnimal suckController = other.GetComponent<SuckableAnimal>();
+                if (suckController.canBeHooked)
+                {
+                    suckController.isHooked = true;
+                    attachedObj = other.gameObject;
+                    this.transform.parent = attachedObj.transform;
+                    isShooting = false;
+                }
+            }*/
         }
     }
     private void Retrieve()
@@ -64,5 +75,7 @@ public class HookController : MonoBehaviour
         if (attachedObj != null) return true;
         return false;
     }
+
+    
 
 }

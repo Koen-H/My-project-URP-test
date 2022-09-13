@@ -32,7 +32,9 @@ public class Suckable : MonoBehaviour
     public bool isSwooshing = true;
 
 
-    Vector3 oldSwoosh;
+    GameManager gameManager; 
+
+    Vector3 oldSwoosh; 
 
     float sX;
     float sY;
@@ -43,6 +45,7 @@ public class Suckable : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameManager.Instance;
         rigidbody = GetComponent<Rigidbody>();
         haptic = Haptic.Instance;
         originalScale = this.transform.localScale;
@@ -69,7 +72,12 @@ public class Suckable : MonoBehaviour
 
     void DeleteItem()
     {
-        if (transform.position.magnitude > 20) Destroy(this.gameObject);
+
+        if (transform.position.magnitude > 20)
+        {
+            flowDirection = -flowDirection;
+            //Destroy(this.gameObject);
+        }
     }
 
     public void Suck(Vector3 _origin, float _suckPower, SuckingMachineController _suckMachine)

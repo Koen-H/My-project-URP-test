@@ -134,73 +134,83 @@ extern void SuckableAnimal_RelaseRandomTrash_m0CA41EABC550546A7DDC89F2252CAE1D3B
 extern void SuckableAnimal_Saved_m4C27E383DB82ECE1F1FE0D4FA83CA5DCAF8B875B (void);
 // 0x0000003D System.Void SuckableAnimal::Update()
 extern void SuckableAnimal_Update_mF9BFAB030F443D36E858AE0D5DC4A0ED18F5BD18 (void);
-// 0x0000003E System.Void SuckableAnimal::SuckedAnimal()
+// 0x0000003E System.Void SuckableAnimal::OnDeath()
+extern void SuckableAnimal_OnDeath_mA87155595ECE4E9298D52B4E3EB21E164CFED485 (void);
+// 0x0000003F System.Void SuckableAnimal::SuckedAnimal()
 extern void SuckableAnimal_SuckedAnimal_mF5885A507DF61980DED2E35CEA4861FA08C33B44 (void);
-// 0x0000003F System.Void SuckableAnimal::AttachTrash(Suckable)
+// 0x00000040 System.Void SuckableAnimal::AttachTrash(Suckable)
 extern void SuckableAnimal_AttachTrash_m0C00AAE7C8FA8DEFE0663DD3420C1F0703EDE581 (void);
-// 0x00000040 System.Void SuckableAnimal::.ctor()
+// 0x00000041 System.Void SuckableAnimal::.ctor()
 extern void SuckableAnimal__ctor_m4A00218A8763E37CF3967AC3CDDF08C13C2A2729 (void);
-// 0x00000041 System.Void SuckingMachineCollectionController::Start()
+// 0x00000042 System.Void SuckingMachineCollectionController::Start()
 extern void SuckingMachineCollectionController_Start_mB8268FF23825787BBCBF66687E5C473E2ACB57B1 (void);
-// 0x00000042 System.Void SuckingMachineCollectionController::UpdateDisplay(Suckable)
+// 0x00000043 System.Void SuckingMachineCollectionController::UpdateDisplay(Suckable)
 extern void SuckingMachineCollectionController_UpdateDisplay_mAB6603EE65FC88958BF96941804DD5CFAEC40643 (void);
-// 0x00000043 System.Void SuckingMachineCollectionController::OnTriggerEnter(UnityEngine.Collider)
+// 0x00000044 System.Void SuckingMachineCollectionController::OnTriggerEnter(UnityEngine.Collider)
 extern void SuckingMachineCollectionController_OnTriggerEnter_mC9F3365F2F2BB96648495B9E875B6595DB3E2478 (void);
-// 0x00000044 System.Void SuckingMachineCollectionController::.ctor()
+// 0x00000045 System.Void SuckingMachineCollectionController::.ctor()
 extern void SuckingMachineCollectionController__ctor_mFDDEE9CA9FE5D647F692CB2532CC9C3C26C39997 (void);
-// 0x00000045 System.Void SuckingMachineController::Start()
+// 0x00000046 System.Void SuckingMachineController::Start()
 extern void SuckingMachineController_Start_mA645913FDB01B274F50AAB88D3BC9ADBB2CB8A3A (void);
-// 0x00000046 System.Void SuckingMachineController::CalculateBarMult()
+// 0x00000047 System.Void SuckingMachineController::CalculateBarMult()
 extern void SuckingMachineController_CalculateBarMult_m10F935845A2992731C97F145860A3231F9F04CCC (void);
-// 0x00000047 System.Void SuckingMachineController::ChangeTrashItemAmount(System.Single)
+// 0x00000048 System.Void SuckingMachineController::ChangeTrashItemAmount(System.Single)
 extern void SuckingMachineController_ChangeTrashItemAmount_m5FF8F781BFB72D02502A54565676E49B97349058 (void);
-// 0x00000048 System.Void SuckingMachineController::Update()
+// 0x00000049 System.Void SuckingMachineController::Update()
 extern void SuckingMachineController_Update_mE389D74A1159D5405AEC716DF57038C5BABB2DF5 (void);
-// 0x00000049 System.Void SuckingMachineController::UpdateBars()
+// 0x0000004A System.Void SuckingMachineController::UpdateBars()
 extern void SuckingMachineController_UpdateBars_mA0FB7D64952D63B007940ED1AFC703245F4BD09E (void);
-// 0x0000004A System.Void SuckingMachineController::FixedUpdate()
+// 0x0000004B System.Void SuckingMachineController::FixedUpdate()
 extern void SuckingMachineController_FixedUpdate_m7E59043D06577CE273A809CE71F390A3FE747AC1 (void);
-// 0x0000004B System.Void SuckingMachineController::Sucking()
+// 0x0000004C System.Void SuckingMachineController::Sucking()
 extern void SuckingMachineController_Sucking_m7C858319D15D2DB8213F153780110C138C395D8C (void);
-// 0x0000004C System.Void SuckingMachineController::CooldownMechanics()
+// 0x0000004D System.Void SuckingMachineController::CooldownMechanics()
 extern void SuckingMachineController_CooldownMechanics_mCB4DF86803FF5A264CFF8EFE4FA5F406BAD3F2FE (void);
-// 0x0000004D System.Void SuckingMachineController::Shoot()
+// 0x0000004E System.Void SuckingMachineController::Shoot()
 extern void SuckingMachineController_Shoot_m2B89AE7E9056D567BDFC6B829E8311907C963761 (void);
-// 0x0000004E System.Void SuckingMachineController::.ctor()
+// 0x0000004F System.Void SuckingMachineController::.ctor()
 extern void SuckingMachineController__ctor_m3F6175B2B0561D16A00A73809E074A4B87E62B05 (void);
-// 0x0000004F System.Void TrashChute::Start()
+// 0x00000050 System.Void TrashChute::Start()
 extern void TrashChute_Start_mB1C6DF7A24D18E367A016437C38EC6FA0ABA9CF7 (void);
-// 0x00000050 System.Void TrashChute::FixedUpdate()
+// 0x00000051 System.Void TrashChute::FixedUpdate()
 extern void TrashChute_FixedUpdate_m4E565A3ECB919D74127854ED31F8EB9F8DB1ED34 (void);
-// 0x00000051 System.Void TrashChute::EjectItem(UnityEngine.GameObject)
+// 0x00000052 System.Void TrashChute::EjectItem(UnityEngine.GameObject)
 extern void TrashChute_EjectItem_m08653AE78F5A493773EF6475490B10A9D35797BB (void);
-// 0x00000052 System.Void TrashChute::OnTriggerEnter(UnityEngine.Collider)
+// 0x00000053 System.Void TrashChute::OnTriggerEnter(UnityEngine.Collider)
 extern void TrashChute_OnTriggerEnter_mCB7435A69369DA93F6D5CAD0021F0D1001F431C7 (void);
-// 0x00000053 System.Void TrashChute::.ctor()
+// 0x00000054 System.Void TrashChute::.ctor()
 extern void TrashChute__ctor_m87F716017D96CBD6E155F3FCD2D64ED1D36FE96F (void);
-// 0x00000054 System.Void TrashChuteSucking::Start()
+// 0x00000055 System.Void TrashChuteSucking::Start()
 extern void TrashChuteSucking_Start_m44D07C2941993AEC1DDCED75DD5DDB5D7ECC2546 (void);
-// 0x00000055 System.Void TrashChuteSucking::OnTriggerEnter(UnityEngine.Collider)
+// 0x00000056 System.Void TrashChuteSucking::OnTriggerEnter(UnityEngine.Collider)
 extern void TrashChuteSucking_OnTriggerEnter_mC5C08915DA48486BAEDD8546E1EE6594ECD49A20 (void);
-// 0x00000056 System.Void TrashChuteSucking::.ctor()
+// 0x00000057 System.Void TrashChuteSucking::.ctor()
 extern void TrashChuteSucking__ctor_m512288133C83C2EB0EF3419CB2F98165D89E9039 (void);
-// 0x00000057 System.Void TrashGenerator::Start()
+// 0x00000058 System.Void TrashGenerator::Start()
 extern void TrashGenerator_Start_mFA7B31CCD86CF6C68010EE464FCBF5B2DDA0B004 (void);
-// 0x00000058 System.Void TrashGenerator::SpawnItem()
+// 0x00000059 System.Void TrashGenerator::BakeWaveValues()
+extern void TrashGenerator_BakeWaveValues_m6A154874705B82CC42194E53C22D4DB14884D5AB (void);
+// 0x0000005A System.Void TrashGenerator::WaveCalculations()
+extern void TrashGenerator_WaveCalculations_mD871EC404E13229ECDB3BACFD3AACC9AD9EDFBA3 (void);
+// 0x0000005B System.Void TrashGenerator::KeepSpawnRateConsistent()
+extern void TrashGenerator_KeepSpawnRateConsistent_mACC6DC408451FAAD5FEDA24F80F53E4830EA5847 (void);
+// 0x0000005C System.Void TrashGenerator::SpawnItem()
 extern void TrashGenerator_SpawnItem_m01F329A16D1A376794888B96BA5ACF21BB140ECA (void);
-// 0x00000059 UnityEngine.Vector3 TrashGenerator::CalculateSpread(System.Single)
+// 0x0000005D UnityEngine.Vector3 TrashGenerator::CalculateSpread(System.Single)
 extern void TrashGenerator_CalculateSpread_m0C4DB34964AEDAFE7A8D6CE6A7D4584AECE3B12F (void);
-// 0x0000005A System.Void TrashGenerator::FixedUpdate()
+// 0x0000005E System.Void TrashGenerator::FixedUpdate()
 extern void TrashGenerator_FixedUpdate_m04EEDEB186EDB4D6D377B896649159886FDD3F0F (void);
-// 0x0000005B System.Void TrashGenerator::Update()
+// 0x0000005F System.Void TrashGenerator::Update()
 extern void TrashGenerator_Update_m32C29032189BFDD4654EA71A4A6F1A68FF300375 (void);
-// 0x0000005C System.Void TrashGenerator::.ctor()
+// 0x00000060 System.Void TrashGenerator::.ctor()
 extern void TrashGenerator__ctor_m58BF269AEF0865D72D36AA6A76C20108273F9A98 (void);
-// 0x0000005D System.Void Readme::.ctor()
+// 0x00000061 System.Void Readme::.ctor()
 extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
-// 0x0000005E System.Void Readme/Section::.ctor()
+// 0x00000062 System.Void Readme/Section::.ctor()
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
-static Il2CppMethodPointer s_methodPointers[94] = 
+// 0x00000063 System.Void WaveSettings::.ctor(System.Single,System.Single,System.Single)
+extern void WaveSettings__ctor_mA589520FF4E6143CDEAA234573DD571D130F3E0A (void);
+static Il2CppMethodPointer s_methodPointers[99] = 
 {
 	AttachTrashController_Start_mA09A253DC47D1F61F8AC4BB69A0BB56CA491624B,
 	AttachTrashController_OnTriggerEnter_m09E3BE2C334D152DB62283A79A9334FDF6F7661C,
@@ -263,6 +273,7 @@ static Il2CppMethodPointer s_methodPointers[94] =
 	SuckableAnimal_RelaseRandomTrash_m0CA41EABC550546A7DDC89F2252CAE1D3B8F012B,
 	SuckableAnimal_Saved_m4C27E383DB82ECE1F1FE0D4FA83CA5DCAF8B875B,
 	SuckableAnimal_Update_mF9BFAB030F443D36E858AE0D5DC4A0ED18F5BD18,
+	SuckableAnimal_OnDeath_mA87155595ECE4E9298D52B4E3EB21E164CFED485,
 	SuckableAnimal_SuckedAnimal_mF5885A507DF61980DED2E35CEA4861FA08C33B44,
 	SuckableAnimal_AttachTrash_m0C00AAE7C8FA8DEFE0663DD3420C1F0703EDE581,
 	SuckableAnimal__ctor_m4A00218A8763E37CF3967AC3CDDF08C13C2A2729,
@@ -289,6 +300,9 @@ static Il2CppMethodPointer s_methodPointers[94] =
 	TrashChuteSucking_OnTriggerEnter_mC5C08915DA48486BAEDD8546E1EE6594ECD49A20,
 	TrashChuteSucking__ctor_m512288133C83C2EB0EF3419CB2F98165D89E9039,
 	TrashGenerator_Start_mFA7B31CCD86CF6C68010EE464FCBF5B2DDA0B004,
+	TrashGenerator_BakeWaveValues_m6A154874705B82CC42194E53C22D4DB14884D5AB,
+	TrashGenerator_WaveCalculations_mD871EC404E13229ECDB3BACFD3AACC9AD9EDFBA3,
+	TrashGenerator_KeepSpawnRateConsistent_mACC6DC408451FAAD5FEDA24F80F53E4830EA5847,
 	TrashGenerator_SpawnItem_m01F329A16D1A376794888B96BA5ACF21BB140ECA,
 	TrashGenerator_CalculateSpread_m0C4DB34964AEDAFE7A8D6CE6A7D4584AECE3B12F,
 	TrashGenerator_FixedUpdate_m04EEDEB186EDB4D6D377B896649159886FDD3F0F,
@@ -296,112 +310,123 @@ static Il2CppMethodPointer s_methodPointers[94] =
 	TrashGenerator__ctor_m58BF269AEF0865D72D36AA6A76C20108273F9A98,
 	Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6,
 	Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B,
+	WaveSettings__ctor_mA589520FF4E6143CDEAA234573DD571D130F3E0A,
 };
-static const int32_t s_InvokerIndices[94] = 
+extern void WaveSettings__ctor_mA589520FF4E6143CDEAA234573DD571D130F3E0A_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[1] = 
 {
-	6700,
-	5278,
-	6700,
-	12101,
-	6700,
-	6700,
-	6569,
-	5333,
-	6700,
-	5247,
-	6700,
-	6465,
-	6569,
-	6700,
-	6569,
-	6700,
-	5278,
-	6700,
-	6700,
-	6700,
-	6465,
-	6700,
-	6700,
-	6700,
-	6700,
-	6690,
-	6629,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	7134,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	5333,
-	6700,
-	6700,
-	6700,
-	12101,
-	6700,
-	2957,
-	2957,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	1547,
-	6700,
-	6700,
-	2957,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	5278,
-	6700,
-	6700,
-	5278,
-	5278,
-	6700,
-	6700,
-	6700,
-	5333,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
-	5278,
-	5278,
-	6700,
-	6700,
-	5278,
-	6700,
-	6700,
-	6700,
-	4883,
-	6700,
-	6700,
-	6700,
-	6700,
-	6700,
+	{ 0x06000063, WaveSettings__ctor_mA589520FF4E6143CDEAA234573DD571D130F3E0A_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[99] = 
+{
+	6717,
+	5290,
+	6717,
+	12123,
+	6717,
+	6717,
+	6586,
+	5345,
+	6717,
+	5259,
+	6717,
+	6482,
+	6586,
+	6717,
+	6586,
+	6717,
+	5290,
+	6717,
+	6717,
+	6717,
+	6482,
+	6717,
+	6717,
+	6717,
+	6717,
+	6707,
+	6646,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	7152,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	5345,
+	6717,
+	6717,
+	6717,
+	12123,
+	6717,
+	2967,
+	2967,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	1552,
+	6717,
+	6717,
+	2967,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	5290,
+	6717,
+	6717,
+	5290,
+	5290,
+	6717,
+	6717,
+	6717,
+	5345,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	5290,
+	5290,
+	6717,
+	6717,
+	5290,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	4895,
+	6717,
+	6717,
+	6717,
+	6717,
+	6717,
+	1530,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	94,
+	99,
 	s_methodPointers,
-	0,
-	NULL,
+	1,
+	s_adjustorThunks,
 	s_InvokerIndices,
 	0,
 	NULL,

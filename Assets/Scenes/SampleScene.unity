@@ -685,6 +685,9 @@ MonoBehaviour:
   garbageProperty: 0
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -875,6 +878,9 @@ MonoBehaviour:
   garbageProperty: 2
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 21300000, guid: c204cb51770ac66478353f03e1c6a68c, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -4587,6 +4593,9 @@ MonoBehaviour:
   garbageProperty: 0
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 0}
   flowDirection: {x: 0, y: 0, z: 0}
   flowSpeed: 0
@@ -4594,7 +4603,7 @@ MonoBehaviour:
   SwooshIntensity: 0
   SwooshFrequency: 0
   isSwooshing: 1
-  attachedSuckableGarbage:
+  preDefinedGarbageOnPrefab:
   - {fileID: 2025429467}
   - {fileID: 1430947304}
   - {fileID: 1780813130}
@@ -5116,6 +5125,9 @@ MonoBehaviour:
   garbageProperty: 1
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 21300000, guid: b258af4e9a1acac498b0106b2984a6b0, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -5386,6 +5398,9 @@ MonoBehaviour:
   garbageProperty: 0
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -6881,6 +6896,9 @@ MonoBehaviour:
   garbageProperty: 0
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -7705,6 +7723,9 @@ MonoBehaviour:
   garbageProperty: 0
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 21300000, guid: 4d19022779a83054998c70ab7d0ab77c, type: 3}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1
@@ -8433,6 +8454,9 @@ MonoBehaviour:
   garbageProperty: 0
   canBeVacuumed: 1
   canBeSucked: 1
+  canBeHooked: 1
+  wasAttached: 0
+  isHooked: 0
   thumbnail: {fileID: 0}
   flowDirection: {x: 1, y: 0, z: 0}
   flowSpeed: 1

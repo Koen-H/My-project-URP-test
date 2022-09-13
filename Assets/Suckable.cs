@@ -12,8 +12,11 @@ public class Suckable : MonoBehaviour
     Haptic haptic;
     public bool canBeVacuumed = true;
     public bool canBeSucked = true;
+    public bool canBeHooked = true;
+    public bool wasAttached = false;
+    public bool isHooked = false;
 
-    public Sprite thumbnail; 
+    public Sprite thumbnail;
 
 
     public Vector3 flowDirection = Vector3.zero;
@@ -26,7 +29,7 @@ public class Suckable : MonoBehaviour
     public bool isSwooshing = true;
 
 
-    Vector3 oldSwoosh; 
+    Vector3 oldSwoosh;
 
     float sX;
     float sY;
@@ -52,9 +55,9 @@ public class Suckable : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isFlowing) Flow();
+        if (isFlowing) Flow();
 
-        if(isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
+        if (isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
     }
 
 
@@ -81,25 +84,32 @@ public class Suckable : MonoBehaviour
             }
         }
     }
-    
+
     public void Shrink()
     {
+        if (isHooked)
+        {
+            GrapplingHookShoot graplingcon = transform.Find("Hook").GetComponent<HookController>().grapplingHookController;
+            graplingcon.LetGo();
+            graplingcon.hookController.isRetrieving = true;
+        } 
 
         this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * shrinkSpeed;
 
         if (transform.localScale.x < 0.1)
         {
-            GameObject suckedItem = this.gameObject;            
+            GameObject suckedItem = this.gameObject;
             this.gameObject.SetActive(false);
             sucked = false;
-            haptic.SendHapticsRightController(0.25f,0.25f);
+            haptic.SendHapticsRightController(0.25f, 0.25f);
         }
+
     }
 
 
     void Flow()
     {
-        transform.position += oldSwoosh; 
+        transform.position += oldSwoosh;
         rigidbody.AddForce(flowDirection * flowSpeed);
     }
 
@@ -107,25 +117,26 @@ public class Suckable : MonoBehaviour
     void Swooshes(float _intensity = 0, float _frequency = 1)
     {
         _frequency /= 10;
-        _intensity /= 100; 
+        _intensity /= 100;
         sX += Random.Range(0.5f, 1f);
         sY += Random.Range(0.5f, 1f);
         sZ += Random.Range(0.5f, 1f);
 
-        float sinX = _intensity * Mathf.Sin(sX* _frequency);
-        float sinY = _intensity * Mathf.Sin(sY* _frequency);
-        float sinZ = _intensity * Mathf.Sin(sZ* _frequency);
+        float sinX = _intensity * Mathf.Sin(sX * _frequency);
+        float sinY = _intensity * Mathf.Sin(sY * _frequency);
+        float sinZ = _intensity * Mathf.Sin(sZ * _frequency);
 
         Vector3 swoosh = new Vector3(sinX, sinY, sinZ);
 
         oldSwoosh = swoosh;
 
-        rigidbody.AddTorque(swoosh/50);
+        rigidbody.AddTorque(swoosh / 50);
 
-        transform.position -= swoosh; 
+        transform.position -= swoosh;
 
 
     }
+
 
 }
 

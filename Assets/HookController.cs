@@ -11,8 +11,9 @@ public class HookController : MonoBehaviour
     public GameObject attachedObj;
     public float hookPower;
     bool moveParent = true;
+    GameObject raycastHit;
 
-    public float pullBackSpeed = 0.4f; 
+    public float pullBackSpeed = 0.4f;
 
     private void Start()
     {
@@ -22,17 +23,25 @@ public class HookController : MonoBehaviour
     {
         if (!IsAttached() && isShooting)
         {
-            attachedObj = other.gameObject;
-            this.transform.parent = attachedObj.transform;
-            isShooting = false;
+            if (other.tag == "Suckable")
+            {
+                Suckable suckController = other.GetComponent<Suckable>();
+                if (suckController.canBeHooked)
+                {
+                    suckController.isHooked = true;
+                    attachedObj = other.gameObject;
+                    this.transform.parent = attachedObj.transform;
+                    isShooting = false;
+                }
+            }
         }
     }
     private void Retrieve()
     {
         // Using MoveTowards
-        if(!moveParent || !IsAttached()) this.transform.position = Vector3.MoveTowards(transform.position, grapplingHookObj.transform.position, pullBackSpeed);
+        if (!moveParent || !IsAttached()) this.transform.position = Vector3.MoveTowards(transform.position, grapplingHookObj.transform.position, pullBackSpeed);
         else attachedObj.transform.position = Vector3.MoveTowards(attachedObj.transform.position, grapplingHookObj.transform.position, pullBackSpeed);
-        
+
 
         /*if (!moveParent || !IsAttached()) this.transform.position = this.transform.position + (grapplingHookObj.transform.position - transform.position).normalized * (pullBackSpeed/10);
         else attachedObj.transform.position = attachedObj.transform.position + (attachedObj.transform.position - grapplingHookObj.transform.position).normalized * pullBackSpeed;*/
@@ -55,4 +64,5 @@ public class HookController : MonoBehaviour
         if (attachedObj != null) return true;
         return false;
     }
+
 }

@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.116011046, g: 0.18238156, b: 0.31132078, a: 1}
   m_FogMode: 2
   m_FogDensity: 0.29
@@ -683,6 +683,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -876,6 +877,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 2
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -3019,7 +3021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0128993c8e8164f96e8b639f978231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnAngle: {x: 170, y: 370}
+  spawnAngle: {x: 170, y: 360}
   radius: 10.7
   spawnRate: 0.6
   randomHorizontalOffsetRange: {x: -2, y: 2}
@@ -3036,6 +3038,8 @@ MonoBehaviour:
   trashType: 1.06
   trashSwooshIntensity: 8
   trashSwooshFrequency: 0.2
+  maxGameTimeMinute: 1
+  waves: []
 --- !u!33 &845875306
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4591,6 +4595,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -5123,6 +5128,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 1
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -5396,6 +5402,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -6894,6 +6901,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -7721,6 +7729,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -8452,6 +8461,7 @@ MonoBehaviour:
   sucked: 0
   shrinkSpeed: 0.85
   garbageProperty: 0
+  weight: 0
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1

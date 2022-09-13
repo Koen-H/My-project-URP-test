@@ -15,6 +15,8 @@ public class TrashGenerator : MonoBehaviour
     [SerializeField]
     float spawnRate;
 
+    float consistentSpawnRate;
+
     [SerializeField]
     Vector2 randomHorizontalOffsetRange;
 
@@ -54,7 +56,18 @@ public class TrashGenerator : MonoBehaviour
     [SerializeField]
     float trashSwooshFrequency;
 
+    [SerializeField]
+    float maxGameTimeMinute;
+    [SerializeField]
+    List<WaveSettings> waves = new List<WaveSettings>();
+
+    List<float> waveIntensityValues = new List<float>();
+
     float time;
+
+    float t;
+
+    int tW = 1;
 
 
 
@@ -76,7 +89,87 @@ public class TrashGenerator : MonoBehaviour
             item.SetActive(false);
         }
 
+        BakeWaveValues();
 
+    }
+
+    void BakeWaveValues()
+    {
+        maxGameTimeMinute *= 60;
+
+        for (int i = 0; i < maxGameTimeMinute; i++)
+        {
+            float j = 0;
+
+            foreach (WaveSettings wave in waves)
+            {
+                float d = wave.timeSeconds;
+                float s = wave.duration;
+                float a = wave.intesity;
+
+                float k = 360 / s;
+                float h = a / 2;
+
+                float f = h * Mathf.Cos((i - d) * k * Mathf.PI / 180) + h;
+
+                if(i < -s/2 +d || i > s/2+d) f = 0;
+
+                j += f;
+            }
+            waveIntensityValues.Add(j);
+        }
+
+    }
+
+
+/*    void BakeWaveValues()
+    {
+        //maxGameTime *= 60;
+        for (int k = 0; k < maxGameTime; k++)
+        {
+            float i = 0;
+
+            foreach (Vector3 wave in waves)
+            {
+                float d = wave.x;
+                float s = wave.y;
+                float j = 1 / wave.z;
+
+                float bottom = Mathf.Sqrt(Mathf.PI * 2) * j;
+                float main = 1f / bottom;
+                float pTop = Mathf.Pow(k - d,2);
+                float pBottom = Mathf.Pow(j, 2) * 2;
+                float power = -pTop / pBottom;
+                main *= Mathf.Pow(s, power);
+                i += main;
+            }
+                waveIntensityValues.Add(i);
+        }
+        for(int p = 0; p < waveIntensityValues.Count; p++)
+        {
+            Debug.Log(p + " : " + waveIntensityValues[p]);
+        }
+    }*/
+
+    void WaveCalculations()
+    {
+        t += Time.deltaTime;
+
+        if(waves.Count != 0)
+        {
+            if (t > tW && t < maxGameTimeMinute)
+            {
+                spawnRate = waveIntensityValues[tW];
+                Debug.Log("Value logged : " + tW + " : " + waveIntensityValues[tW]);
+                tW++;
+            }
+        }
+    }
+    void KeepSpawnRateConsistent()
+    {
+        float arc = spawnAngle.y - spawnAngle.x;
+
+        consistentSpawnRate = spawnRate * (arc / 360); 
     }
 
     void SpawnItem()
@@ -127,7 +220,10 @@ public class TrashGenerator : MonoBehaviour
 
         time += Time.deltaTime;
 
-        if (time > 1/spawnRate)
+        WaveCalculations();
+        KeepSpawnRateConsistent();
+
+        if (time > 1/ consistentSpawnRate)
         {
             time = 0;
             SpawnItem(); 

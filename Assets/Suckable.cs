@@ -8,6 +8,7 @@ public class Suckable : MonoBehaviour
     public bool sucked;
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
+    public float weight;
     SuckingMachineController suckMachine;
     Haptic haptic;
     public bool canBeVacuumed = true;
@@ -34,6 +35,8 @@ public class Suckable : MonoBehaviour
     float sX;
     float sY;
     float sZ;
+
+
 
 
     private void Start()
@@ -80,6 +83,7 @@ public class Suckable : MonoBehaviour
                     velocity /= direction.magnitude * 3;
                     velocity *= _suckPower;
                     rigidbody.AddForce(velocity);
+                    flowDirection = velocity.normalized;
                 }
             }
         }

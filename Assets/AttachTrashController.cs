@@ -13,8 +13,13 @@ public class AttachTrashController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Suckable") animalController.AttachTrash(other.GetComponent<Suckable>());
-        Debug.Log("test");
+        if (other.tag == "Suckable")
+        {
+            Suckable suckable = other.GetComponent<Suckable>();
+            if(!suckable.wasAttached) animalController.AttachTrash(suckable);
+
+
+        }
 
     }
 }

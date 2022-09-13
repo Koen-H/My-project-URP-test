@@ -213,6 +213,7 @@ public class SuckingMachineController : MonoBehaviour
         
         if (suckedObjects.Count > 0)
         {
+
             GameObject suckedItem = suckedObjects.Last();
             suckedItem.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             suckedItem.transform.rotation = this.transform.rotation;
@@ -222,6 +223,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItemRigidbody.angularVelocity = Vector3.zero;
             suckedItemRigidbody.velocity = (transform.forward * 20);
             Suckable suckedItemSuckable = suckedItem.gameObject.GetComponent<Suckable>();
+            suckedItemSuckable.wasAttached = false;
             suckedItemSuckable.flowDirection = transform.forward;
             suckedItemSuckable.flowSpeed = 1;
             suckedItemSuckable.SwooshIntensity = 0;

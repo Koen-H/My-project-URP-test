@@ -109,7 +109,10 @@ public class GrapplingHookShoot : MonoBehaviour
         if (hookController.IsAttached())
         {
             Vector3 pullVelocity = (hookEndpoint.transform.position - hookObj.transform.position).normalized * (2.75f);
-            hookController.attachedObj.GetComponent<Suckable>().flowDirection = pullVelocity;
+            Suckable suckController = hookController.attachedObj.GetComponent<Suckable>();
+            suckController.flowDirection = pullVelocity;
+            suckController.isHooked = false;
+
         }
         hookObj.transform.parent = null;
         hookController.attachedObj = null;

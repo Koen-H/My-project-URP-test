@@ -18,12 +18,14 @@ public class GameManager : MonoBehaviour
     public float timerInSeconds;
     public TextMeshPro timerText;
     private float timer;
-
+    private float streak = 0;
+    public bool onStreak = true;
+    float streakTimer;
 
     public float cleannessLevel = 100; 
 
     public TextMeshPro trashPointsText;
-    public float trashPoints = 0;
+    public float score = 0;
 
     [SerializeField]
     GameObject cleannessBar;
@@ -40,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(StartTimer());
+        StartCoroutine(StartGameTimer());
         CalculateBarMult();
     }
 
@@ -59,7 +61,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    IEnumerator StartTimer()
+    IEnumerator StartGameTimer()
     {
         timer = 0;
         while (timerInSeconds > timer)
@@ -72,9 +74,26 @@ public class GameManager : MonoBehaviour
         timerText.text = $"The timer is finished";
     }
 
-    public void AddTrashPoints(float _trashPoints)
+    public void AddTrashPoints(float _trashPoints,float streakTime = 0.5f)
     {
-        trashPoints += _trashPoints;
-        trashPointsText.text = $"Trashpoints: {trashPoints}";
+        if (onStreak) streak += _trashPoints;
+        else streak = _trashPoints;
+        score += streak;
+        onStreak = true;
+         trashPointsText.text = $"Trashpoints: {score}";
+        if (0 > streakTimer) StartStreakTimer();
+        else streakTimer += streakTime;
+    }
+
+    IEnumerator StartStreakTimer()
+    {
+        streakTimer = 1.5f;
+        while (0 > streakTimer || onStreak)
+        {
+            streakTimer -= 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        Debug.Log("Streak ended");
+        onStreak = false;
     }
 }

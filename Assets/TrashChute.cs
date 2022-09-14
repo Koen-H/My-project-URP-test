@@ -29,6 +29,7 @@ public class TrashChute : MonoBehaviour
 
     void EjectItem(GameObject item)
     {
+        gameManager.onStreak = false;
         item.gameObject.transform.position = ejectTransform.position;
         Rigidbody itemRigidbody = item.GetComponent<Rigidbody>();
         itemRigidbody.AddForce(ejectTransform.forward * ejectForce);

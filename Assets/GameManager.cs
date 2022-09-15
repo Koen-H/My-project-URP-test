@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public TextMeshPro timerText;
     private float timer;
     private float streak = 0;
+    public float combos;
+    public float perComboValue = 0.25f;
+    public float objective = 10;
     public bool onStreak = true;
     float streakTimer = 0;
 
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float maxCleanness;
 
+    [SerializeField] ScoreController scoreController; 
 
 
     void Awake()
@@ -72,33 +76,39 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("The timer is finished");
         timerText.text = $"The timer is finished";
+        EndGame();
     }
 
     public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
     {
-        if (onStreak) streak += _trashPoints;
-        else streak = _trashPoints;
-        score += streak;
+        score += _trashPoints;
+        if (onStreak) combos++;
+        else streak = 0;
         onStreak = true;
-        trashPointsText.text = $"Trashpoints: {score}";
+        trashPointsText.text = $"CurrentScore: {score}";
         if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
         else streakTimer += _streakTime;
-        Debug.Log(streakTimer);
     }
 
     IEnumerator StartStreakTimer()
     {
         Debug.Log("Streak Timer Started" + onStreak);
         streakTimer = 1.5f;
-        Debug.Log(streakTimer);
         while (streakTimer > 0 )
         {
             streakTimer -= 0.1f;
-            Debug.Log(streakTimer);
             if (!onStreak) break;
             yield return new WaitForSeconds(0.1f);
         }
         Debug.Log("Streak ended");
         onStreak = false;
+    }
+
+    /// <summary>
+    /// Once the timer reaches zero, time's up and end the game.
+    /// </summary>
+    private void EndGame()
+    {
+        scoreController.UpdateScreen();
     }
 }

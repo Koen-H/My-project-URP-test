@@ -43,11 +43,11 @@ public class TrashChute : MonoBehaviour
     {
         if (other.gameObject.tag == "Suckable")
         {
-
-            if (other.gameObject.GetComponent<Suckable>().garbageProperty != garbageProperty) EjectItem(other.gameObject);
+            Suckable suckableContr = other.gameObject.GetComponent<Suckable>();
+            if (suckableContr.garbageProperty != garbageProperty) EjectItem(other.gameObject);
             else
             {
-                gameManager.AddTrashPoints(1);
+                gameManager.AddTrashPoints(suckableContr.trashPointsValue);
                 gameManager.cleannessLevel++;
                 gameManager.UpdateBars();
                 Destroy(other.gameObject);

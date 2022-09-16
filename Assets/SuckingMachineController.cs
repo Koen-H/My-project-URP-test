@@ -273,11 +273,14 @@ public class SuckingMachineController : MonoBehaviour
 
     void UpdateRadiatorMaterial()
     {
-        heatColor.texture.SetPixel(1, 1, Color.Lerp(Color.gray,heatAlbedoColor, temp * tempBarMult));
+        float tempPercentage = temp * tempBarMult;
+        heatColor.texture.SetPixel(1, 1, Color.Lerp(Color.gray,heatAlbedoColor, tempPercentage));
         heatColor.texture.Apply();
 
-        heatEmmision.texture.SetPixel(1, 1, Color.Lerp(Color.black, heatEmmisionColor, temp * tempBarMult));
+        heatEmmision.texture.SetPixel(1, 1, Color.Lerp(Color.black, heatEmmisionColor, tempPercentage));
         heatEmmision.texture.Apply();
+
+        haptic.SendHapticsRightController(tempPercentage,0.1f * Time.deltaTime);
     }
 
 

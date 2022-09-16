@@ -7,12 +7,16 @@ using UnityEngine.UI;
 
 public class HelmetController : MonoBehaviour
 {
+    public Vector3 defaultPosition;
+
     public GameManager gameManager;
     private static HelmetController _instance;
     public TextMeshProUGUI timerText;
     public Slider slider;
     public float objective;
     private float currentTrashpoints = 0;
+    public Camera UICamera;
+    public Vector3 customCameraPosition;
 
     public TextMeshProUGUI objText;
 
@@ -30,13 +34,14 @@ public class HelmetController : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+        
     }
 
 
     void Start()
     {
         gameManager = GameManager.Instance;
-
+        defaultPosition = UICamera.transform.localPosition;
     }
 
     public void SetUpHelmet()

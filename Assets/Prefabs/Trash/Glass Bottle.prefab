@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4988644868391860373
 Transform:
   m_ObjectHideFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4988644868391860372}
-  m_LocalRotation: {x: -0, y: 0.7614233, z: 0, w: -0.6482551}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.9300236, z: -0, w: -0.36749983}
+  m_LocalPosition: {x: -12.325407, y: -1.5928376, z: 2.50414}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -62,8 +62,8 @@ MonoBehaviour:
   isHooked: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
-  flowDirection: {x: 0.86159235, y: -0.029871557, z: -0.43575716}
-  flowSpeed: 2.6643577
+  flowDirection: {x: 0.9757134, y: 0.10112773, z: -0.27200526}
+  flowSpeed: 1.6127635
   isFlowing: 1
   SwooshIntensity: 8
   SwooshFrequency: 0.2

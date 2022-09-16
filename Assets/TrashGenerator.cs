@@ -221,7 +221,7 @@ public class TrashGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //TODO, start within GameStart(); Either change timer or instantiate this prefab.
         time += Time.deltaTime;
 
         WaveCalculations();

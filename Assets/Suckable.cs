@@ -13,6 +13,7 @@ public class Suckable : MonoBehaviour
     public float weight;
     SuckingMachineController suckMachine;
     Haptic haptic;
+    public float trashPointsValue = 1;//This is in pounds, how much should it contribute to the objective?
     public bool canBeVacuumed = true;
     public bool canBeSucked = true;
     public bool canBeHooked = true;

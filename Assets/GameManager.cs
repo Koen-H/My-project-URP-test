@@ -18,19 +18,25 @@ public class GameManager : MonoBehaviour
     public float timerInSeconds;
     public TextMeshPro timerText;
     private float timer;
+    private float streak = 0;
+    public float combos;
+    public float perComboValue = 0.25f;
+    public float objective = 10;
+    public bool onStreak = true;
+    float streakTimer = 0;
 
-
-    public float cleannessLevel = 100; 
+    public float cleannessLevel = 100;
 
     public TextMeshPro trashPointsText;
-    public float trashPoints = 0;
+    public float score = 0;
 
     [SerializeField]
     GameObject cleannessBar;
     float cleannessBarMult;
     [SerializeField]
-    float maxCleanness; 
+    float maxCleanness;
 
+    [SerializeField] ScoreController scoreController; 
 
 
     void Awake()
@@ -40,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(StartTimer());
+        StartCoroutine(StartGameTimer());
         CalculateBarMult();
     }
 
@@ -59,7 +65,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    IEnumerator StartTimer()
+    IEnumerator StartGameTimer()
     {
         timer = 0;
         while (timerInSeconds > timer)
@@ -70,11 +76,39 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("The timer is finished");
         timerText.text = $"The timer is finished";
+        EndGame();
     }
 
-    public void AddTrashPoints(float _trashPoints)
+    public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
     {
-        trashPoints += _trashPoints;
-        trashPointsText.text = $"Trashpoints: {trashPoints}";
+        score += _trashPoints;
+        if (onStreak) combos++;
+        else streak = 0;
+        onStreak = true;
+        trashPointsText.text = $"CurrentScore: {score}";
+        if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
+        else streakTimer += _streakTime;
+    }
+
+    IEnumerator StartStreakTimer()
+    {
+        Debug.Log("Streak Timer Started" + onStreak);
+        streakTimer = 1.5f;
+        while (streakTimer > 0 )
+        {
+            streakTimer -= 0.1f;
+            if (!onStreak) break;
+            yield return new WaitForSeconds(0.1f);
+        }
+        Debug.Log("Streak ended");
+        onStreak = false;
+    }
+
+    /// <summary>
+    /// Once the timer reaches zero, time's up and end the game.
+    /// </summary>
+    private void EndGame()
+    {
+        scoreController.UpdateScreen();
     }
 }

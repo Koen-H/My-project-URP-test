@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2567083380301380278
 Transform:
   m_ObjectHideFlags: 0
@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
   sucked: 0
+  trashChuteSucked: 0
+  trashChute: {fileID: 0}
   shrinkSpeed: 0
   garbageProperty: 1
   weight: 0

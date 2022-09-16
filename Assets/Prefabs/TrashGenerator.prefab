@@ -61,8 +61,12 @@ MonoBehaviour:
   randomVerticalOffsetRange: {x: -2, y: 2}
   randomSpeedRange: {x: 1, y: 3}
   spread: 0.103
-  generalTrash: []
-  plasticTrash: []
+  generalTrash:
+  - {fileID: 1066151225642891563, guid: b179bb66d8151a3479b2ae6e0723296b, type: 3}
+  - {fileID: 6677699901982991062, guid: e8ba4dbcd8420d64599c67043ee750c7, type: 3}
+  - {fileID: 3753672223801308650, guid: 4825d0aed0e733d49944d12cae139bfa, type: 3}
+  plasticTrash:
+  - {fileID: 2567083380301380279, guid: 31ca9cecbe9dfdd4094cbc98750218c0, type: 3}
   wasteTrash:
   - {fileID: 2567083380301380279, guid: 31ca9cecbe9dfdd4094cbc98750218c0, type: 3}
   - {fileID: 4988644868391860372, guid: f5216ddffe8cc9046a08b36818c24362, type: 3}

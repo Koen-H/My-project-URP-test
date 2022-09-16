@@ -6,6 +6,8 @@ public class Suckable : MonoBehaviour
 {
     public Rigidbody rigidbody;
     public bool sucked;
+    public bool trashChuteSucked;
+    public TrashChute trashChute; 
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
     public float weight;
@@ -17,6 +19,8 @@ public class Suckable : MonoBehaviour
     public bool canBeHooked = true;
     public bool wasAttached = false;
     public bool isHooked = false;
+    private float growSpeed;
+    public bool isGrowing;
 
     public Vector3 originalScale;
 
@@ -54,10 +58,10 @@ public class Suckable : MonoBehaviour
         sX = Random.Range(0, 10);
         sY = Random.Range(0, 10);
         sZ = Random.Range(0, 10);
+        growSpeed = 1 - shrinkSpeed + 1;
     }
     private void Update()
     {
-        if (sucked) Shrink();
         DeleteItem();
 
     }
@@ -65,8 +69,11 @@ public class Suckable : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isFlowing) Flow();
 
+        if (isFlowing) Flow();
+        if (sucked) Shrink();
+        if (isGrowing) Grow();
+        if (trashChute != null) ShrinkTrashChute();
         if (isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
     }
 
@@ -119,8 +126,48 @@ public class Suckable : MonoBehaviour
             sucked = false;
             haptic.SendHapticsRightController(0.25f, 0.25f);
         }
-
     }
+    public void Grow()
+    {
+        if (isHooked)
+        {
+            GrapplingHookShoot graplingcon = transform.Find("Hook").GetComponent<HookController>().grapplingHookController;
+            graplingcon.LetGo();
+            graplingcon.hookController.isRetrieving = true;
+        }
+
+        this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * growSpeed ;
+
+        if (transform.localScale.x > 1)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+            isGrowing = false;
+        }
+    }
+
+    void ShrinkTrashChute()
+    {
+        this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * shrinkSpeed;
+
+        if (transform.localScale.x < 0.1)
+        {
+            trashChuteSucked = false;     
+            if(trashChute.garbageProperty != garbageProperty)
+            {
+                trashChute.itemsToEject.Add(this.gameObject);
+                trashChute = null;
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                gameManager.AddTrashPoints(1);
+                gameManager.cleannessLevel++;
+                //gameManager.UpdateBars();
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
 
 
     void Flow()

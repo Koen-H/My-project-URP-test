@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: -2326951979168681049}
   - component: {fileID: 4988644868391860378}
   - component: {fileID: -2165908812397896289}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glass Bottle
-  m_TagString: Untagged
+  m_TagString: Suckable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4988644868391860372}
-  m_LocalRotation: {x: -0, y: 0.8844146, z: -0, w: 0.46670204}
-  m_LocalPosition: {x: 1.2300217, y: -0.15566015, z: 9.163345}
+  m_LocalRotation: {x: -0, y: 0.15090434, z: 0, w: -0.9885484}
+  m_LocalPosition: {x: -7.602319, y: -1.7525637, z: 5.4310503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49,7 +49,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
   sucked: 0
-  shrinkSpeed: 0
+  trashChuteSucked: 0
+  trashChute: {fileID: 0}
+  shrinkSpeed: 0.85
   garbageProperty: 1
   weight: 0
   trashPointsValue: 1
@@ -58,10 +60,11 @@ MonoBehaviour:
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  isGrowing: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
-  flowDirection: {x: -0.1648035, y: 0.027730072, z: -0.91407263}
-  flowSpeed: 1.312787
+  flowDirection: {x: 0.71009356, y: 0.112139046, z: -0.4986779}
+  flowSpeed: 2.3600187
   isFlowing: 1
   SwooshIntensity: 8
   SwooshFrequency: 0.2
@@ -182,6 +185,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GlassBottle-UVMapped
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5067c64d6d95ae44c96b848f0a6dc49a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5067c64d6d95ae44c96b848f0a6dc49a, type: 3}

@@ -7,7 +7,7 @@ public class TrashChute : MonoBehaviour
 
 
     [SerializeField]
-    GarbageProperty garbageProperty;
+    public GarbageProperty garbageProperty;
 
     [SerializeField]
     Transform ejectTransform; 
@@ -15,6 +15,14 @@ public class TrashChute : MonoBehaviour
     [SerializeField]
     float ejectForce;
     GameManager gameManager;
+
+    [SerializeField]
+    float ejectDelay; 
+    float ejectTime;
+
+
+
+    public List<GameObject> itemsToEject = new List<GameObject>();
 
     private void Start()
     {
@@ -27,9 +35,27 @@ public class TrashChute : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if(itemsToEject.Count > 0)
+        {
+            ejectTime += Time.deltaTime;
+            if(ejectTime > ejectDelay)
+            {
+                ejectTime = 0;
+                EjectItem(itemsToEject[0]);
+            }
+        }
+    }
+
+
+
+
     void EjectItem(GameObject item)
     {
         gameManager.onStreak = false;
+        item.SetActive(true);
+        item.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
         item.gameObject.transform.position = ejectTransform.position;
         Rigidbody itemRigidbody = item.GetComponent<Rigidbody>();
         itemRigidbody.AddForce(ejectTransform.forward * ejectForce);
@@ -37,24 +63,22 @@ public class TrashChute : MonoBehaviour
         Suckable itemSuckable = item.gameObject.GetComponent<Suckable>();
         itemSuckable.flowDirection = ejectTransform.forward; 
         itemSuckable.flowSpeed = 1;
+        itemSuckable.isGrowing = true;
+        itemsToEject.Remove(item);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Suckable")
         {
-            Suckable suckableContr = other.gameObject.GetComponent<Suckable>();
-            if (suckableContr.garbageProperty != garbageProperty) EjectItem(other.gameObject);
-            else
-            {
-                gameManager.AddTrashPoints(suckableContr.trashPointsValue);
-                gameManager.cleannessLevel++;
-                gameManager.UpdateBars();
-                Destroy(other.gameObject);
-            }
 
+            Suckable suckable = other.gameObject.GetComponent<Suckable>();
+            suckable.trashChute = this;
         }
     }
-
-
 }
+
+
+/*GameManager gamemanager = GameManager.Instance;
+gamemanager.cleannessLevel++;
+gamemanager.UpdateBars();*/

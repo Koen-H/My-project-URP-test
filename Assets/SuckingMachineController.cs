@@ -12,7 +12,7 @@ public class SuckingMachineController : MonoBehaviour
     public float depth;
     public float angle;
     [SerializeField] float suckPower;
-   // public float suckingTriggerValue;
+    // public float suckingTriggerValue;
     bool disableSuckButton = false;
     public InputActionProperty enableSuck;
     public InputActionProperty suckPowerInput;
@@ -31,6 +31,7 @@ public class SuckingMachineController : MonoBehaviour
     float maxOpTemp;
     [SerializeField]
     GameObject tempBar;
+    [HideInInspector]
     public bool coolingDown;
     float tempBarMult;
     float temp;
@@ -44,24 +45,53 @@ public class SuckingMachineController : MonoBehaviour
     [SerializeField]
     GameObject capacityBar;
     float capacityBarMult;
+    [HideInInspector]
     public float trashItemAmount;
+    [HideInInspector]
     public bool storageFull;
 
 
+    [SerializeField]
+    Color heatAlbedoColor;
+    [SerializeField]
+    Color heatEmmisionColor;
+    [SerializeField]
+    Sprite heatColor;
+    [SerializeField]
+    Sprite heatEmmision;
 
 
+    [SerializeField]
+    GameObject modeArrow;
+    [SerializeField]
+    float modeChangingDelay;
+    bool gunModeChanging;
+    float modeChangingTime;
+    float shootingModeDirection;
+    [Range(0.0f, 1f)]
+    [SerializeField]
+    float arrowSpeed;
+
+
+    [HideInInspector]
     public float triggerValue;
+    [HideInInspector]
     public bool machineModeSucking;
     bool modeButtonBeingPressed;
 
-    bool shooting;
+    [SerializeField]
+    FanController fanController;
 
-    public TextMeshPro powerText;
-    public TextMeshPro suckingModeText;
-    public TextMeshPro suckedItemsCountText;
+    public bool shooting;
+
+    public bool sucking; 
+
+    /*    public TextMeshPro powerText;
+        public TextMeshPro suckingModeText;
+        public TextMeshPro suckedItemsCountText;*/
 
 
-
+    [HideInInspector]
     public List<GameObject> suckedObjects;
 
     private Physics physics;
@@ -70,10 +100,12 @@ public class SuckingMachineController : MonoBehaviour
     {
         haptic = Haptic.Instance;
 
-
-
+        arrowSpeed /= 200;
+        modeChangingDelay /= 10;
 
         CalculateBarMult();
+        UpdateRadiatorMaterial();
+
     }
 
     void CalculateBarMult()
@@ -97,16 +129,27 @@ public class SuckingMachineController : MonoBehaviour
     private void Update()
     {
         triggerValue = shootTriggerInput.action.ReadValue<float>();
-       // suckingTriggerValue = enableSuck.action.ReadValue<float>();
+        // suckingTriggerValue = enableSuck.action.ReadValue<float>();
 
         //Debug.Log("Sucking trigger value : " + triggerValue);
 
 
-        if (suckingMachineModeInput.action.IsPressed() && !modeButtonBeingPressed)
+        if (triggerValue > 0.5f && !disableSuckButton && !machineModeSucking)
+        {
+            if (!coolingDown && !storageFull) sucking = true;
+            else sucking = false;
+        }
+        else sucking = false;
+
+
+        if (suckingMachineModeInput.action.IsPressed() && !modeButtonBeingPressed && !gunModeChanging)
         {
             modeButtonBeingPressed = true;
             machineModeSucking = machineModeSucking ? false : true;
-            suckingModeText.text = $"{machineModeSucking}";
+            ChangeGunMode(machineModeSucking);
+            fanController.machineModeChanging = true;
+            fanController.machineModeSucking = machineModeSucking; 
+            //suckingModeText.text = $"{machineModeSucking}";
         }
         else if (!suckingMachineModeInput.action.IsPressed()) modeButtonBeingPressed = false;
 
@@ -122,6 +165,45 @@ public class SuckingMachineController : MonoBehaviour
 
         UpdateBars();
 
+
+    }
+
+    void ChangeGunMode(bool shooting)
+    {
+        gunModeChanging = true;
+        modeChangingTime = 0;
+        if (shooting)
+        {
+            shootingModeDirection = 180;
+        }
+        else
+        {
+            shootingModeDirection = 0; 
+        }
+    }
+    void ArrowChanging()
+    {
+
+        modeChangingTime += Time.fixedDeltaTime;
+
+
+        if (modeChangingTime > modeChangingDelay / 2 && modeChangingTime < modeChangingDelay)
+        {
+            modeArrow.transform.position += modeArrow.transform.forward * arrowSpeed;
+        }
+        else if (modeChangingTime < modeChangingDelay / 2)
+        {
+            modeArrow.transform.position -= modeArrow.transform.forward * arrowSpeed; 
+        }
+        if(modeChangingTime < modeChangingDelay * 2 - modeChangingDelay / 2 && modeChangingTime > modeChangingDelay / 2)
+        {
+            modeArrow.transform.localRotation = Quaternion.Euler(0, -7, shootingModeDirection);
+        }
+        if (modeChangingTime > modeChangingDelay)
+        {
+            gunModeChanging = false; 
+
+        }
 
     }
 
@@ -141,47 +223,37 @@ public class SuckingMachineController : MonoBehaviour
     void FixedUpdate()
     {
 
-        Sucking();
+        if(sucking) Sucking();
 
         CooldownMechanics();
 
+        if (gunModeChanging) ArrowChanging();
 
     }
 
     void Sucking()
     {
+        float suckValue = triggerValue * suckPower; 
 
-        if (triggerValue > 0.5f && !disableSuckButton && !machineModeSucking)
+        Vector3 origin = pivot.transform.position;
+        RaycastHit[] coneHits = physics.ConeCastAll(origin, radius, transform.forward, depth, angle);
+
+        if (coneHits.Length > 0)
         {
-            if (!coolingDown && !storageFull)
+            for (int i = 0; i < coneHits.Length; i++)
             {
-                //triggerValue = suckPowerInput.action.ReadValue<Vector2>().y;
-                float suckValue = triggerValue * suckPower; 
-                powerText.text = $"{triggerValue}";
-                suckedItemsCountText.text = suckedObjects.Count.ToString();
-
-                Vector3 origin = pivot.transform.position;
-                RaycastHit[] coneHits = physics.ConeCastAll(origin, radius, transform.forward, depth, angle);
-
-                if (coneHits.Length > 0)
+                if (coneHits[i].collider.gameObject.tag == "Suckable")
                 {
-                    for (int i = 0; i < coneHits.Length; i++)
-                    {
-                        if (coneHits[i].collider.gameObject.tag == "Suckable")
-                        {
 
-                            coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin + transform.forward * -0.5f, suckValue, this);
-                        }
-                        else if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
-                        {
+                    coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin + transform.forward * -0.5f, suckValue, this);
+                }
+                else if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
+                {
 
-                            coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
-                        }
-                    }
-
+                    coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
                 }
             }
-        }   
+        }      
     }
 
 
@@ -191,20 +263,24 @@ public class SuckingMachineController : MonoBehaviour
         temp += coolingDown ? 0 : storageFull ? 0 : machineModeSucking ? 0 : triggerValue / 10;
         if (temp > maxOpTemp) coolingDown = true; 
 
-
-
         temp -= 0.05f;
         if(coolingDown) temp -= 0.15f;
-
-       //Debug.Log(charge); 
 
         if(temp < 0)
         {
             coolingDown = false;
             temp = 0; 
         }
+        UpdateRadiatorMaterial();
+    }
 
+    void UpdateRadiatorMaterial()
+    {
+        heatColor.texture.SetPixel(1, 1, Color.Lerp(Color.gray,heatAlbedoColor, temp * tempBarMult));
+        heatColor.texture.Apply();
 
+        heatEmmision.texture.SetPixel(1, 1, Color.Lerp(Color.black, heatEmmisionColor, temp * tempBarMult));
+        heatEmmision.texture.Apply();
     }
 
 

@@ -6,6 +6,8 @@ public class Suckable : MonoBehaviour
 {
     public Rigidbody rigidbody;
     public bool sucked;
+    public bool trashChuteSucked;
+    public TrashChute trashChute; 
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
     public float weight;
@@ -57,7 +59,6 @@ public class Suckable : MonoBehaviour
     }
     private void Update()
     {
-        if (sucked) Shrink();
         DeleteItem();
 
     }
@@ -65,8 +66,10 @@ public class Suckable : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isFlowing) Flow();
 
+        if (isFlowing) Flow();
+        if (sucked) Shrink();
+        if (trashChute != null) ShrinkTrashChute();
         if (isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
     }
 
@@ -119,8 +122,31 @@ public class Suckable : MonoBehaviour
             sucked = false;
             haptic.SendHapticsRightController(0.25f, 0.25f);
         }
-
     }
+
+    void ShrinkTrashChute()
+    {
+        this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * shrinkSpeed;
+
+        if (transform.localScale.x < 0.1)
+        {
+            trashChuteSucked = false;     
+            if(trashChute.garbageProperty != garbageProperty)
+            {
+                trashChute.itemsToEject.Add(this.gameObject);
+                trashChute = null;
+                this.gameObject.SetActive(false);
+            }
+            else
+            {
+                gameManager.AddTrashPoints(1);
+                gameManager.cleannessLevel++;
+                gameManager.UpdateBars();
+                Destroy(this.gameObject);
+            }
+        }
+    }
+
 
 
     void Flow()

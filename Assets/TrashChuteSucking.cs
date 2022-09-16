@@ -23,7 +23,9 @@ public class TrashChuteSucking : MonoBehaviour
     {
         if (other.gameObject.tag == "Suckable")
         {
-            Vector3 suckDirection = -transform.up * suckForce;
+            Vector3 suckDirection = transform.position - other.gameObject.transform.position;
+            suckDirection /= suckDirection.magnitude;
+            suckDirection *= suckForce; 
             other.gameObject.GetComponent<Rigidbody>().AddForce(suckDirection);
             Suckable itemSuckable = other.GetComponent<Suckable>();
             itemSuckable.flowDirection = suckDirection;

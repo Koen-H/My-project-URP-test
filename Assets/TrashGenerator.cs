@@ -196,7 +196,7 @@ public class TrashGenerator : MonoBehaviour
 
         GameManager gamemanager = GameManager.Instance;
         gamemanager.cleannessLevel--;
-        gamemanager.UpdateBars();
+        //gamemanager.UpdateBars();
 
         GameObject newTrashItem = Instantiate(trashItem);
 

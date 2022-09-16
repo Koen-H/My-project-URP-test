@@ -16,19 +16,20 @@ public class GameManager : MonoBehaviour
     }
 
     public float timerInSeconds;
-    public TextMeshPro timerText;
-    private float timer;
+
     private float streak = 0;
     public float combos;
     public float perComboValue = 0.25f;
     public float objective = 10;
     public bool onStreak = true;
     float streakTimer = 0;
+    HelmetController helmetController;
 
     public float cleannessLevel = 100;
 
     public TextMeshPro trashPointsText;
     public float score = 0;
+    public float currentTrashpoints = 0;
 
     [SerializeField]
     GameObject cleannessBar;
@@ -42,12 +43,14 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         _instance = this;
+        Application.runInBackground = true;
     }
 
     private void Start()
     {
-        StartCoroutine(StartGameTimer());
+        
         //CalculateBarMult();
+        helmetController = HelmetController.Instance;
     }
 
 
@@ -65,29 +68,18 @@ public class GameManager : MonoBehaviour
     }
 
 
-    IEnumerator StartGameTimer()
-    {
-        timer = 0;
-        while (timerInSeconds > timer)
-        {
-            timer++;
-            timerText.text = $"Timer: {timer}";
-            yield return new WaitForSeconds(1f);
-        }
-        Debug.Log("The timer is finished");
-        timerText.text = $"The timer is finished";
-        EndGame();
-    }
+
 
     public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
     {
-        score += _trashPoints;
+        currentTrashpoints += _trashPoints;
         if (onStreak) combos++;
         else streak = 0;
         onStreak = true;
-        trashPointsText.text = $"CurrentScore: {score}";
+        trashPointsText.text = $"Current Trashpoints: {currentTrashpoints}";
         if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
         else streakTimer += _streakTime;
+        helmetController.UpdateScoreBar(currentTrashpoints);
     }
 
     IEnumerator StartStreakTimer()
@@ -107,8 +99,14 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Once the timer reaches zero, time's up and end the game.
     /// </summary>
-    private void EndGame()
+    public void EndGame()
     {
         scoreController.UpdateScreen();
+    }
+
+    public void StartGame()
+    {
+        
+        helmetController.SetUpHelmet();
     }
 }

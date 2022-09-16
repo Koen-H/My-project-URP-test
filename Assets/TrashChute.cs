@@ -63,6 +63,7 @@ public class TrashChute : MonoBehaviour
         Suckable itemSuckable = item.gameObject.GetComponent<Suckable>();
         itemSuckable.flowDirection = ejectTransform.forward; 
         itemSuckable.flowSpeed = 1;
+        itemSuckable.isGrowing = true;
         itemsToEject.Remove(item);
     }
 

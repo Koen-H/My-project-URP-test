@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2567083380301380279}
-  m_LocalRotation: {x: -0, y: 0.973327, z: -0, w: -0.22942248}
-  m_LocalPosition: {x: 8.512031, y: 0.22097063, z: 5.0200143}
+  m_LocalRotation: {x: -0, y: 0.683489, z: -0, w: 0.72996086}
+  m_LocalPosition: {x: 10.491029, y: -1.7849786, z: 5.2287736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -52,7 +52,7 @@ MonoBehaviour:
   sucked: 0
   trashChuteSucked: 0
   trashChute: {fileID: 0}
-  shrinkSpeed: 0
+  shrinkSpeed: 0.85
   garbageProperty: 1
   weight: 0
   trashPointsValue: 1
@@ -61,10 +61,11 @@ MonoBehaviour:
   canBeHooked: 1
   wasAttached: 0
   isHooked: 0
+  isGrowing: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
-  flowDirection: {x: -0.79951286, y: -0.006568756, z: -0.49876386}
-  flowSpeed: 2.6044025
+  flowDirection: {x: -0.89187497, y: 0.14786315, z: -0.5023134}
+  flowSpeed: 1.7263091
   isFlowing: 1
   SwooshIntensity: 8
   SwooshFrequency: 0.2
@@ -80,8 +81,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.43209553, y: 0.94477355, z: 0.5969709}
-  m_Center: {x: 0.05801177, y: 0.2657668, z: -0.0061065555}
+  m_Size: {x: 0.14181805, y: 0.34709328, z: 0.20900965}
+  m_Center: {x: 0.02131033, y: 0.18030891, z: 0.0010495186}
 --- !u!65 &2567083380301380273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93,8 +94,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.16340947, y: 0.55422544, z: 0.5763817}
-  m_Center: {x: -0.23510027, y: 0.06411821, z: -0.020695344}
+  m_Size: {x: 0.080246925, y: 0.1910646, z: 0.20231128}
+  m_Center: {x: -0.086158276, y: 0.0968675, z: -0.0005565882}
 --- !u!54 &2305094078960119357
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ca6d6a0a9f6d41640a5df4e179112997,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.174
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca6d6a0a9f6d41640a5df4e179112997,
         type: 3}

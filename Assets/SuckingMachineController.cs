@@ -296,6 +296,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItemRigidbody.angularVelocity = Vector3.zero;
             suckedItemRigidbody.velocity = (transform.forward * 20);
             Suckable suckedItemSuckable = suckedItem.gameObject.GetComponent<Suckable>();
+            suckedItemSuckable.isGrowing = true;
             suckedItemSuckable.wasAttached = false;
             suckedItemSuckable.flowDirection = transform.forward;
             suckedItemSuckable.flowSpeed = 1;

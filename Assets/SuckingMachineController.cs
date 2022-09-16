@@ -30,7 +30,7 @@ public class SuckingMachineController : MonoBehaviour
     [SerializeField]
     float maxOpTemp;
     [SerializeField]
-    GameObject tempBar;
+    //GameObject tempBar;
     [HideInInspector]
     public bool coolingDown;
     float tempBarMult;
@@ -110,7 +110,7 @@ public class SuckingMachineController : MonoBehaviour
 
     void CalculateBarMult()
     {
-        tempBarMult = tempBar.transform.localScale.x / maxOpTemp;
+        tempBarMult = 1 / maxOpTemp;
         temp = 0;
 
         capacityBarMult = capacityBar.transform.localScale.x / maxCapacity;
@@ -209,9 +209,6 @@ public class SuckingMachineController : MonoBehaviour
 
     void UpdateBars()
     {
-        float tempBarX = temp * tempBarMult;
-        tempBar.transform.localScale = new Vector3(tempBarX, tempBar.transform.localScale.y, tempBar.transform.localScale.z); 
-
         float capacityBarX = trashItemAmount * capacityBarMult;
         capacityBar.transform.localScale = new Vector3(capacityBarX, capacityBar.transform.localScale.y, capacityBar.transform.localScale.z);
 
@@ -308,7 +305,7 @@ public class SuckingMachineController : MonoBehaviour
             else collectionController.UpdateDisplay(null);
             GameManager gamemanager = GameManager.Instance;
             gamemanager.cleannessLevel--;
-            gamemanager.UpdateBars();
+            //gamemanager.UpdateBars();
             ChangeTrashItemAmount(-1);
             haptic.SendHapticsRightController(1,0.25f);
         }

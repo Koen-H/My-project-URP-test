@@ -141,7 +141,7 @@ public class Suckable : MonoBehaviour
             {
                 gameManager.AddTrashPoints(1);
                 gameManager.cleannessLevel++;
-                gameManager.UpdateBars();
+                //gameManager.UpdateBars();
                 Destroy(this.gameObject);
             }
         }

@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartGameTimer());
-        CalculateBarMult();
+        //CalculateBarMult();
     }
 
 
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     void CalculateBarMult()
     {
-        cleannessBarMult = cleannessBar.transform.localScale.x / cleannessLevel;
+        cleannessBarMult = 1 / cleannessLevel;
     }
 
     public void UpdateBars()

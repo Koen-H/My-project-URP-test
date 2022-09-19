@@ -388,6 +388,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.228
       objectReference: {fileID: 0}
+    - target: {fileID: 6174294680816291387, guid: 3b16eb1cddf28024f9978e99164ba2f0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.01920773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174294680816291387, guid: 3b16eb1cddf28024f9978e99164ba2f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01920773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174294680816291387, guid: 3b16eb1cddf28024f9978e99164ba2f0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.01920773
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174294680816291387, guid: 3b16eb1cddf28024f9978e99164ba2f0,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6265769699852656359, guid: 3b16eb1cddf28024f9978e99164ba2f0,
         type: 3}
       propertyPath: m_AnchorMax.x

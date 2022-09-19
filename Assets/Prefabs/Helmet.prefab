@@ -153,7 +153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &382684417509522383
 Transform:
   m_ObjectHideFlags: 0
@@ -224,6 +224,7 @@ MonoBehaviour:
   slider: {fileID: 7705540528768503209}
   objective: 0
   UICamera: {fileID: 2184781780187130886}
+  customCameraPosition: {x: 0, y: 0, z: 0}
   objText: {fileID: 7876862305223998117}
   timer: 0
 --- !u!1 &1277925796462718926

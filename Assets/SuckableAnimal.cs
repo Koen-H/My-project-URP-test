@@ -69,37 +69,42 @@ public class SuckableAnimal : Suckable
 
     private void Update()
     {
-        if (!isDead)
+        if (Time.timeScale != 0)
         {
-            distanceToPlayer = Vector3.Distance(this.gameObject.transform.position, playerObj.transform.position);
-            if (stayWithinPlayerRange)
+
+
+            if (!isDead)
             {
-                if (distanceToPlayer > maxPlayerRange && !isRotating)
+                distanceToPlayer = Vector3.Distance(this.gameObject.transform.position, playerObj.transform.position);
+                if (stayWithinPlayerRange)
                 {
-                    isRotating = true;
-                    targetAngle = Random.Range(20, 60);
+                    if (distanceToPlayer > maxPlayerRange && !isRotating)
+                    {
+                        isRotating = true;
+                        targetAngle = Random.Range(20, 60);
+                    }
+                }
+                rigidbody.AddForce(transform.forward * swimSpeed);
+                if (isRotating)
+                {
+                    float angleBetween = Vector3.Angle(transform.forward, playerObj.transform.position - transform.position);
+                    if (angleBetween > targetAngle)
+                    {
+                        //Debug.Log($"Rotating with targetAngel {targetAngle} and anglebetween {angleBetween}");
+                        transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, playerObj.transform.position - transform.position, 1f * Time.deltaTime, 0.0f));
+                    }
+                    else
+                    {
+                        isRotating = false;
+                    }
                 }
             }
-            rigidbody.AddForce(transform.forward * swimSpeed);
-            if (isRotating)
+            else
             {
-                float angleBetween = Vector3.Angle(transform.forward, playerObj.transform.position - transform.position);
-                if (angleBetween > targetAngle)
-                {
-                    //Debug.Log($"Rotating with targetAngel {targetAngle} and anglebetween {angleBetween}");
-                    transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(transform.forward, playerObj.transform.position - transform.position, 1f * Time.deltaTime, 0.0f));
-                }
-                else
-                {
-                    isRotating = false;
-                }
+                //If it's dead, make it go to the bottom of the ocean.
+                rigidbody.AddForce((-transform.up) * 0.2f);
+
             }
-        }
-        else
-        {
-            //If it's dead, make it go to the bottom of the ocean.
-            rigidbody.AddForce((-transform.up) * 0.2f);
-            
         }
     }
 

@@ -162,6 +162,7 @@ public class Suckable : MonoBehaviour
             {
                 gameManager.AddTrashPoints(1);
                 gameManager.cleannessLevel++;
+                trashChute.streakDisplay.text = $"Streak {gameManager.combos}";
                 //gameManager.UpdateBars();
                 Destroy(this.gameObject);
             }

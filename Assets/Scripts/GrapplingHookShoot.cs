@@ -16,16 +16,22 @@ public class GrapplingHookShoot : MonoBehaviour
 
     public GameObject hookObj;
     public GameObject hookEndpoint;
+
+    public AudioSource audioSource;
+    [SerializeField] AudioClip hookShootSound;
+    [SerializeField] public AudioClip hookAttachSound;
+
     private void Start()
     {
         haptic = Haptic.Instance;
         lineRenderer = this.GetComponent<LineRenderer>();
         hookController = hookObj.GetComponent<HookController>();
-
+        audioSource = new AudioSource();
     }
 
     private void Shoot()
     {
+        audioSource.PlayOneShot(hookShootSound);
         isShot = true;
         haptic.SendHapticsLeftController(0.5f,0.5f);
         hookObj.transform.parent = null;

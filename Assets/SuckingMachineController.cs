@@ -114,9 +114,16 @@ public class SuckingMachineController : MonoBehaviour
 
     bool storageEmpty;
 
-    
+    //These needs some special threatment 
+    [SerializeField] AudioSource audioSourceSucking;
+    [SerializeField] AudioClip suckingSound;
 
-
+    AudioSource audioSource;
+    [SerializeField] AudioClip trashEnterSound;
+    [SerializeField] AudioClip trashFullSound;
+    [SerializeField] AudioClip overHeatSound;
+    [SerializeField] AudioClip trashShootSound;
+    [SerializeField] AudioClip switchModeSound; 
 
 
 
@@ -132,8 +139,9 @@ public class SuckingMachineController : MonoBehaviour
 
     private void Start()
     {
-        haptic = Haptic.Instance;
 
+        audioSource = new AudioSource();
+        haptic = Haptic.Instance;
         arrowSpeed /= 200;
         modeChangingDelay /= 10;
 
@@ -156,7 +164,7 @@ public class SuckingMachineController : MonoBehaviour
 
     }
 
-    public void ChangeTrashItemAmount(float amount)
+    public void ChangeTrashItemAmount(float amount, bool isAdding = false)
     {
         trashItemAmount += amount;
         if (trashItemAmount < 0) trashItemAmount = 0;
@@ -164,9 +172,12 @@ public class SuckingMachineController : MonoBehaviour
         {
             storageFull = true;
             spriteRenderer.sprite = warningCapacity;
+            audioSource.PlayOneShot(trashFullSound);
+
         }
         else
         {
+            if(isAdding) audioSource.PlayOneShot(trashEnterSound);
             storageFull = false;
         }
 
@@ -217,6 +228,7 @@ public class SuckingMachineController : MonoBehaviour
     void ChangeGunMode(bool shooting)
     {
         gunModeChanging = true;
+        audioSource.PlayOneShot(switchModeSound);
         modeChangingTime = 0;
         if (shooting)
         {
@@ -347,6 +359,7 @@ public class SuckingMachineController : MonoBehaviour
         {
             coolingDown = true;
             spriteRenderer.sprite = warningOverheating;
+            audioSource.PlayOneShot(overHeatSound);
         }
 
         temp -= 0.05f;
@@ -378,7 +391,7 @@ public class SuckingMachineController : MonoBehaviour
         
         if (suckedObjects.Count > 0)
         {
-
+            audioSource.PlayOneShot(trashShootSound);
             GameObject suckedItem = suckedObjects.Last();
             suckedItem.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             suckedItem.transform.rotation = this.transform.rotation;
@@ -412,5 +425,10 @@ public class SuckingMachineController : MonoBehaviour
             ChangeTrashItemAmount(-1);
             haptic.SendHapticsRightController(1,0.25f);
         }
+        else
+        {
+            audioSource.PlayOneShot(trashFullSound);
+        }
+        
     }
 }

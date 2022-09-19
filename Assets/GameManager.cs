@@ -49,9 +49,14 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
 
+    AudioSource backgroundMusic;
+
+    AudioSource streakAudioSource;
+    [SerializeField] List<AudioClip> streakAudioClips;
 
     void Awake()
     {
+        backgroundMusic = this.GetComponent<AudioSource>();
         _instance = this;
         Application.runInBackground = true;
     }

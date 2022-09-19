@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TrashChute : MonoBehaviour
@@ -20,6 +21,8 @@ public class TrashChute : MonoBehaviour
     float ejectDelay; 
     float ejectTime;
 
+    
+    public TextMeshPro streakDisplay;
 
 
     public List<GameObject> itemsToEject = new List<GameObject>();
@@ -70,7 +73,7 @@ public class TrashChute : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Suckable")
-        {
+        { 
 
             Suckable suckable = other.gameObject.GetComponent<Suckable>();
             suckable.trashChute = this;

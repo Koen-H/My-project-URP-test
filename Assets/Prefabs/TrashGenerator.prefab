@@ -66,7 +66,9 @@ MonoBehaviour:
   - {fileID: 6677699901982991062, guid: e8ba4dbcd8420d64599c67043ee750c7, type: 3}
   - {fileID: 3753672223801308650, guid: 4825d0aed0e733d49944d12cae139bfa, type: 3}
   plasticTrash:
-  - {fileID: 2567083380301380279, guid: 31ca9cecbe9dfdd4094cbc98750218c0, type: 3}
+  - {fileID: 6438184336156033609, guid: 312f650b29fe6c143a385b7f453da483, type: 3}
+  - {fileID: 16210832999405898, guid: 2c4e96668ef8b574bb18eb13cf91278a, type: 3}
+  - {fileID: 3408786753838123360, guid: ed02967a51cf3d24882c4a27d4e554c8, type: 3}
   wasteTrash:
   - {fileID: 2567083380301380279, guid: 31ca9cecbe9dfdd4094cbc98750218c0, type: 3}
   - {fileID: 4988644868391860372, guid: f5216ddffe8cc9046a08b36818c24362, type: 3}

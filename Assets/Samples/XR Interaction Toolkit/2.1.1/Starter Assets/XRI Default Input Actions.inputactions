@@ -278,6 +278,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Menu Button",
+                    "type": "Button",
+                    "id": "c9a67bd3-bdef-4430-97f0-2e585e2a1849",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "X Button",
+                    "type": "Button",
+                    "id": "7d6c1395-6945-41c6-9f3b-7602f37a28bb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -366,6 +384,28 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "Generic XR Controller",
                     "action": "Translate Anchor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54b1f2b8-50f7-4bab-8bc7-0d4f73df3158",
+                    "path": "<XRController>{LeftHand}/menu",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Menu Button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbd50ed0-7465-4443-a848-851cba6f5122",
+                    "path": "<OculusTouchController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "X Button",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -811,7 +851,7 @@
                 {
                     "name": "",
                     "id": "7b9e2bd0-39fa-40ad-94e5-2a0393dd0db3",
-                    "path": "<OculusTouchController>/primaryButton",
+                    "path": "<OculusTouchController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

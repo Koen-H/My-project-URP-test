@@ -369,8 +369,7 @@ public class SuckingMachineController : MonoBehaviour
         heatEmmision.texture.SetPixel(1, 1, Color.Lerp(Color.black, heatEmmisionColor, tempPercentage));
         heatEmmision.texture.Apply();
 
-
-        haptic.SendHapticsRightController(tempPercentage,0.1f * Time.deltaTime);
+        haptic.SendHapticsRightController(tempPercentage/2,0.1f * Time.deltaTime);
     }
 
 

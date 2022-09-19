@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
         if (onStreak) combos++;
         else streak = 0;
         onStreak = true;
-        trashPointsText.text = $"Current Trashpoints: {currentTrashpoints}";
         if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
         else streakTimer += _streakTime;
         helmetController.UpdateScoreBar(currentTrashpoints);

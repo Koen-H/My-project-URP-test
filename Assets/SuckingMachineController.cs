@@ -44,6 +44,8 @@ public class SuckingMachineController : MonoBehaviour
     float maxCapacity;
     [SerializeField]
     GameObject capacityBar;
+    [SerializeField]
+    Material capacityMaterial;
     float capacityBarMult;
     [HideInInspector]
     public float trashItemAmount;
@@ -84,7 +86,39 @@ public class SuckingMachineController : MonoBehaviour
 
     public bool shooting;
 
-    public bool sucking; 
+    public bool sucking;
+
+
+    [SerializeField]
+    float warningFrequency;
+    float warningValue;
+    float warningDirection = 1;
+    float warningAlphaMult;
+    [SerializeField]
+    Material warningMaterial;
+    [SerializeField]
+    Sprite warningAplha;
+    [SerializeField]
+    Sprite warningOverheating;
+    [SerializeField]
+    Sprite warningCapacity;
+    [SerializeField]
+    Sprite warningEmpty;
+    bool warningActive;
+    string warningType;
+    [SerializeField]
+    SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    Color colorTest;
+
+    bool storageEmpty;
+
+    
+
+
+
+
 
     /*    public TextMeshPro powerText;
         public TextMeshPro suckingModeText;
@@ -105,6 +139,7 @@ public class SuckingMachineController : MonoBehaviour
 
         CalculateBarMult();
         UpdateRadiatorMaterial();
+        warningActive = true;
 
     }
 
@@ -114,15 +149,26 @@ public class SuckingMachineController : MonoBehaviour
         temp = 0;
 
         capacityBarMult = capacityBar.transform.localScale.x / maxCapacity;
-        trashItemAmount = 0; 
+        trashItemAmount = 0;
+
+        warningAlphaMult = 1 / warningFrequency; 
+        warningValue = 0;
+
     }
 
     public void ChangeTrashItemAmount(float amount)
     {
-        trashItemAmount += amount; 
+        trashItemAmount += amount;
         if (trashItemAmount < 0) trashItemAmount = 0;
-        if (trashItemAmount > maxCapacity) storageFull = true;
-        else storageFull = false;
+        if (trashItemAmount > maxCapacity)
+        {
+            storageFull = true;
+            spriteRenderer.sprite = warningCapacity;
+        }
+        else
+        {
+            storageFull = false;
+        }
 
     }
 
@@ -206,15 +252,51 @@ public class SuckingMachineController : MonoBehaviour
         }
 
     }
+    
 
     void UpdateBars()
     {
         float capacityBarX = trashItemAmount * capacityBarMult;
         capacityBar.transform.localScale = new Vector3(capacityBarX, capacityBar.transform.localScale.y, capacityBar.transform.localScale.z);
 
-
-
+        Color rgb = Color.Lerp(Color.green, Color.red, capacityBarX/100);
+        capacityMaterial.color = rgb;
     }
+    void CheckWarning()
+    {
+        if (storageFull || coolingDown) warningActive = true;
+        if (storageEmpty && !coolingDown) spriteRenderer.sprite = warningEmpty;
+
+
+        if (suckedObjects.Count > 0 && !storageFull && !coolingDown)
+        {
+            warningActive = false;
+            spriteRenderer.color = new Color(1, 1, 1, 0);
+            warningValue = 0;
+        }
+    }
+
+    void WarningBlinking()
+    {
+        warningValue += Time.fixedDeltaTime * warningDirection;
+
+
+        if(warningValue > warningFrequency)
+        {
+            warningDirection *= -1; 
+            warningValue = warningFrequency;
+        }
+        if (warningValue < -warningFrequency)
+        {
+            warningDirection *= -1;
+            warningValue = -warningFrequency;
+        }
+        float alpha = warningValue * warningAlphaMult * warningDirection;
+        spriteRenderer.color += new Color(0, 0, 0, alpha);
+        
+    }
+
+
 
 
     void FixedUpdate()
@@ -225,6 +307,9 @@ public class SuckingMachineController : MonoBehaviour
         CooldownMechanics();
 
         if (gunModeChanging) ArrowChanging();
+
+        CheckWarning();
+        if (warningActive) WarningBlinking();
 
     }
 
@@ -258,7 +343,11 @@ public class SuckingMachineController : MonoBehaviour
     void CooldownMechanics()
     {
         temp += coolingDown ? 0 : storageFull ? 0 : machineModeSucking ? 0 : triggerValue / 10;
-        if (temp > maxOpTemp) coolingDown = true; 
+        if (temp > maxOpTemp)
+        {
+            coolingDown = true;
+            spriteRenderer.sprite = warningOverheating;
+        }
 
         temp -= 0.05f;
         if(coolingDown) temp -= 0.15f;
@@ -279,6 +368,7 @@ public class SuckingMachineController : MonoBehaviour
 
         heatEmmision.texture.SetPixel(1, 1, Color.Lerp(Color.black, heatEmmisionColor, tempPercentage));
         heatEmmision.texture.Apply();
+
 
         haptic.SendHapticsRightController(tempPercentage,0.1f * Time.deltaTime);
     }
@@ -305,8 +395,18 @@ public class SuckingMachineController : MonoBehaviour
             suckedItemSuckable.flowSpeed = 1;
             suckedItemSuckable.SwooshIntensity = 0;
             suckedObjects.Remove(suckedItem);
-            if(suckedObjects.Count > 0) collectionController.UpdateDisplay(suckedObjects.Last().GetComponent<Suckable>());
-            else collectionController.UpdateDisplay(null);
+            if (suckedObjects.Count > 0)
+            { 
+                collectionController.UpdateDisplay(suckedObjects.Last().GetComponent<Suckable>());
+                storageEmpty = false;
+            }
+            else
+            {
+                collectionController.UpdateDisplay(null, null);
+                warningActive = true;
+                spriteRenderer.sprite = warningEmpty;
+                storageEmpty = true;
+            }
             GameManager gamemanager = GameManager.Instance;
             gamemanager.cleannessLevel--;
             //gamemanager.UpdateBars();

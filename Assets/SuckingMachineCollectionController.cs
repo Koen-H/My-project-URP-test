@@ -11,6 +11,9 @@ public class SuckingMachineCollectionController : MonoBehaviour
     SpriteRenderer display;
 
     [SerializeField]
+    SpriteRenderer secondDisplay; 
+
+    [SerializeField]
     Sprite emptySprite;
 
     [SerializeField]
@@ -25,11 +28,22 @@ public class SuckingMachineCollectionController : MonoBehaviour
     }
 
 
-    public void UpdateDisplay(Suckable item)
+    public void UpdateDisplay(Suckable item, Suckable item2 = null)
     {
+        item2 = suckingMachineController.suckedObjects.Count > 1 ? suckingMachineController.suckedObjects[suckingMachineController.suckedObjects.Count - 2].GetComponent<Suckable>() : null;
+
         if (item != null)
         {
-            if(item.thumbnail != null) display.sprite = item.thumbnail;
+            if (item.thumbnail != null)
+            {
+                display.sprite = item.thumbnail;
+                if(item2 != null)
+                {
+                    if (item2.thumbnail != null) secondDisplay.sprite = item2.thumbnail;
+                    else secondDisplay.sprite = notFound;
+                }
+                else secondDisplay.sprite = emptySprite;
+            }
             else display.sprite = notFound;
         }
         else display.sprite = emptySprite;
@@ -41,15 +55,14 @@ public class SuckingMachineCollectionController : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Suckable>().canBeVacuumed)
             {
-            Debug.Log("Object SHould be sucked " + other.gameObject.name);
-            Suckable suckable = other.gameObject.GetComponent<Suckable>();
-            suckable.sucked = true;
-            UpdateDisplay(suckable);
+                Debug.Log("Object SHould be sucked " + other.gameObject.name);
+                Suckable suckable = other.gameObject.GetComponent<Suckable>();
+                suckable.sucked = true;
                 GameManager gamemanager = GameManager.Instance;
                 gamemanager.cleannessLevel++;
-                //gamemanager.UpdateBars(); 
-            suckingMachineController.suckedObjects.Add(other.gameObject);
-            suckingMachineController.ChangeTrashItemAmount(1);
+                suckingMachineController.suckedObjects.Add(other.gameObject);
+                suckingMachineController.ChangeTrashItemAmount(1);
+                UpdateDisplay(suckable);
             }
         }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using Newtonsoft.Json;
 
 public class GameManager : MonoBehaviour
 {
@@ -48,8 +49,9 @@ public class GameManager : MonoBehaviour
     InputActionProperty menuButton;
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
+    [SerializeField] GameObject mainMenu;
 
-    AudioSource backgroundMusic;
+    [SerializeField] AudioSource backgroundMusic;
 
     AudioSource streakAudioSource;
     [SerializeField] List<AudioClip> streakAudioClips;
@@ -145,7 +147,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
-        scoreController.UpdateScreen();
+        helmetController.LoadEndOfGame();
+        mainMenu.SetActive(true);
+        ToggleTools(false);
     }
 
     public void StartGame()
@@ -182,7 +186,9 @@ public class GameManager : MonoBehaviour
     private void PlayComboSoundEffect()
     {
         int listIndex = combos - 2; //Rmove 2 because
-        if(listIndex !<= 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
+        if(listIndex > 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
 
     }
+
+
 }

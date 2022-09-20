@@ -119,9 +119,9 @@ public class SuckingMachineController : MonoBehaviour
     [SerializeField] AudioClip suckingSound;
 
     float recoilValue;
-    float recoilRotation; 
+    float recoilRotation;
 
-    
+    [SerializeField] TextMeshPro togglePopup;
 
 
     AudioSource audioSource;
@@ -146,7 +146,7 @@ public class SuckingMachineController : MonoBehaviour
     private void Start()
     {
 
-        audioSource = new AudioSource();
+        audioSource = gameObject.AddComponent<AudioSource>();
         haptic = Haptic.Instance;
         arrowSpeed /= 200;
         modeChangingDelay /= 10;
@@ -154,6 +154,7 @@ public class SuckingMachineController : MonoBehaviour
         CalculateBarMult();
         UpdateRadiatorMaterial();
         warningActive = true;
+        togglePopup.gameObject.SetActive(false);
 
     }
 
@@ -177,13 +178,15 @@ public class SuckingMachineController : MonoBehaviour
         if (trashItemAmount > maxCapacity)
         {
             storageFull = true;
+            togglePopup.gameObject.SetActive(true);
             spriteRenderer.sprite = warningCapacity;
             audioSource.PlayOneShot(trashFullSound);
 
         }
         else
         {
-            if(isAdding) audioSource.PlayOneShot(trashEnterSound);
+            togglePopup.gameObject.SetActive(false);
+            if (isAdding) audioSource.PlayOneShot(trashEnterSound);
             storageFull = false;
         }
 

@@ -225,6 +225,7 @@ MonoBehaviour:
   objective: 0
   UICamera: {fileID: 2184781780187130886}
   customCameraPosition: {x: 0, y: 0, z: 0}
+  scoreController: {fileID: 9030398355856223938}
   objText: {fileID: 7468246515355585863}
   timer: 0
 --- !u!1 &1339859258017111498

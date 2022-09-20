@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,8 @@ public class HelmetController : MonoBehaviour
     private float currentTrashpoints = 0;
     public Camera UICamera;
     public Vector3 customCameraPosition;
+
+    [SerializeField] ScoreController scoreController;
 
     public TextMeshProUGUI objText;
 
@@ -51,6 +54,7 @@ public class HelmetController : MonoBehaviour
         slider.value = 0;
         objText.text = $"{currentTrashpoints} / {objective} lbs";
         StartCoroutine(StartGameTimer(gameManager.timerInSeconds));
+        scoreController.gameObject.SetActive(false);
     }
 
     public void UpdateScoreBar(float _currentTrashpoints)
@@ -59,6 +63,17 @@ public class HelmetController : MonoBehaviour
         slider.value = currentTrashpoints;
         objText.text = $"{currentTrashpoints} / {objective} lbs";
     }
+    
+    public void LoadEndOfGame()
+    {
+        scoreController.gameObject.SetActive(true);
+        scoreController.UpdateScreen();
+       
+
+    }
+
+    
+
 
     IEnumerator StartGameTimer(float _timer)
     {

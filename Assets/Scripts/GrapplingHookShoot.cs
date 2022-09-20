@@ -26,7 +26,7 @@ public class GrapplingHookShoot : MonoBehaviour
         haptic = Haptic.Instance;
         lineRenderer = this.GetComponent<LineRenderer>();
         hookController = hookObj.GetComponent<HookController>();
-        audioSource = new AudioSource();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     private void Shoot()

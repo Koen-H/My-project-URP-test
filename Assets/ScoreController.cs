@@ -14,7 +14,7 @@ public class ScoreController : MonoBehaviour
     [SerializeField] TextMeshProUGUI comboValueText;
     [SerializeField] TextMeshProUGUI extraFromLevelValueText;
     [SerializeField] TextMeshProUGUI totalValueText;
-    GameManager gameManager;
+    [SerializeField] GameManager gameManager;
 
 
     private void Start()
@@ -25,10 +25,13 @@ public class ScoreController : MonoBehaviour
 
     public void UpdateScreen()
     {
-        objectiveValueText.text = $"{gameManager.objective}lbs";
+        gameManager = GameManager.Instance;
+        float objective = gameManager.objective;
+        Debug.Log("Objective"+ objective);
+        objectiveValueText.text = $"{objective}lbs";
         comboValueText.text = $"{gameManager.combos * gameManager.perComboValue}$";
-        extraFromLevelValueText.text = $"{gameManager.score - gameManager.objective}$";
-        totalValueText.text = $"{gameManager.objective + (gameManager.combos * gameManager.perComboValue) + (gameManager.score - gameManager.objective)}$";
+        extraFromLevelValueText.text = $"{gameManager.score - objective}$";
+        totalValueText.text = $"{objective + (gameManager.combos * gameManager.perComboValue) + (gameManager.score - objective)}$";
     }
 
 }

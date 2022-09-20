@@ -22,10 +22,14 @@ public class SuckableAnimal : Suckable
     float targetAngle;
     bool isDead = false;
 
+    AudioSource audioSource;
+    [SerializeField] AudioClip turtleHit;
+    [SerializeField] AudioClip turtleDie;
 
 
     public void Start()
     {
+        audioSource = gameObject.AddComponent<AudioSource>();
         attachedGarbage = new List<Suckable>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
         rigidbody = GetComponent<Rigidbody>();
@@ -117,6 +121,7 @@ public class SuckableAnimal : Suckable
         GetComponent<Collider>().isTrigger = false;
         attachCollider.enabled = false;
         gameObject.layer = LayerMask.NameToLayer("Trash");
+        audioSource.PlayOneShot(turtleDie);
     }
 
     public void SuckedAnimal()
@@ -135,6 +140,7 @@ public class SuckableAnimal : Suckable
 
     public void AttachTrash(Suckable attachedGarbageObj)
     {
+        
         attachedGarbage.Add(attachedGarbageObj);
         isSaved = false;
         attachedGarbageObj.transform.parent = this.transform;
@@ -147,6 +153,7 @@ public class SuckableAnimal : Suckable
         attachedGarbageObj.GetComponent<Collider>().enabled = false;
         attachedGarbageObj.GetComponent<Rigidbody>().isKinematic = true;
         if (maxTrashAllowed < attachedGarbage.Count) OnDeath();
+        else audioSource.PlayOneShot(turtleHit);
     }
 
 

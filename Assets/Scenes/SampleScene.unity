@@ -1643,18 +1643,20 @@ MonoBehaviour:
     m_Reference: {fileID: 6833234262336112822, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   isPaused: 0
-  pauseMenu: {fileID: 511243237}
+  pauseMenu: {fileID: 1627685613}
+  mainMenu: {fileID: 944546077}
+  backgroundMusic: {fileID: 0}
+  streakAudioClips: []
   lightingSettings: {fileID: 0}
   cleanWater: {r: 0.050980397, g: 0.3529412, b: 0.50980395, a: 0}
   dirtyWater: {r: 0.32941177, g: 0.3137255, b: 0, a: 0}
   cleanDensity: 0.05
   dirtyDensity: 0.3
   globalVolume: {fileID: 832575518}
-  colorCurve: {fileID: 0}
   cMaster: {x: 0.467, y: 0.632}
   dMaster: {x: 0.467, y: 0.12}
-  cBlue: {x: 0, y: 0}
-  dBlue: {x: 0, y: 0}
+  cBlue: {x: 0.376, y: 0.883}
+  dBlue: {x: 0.376, y: 0.13}
 --- !u!4 &1918523784
 Transform:
   m_ObjectHideFlags: 0

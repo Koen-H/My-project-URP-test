@@ -148,12 +148,14 @@ public class GameManager : MonoBehaviour
 
     void CleannessEffect()
     {
+        Debug.Log("thisworks");
         float t = cleannessLevel * cleannessBarMult;
         RenderSettings.fogDensity = Mathf.Lerp(dirtyDensity, cleanDensity, t);
         RenderSettings.fogColor = Color.Lerp(dirtyWater, cleanWater, t);
         Vector2 masterVector = Vector2.Lerp(dMaster, cMaster, t);
         Vector2 blueVector = Vector2.Lerp(dMaster, cMaster, t);
         Vector2 bounds = new Vector2(1, 1);
+        Debug.Log(blueVector);
         TextureCurve masterCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(masterVector.x, masterVector.y, 1f,1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(masterCurve);
 

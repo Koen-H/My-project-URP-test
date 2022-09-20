@@ -994,6 +994,9 @@ MonoBehaviour:
   letGoDistance: 2.2
   hookObj: {fileID: 5223141760587908040}
   hookEndpoint: {fileID: 5223141761433549052}
+  audioSource: {fileID: 0}
+  hookShootSound: {fileID: 0}
+  hookAttachSound: {fileID: 0}
 --- !u!120 &5223141761099512618
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1014,7 +1017,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 32d19eeb7303ccc4c91bb403657beb92, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1088,7 +1091,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1

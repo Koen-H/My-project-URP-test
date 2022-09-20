@@ -114,13 +114,22 @@ public class SuckingMachineController : MonoBehaviour
     Color colorTest;
     bool storageEmpty;
 
+    //These needs some special threatment 
+    [SerializeField] AudioSource audioSourceSucking;
+    [SerializeField] AudioClip suckingSound;
 
     float recoilValue;
-    float recoilRotation; 
+    float recoilRotation;
 
-    
+    [SerializeField] TextMeshPro togglePopup;
 
 
+    AudioSource audioSource;
+    [SerializeField] AudioClip trashEnterSound;
+    [SerializeField] AudioClip trashFullSound;
+    [SerializeField] AudioClip overHeatSound;
+    [SerializeField] AudioClip trashShootSound;
+    [SerializeField] AudioClip switchModeSound; 
 
 
 
@@ -136,14 +145,16 @@ public class SuckingMachineController : MonoBehaviour
 
     private void Start()
     {
-        haptic = Haptic.Instance;
 
+        audioSource = gameObject.AddComponent<AudioSource>();
+        haptic = Haptic.Instance;
         arrowSpeed /= 200;
         modeChangingDelay /= 10;
 
         CalculateBarMult();
         UpdateRadiatorMaterial();
         warningActive = true;
+        togglePopup.gameObject.SetActive(false);
 
     }
 
@@ -160,17 +171,22 @@ public class SuckingMachineController : MonoBehaviour
 
     }
 
-    public void ChangeTrashItemAmount(float amount)
+    public void ChangeTrashItemAmount(float amount, bool isAdding = false)
     {
         trashItemAmount += amount;
         if (trashItemAmount < 0) trashItemAmount = 0;
         if (trashItemAmount > maxCapacity)
         {
             storageFull = true;
+            togglePopup.gameObject.SetActive(true);
             spriteRenderer.sprite = warningCapacity;
+            audioSource.PlayOneShot(trashFullSound);
+
         }
         else
         {
+            togglePopup.gameObject.SetActive(false);
+            if (isAdding) audioSource.PlayOneShot(trashEnterSound);
             storageFull = false;
         }
 
@@ -221,6 +237,7 @@ public class SuckingMachineController : MonoBehaviour
     void ChangeGunMode(bool shooting)
     {
         gunModeChanging = true;
+        audioSource.PlayOneShot(switchModeSound);
         modeChangingTime = 0;
         if (shooting)
         {
@@ -353,6 +370,7 @@ public class SuckingMachineController : MonoBehaviour
         {
             coolingDown = true;
             spriteRenderer.sprite = warningOverheating;
+            audioSource.PlayOneShot(overHeatSound);
         }
 
         temp -= 0.05f;
@@ -384,7 +402,7 @@ public class SuckingMachineController : MonoBehaviour
         
         if (suckedObjects.Count > 0)
         {
-
+            audioSource.PlayOneShot(trashShootSound);
             GameObject suckedItem = suckedObjects.Last();
             suckedItem.transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
             suckedItem.transform.rotation = this.transform.rotation;
@@ -418,5 +436,10 @@ public class SuckingMachineController : MonoBehaviour
             ChangeTrashItemAmount(-1);
             haptic.SendHapticsRightController(1,0.25f);
         }
+        else
+        {
+            audioSource.PlayOneShot(trashFullSound);
+        }
+        
     }
 }

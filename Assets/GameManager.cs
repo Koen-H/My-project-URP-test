@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using Newtonsoft.Json;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
     public float timerInSeconds;
 
     //public float streak = 0;
-    public float combos;
+    public int combos;
     public float perComboValue = 0.25f;
     public float objective = 10;
     public bool onStreak = true;
@@ -52,7 +53,12 @@ public class GameManager : MonoBehaviour
     InputActionProperty menuButton;
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
+    [SerializeField] GameObject mainMenu;
 
+    [SerializeField] AudioSource backgroundMusic;
+
+    AudioSource streakAudioSource;
+    [SerializeField] List<AudioClip> streakAudioClips;
 
     [SerializeField]
     LightingSettings lightingSettings;
@@ -81,9 +87,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Vector2 dBlue;
 
+    [SerializeField] TrashGenerator trashGenerator;
+
 
     void Awake()
     {
+        backgroundMusic = this.GetComponent<AudioSource>();
         _instance = this;
         Application.runInBackground = true;
     }
@@ -141,6 +150,7 @@ public class GameManager : MonoBehaviour
 
     void CleannessEffect()
     {
+        Debug.Log("thisworks");
         float t = cleannessLevel * cleannessBarMult;
         RenderSettings.fogDensity = Mathf.Lerp(dirtyDensity, cleanDensity, t);
         RenderSettings.fogColor = Color.Lerp(dirtyWater, cleanWater, t);
@@ -153,9 +163,6 @@ public class GameManager : MonoBehaviour
         TextureCurve blueCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(blueVector.x, blueVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(blueCurve);
 
-        //colorCurve.
-
-
 
     }
    
@@ -163,7 +170,11 @@ public class GameManager : MonoBehaviour
     public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
     {
         currentTrashpoints += _trashPoints;
-        if (onStreak) combos++;
+        if (onStreak)
+        {
+            combos++;
+            PlayComboSoundEffect();
+        }
         else combos = 0;
         onStreak = true;
         if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
@@ -190,7 +201,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
-        scoreController.UpdateScreen();
+        helmetController.LoadEndOfGame();
+        mainMenu.SetActive(true);
+        ToggleTools(false);
     }
 
     public void StartGame()
@@ -198,6 +211,7 @@ public class GameManager : MonoBehaviour
         
         helmetController.SetUpHelmet();
         ToggleTools(true);
+        trashGenerator.BakeWaveValues();
     }
 
     public void ToggleTools(bool _toggle)
@@ -223,4 +237,13 @@ public class GameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
+
+    private void PlayComboSoundEffect()
+    {
+        int listIndex = combos - 2; //Rmove 2 because
+        if(listIndex > 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
+
+    }
+
+
 }

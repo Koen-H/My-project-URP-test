@@ -10,10 +10,10 @@ public class Suckable : MonoBehaviour
     public TrashChute trashChute; 
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
-    public float weight;
+    public float weight = 1;
     SuckingMachineController suckMachine;
     Haptic haptic;
-    public float trashPointsValue = 1;//This is in pounds, how much should it contribute to the objective?
+    //public float trashPointsValue = 1;//This is in pounds, how much should it contribute to the objective?
     public bool canBeVacuumed = true;
     public bool canBeSucked = true;
     public bool canBeHooked = true;
@@ -149,6 +149,12 @@ public class Suckable : MonoBehaviour
 
     void ShrinkTrashChute()
     {
+        if (isHooked)
+        {
+            GrapplingHookShoot graplingcon = transform.Find("Hook").GetComponent<HookController>().grapplingHookController;
+            graplingcon.LetGo();
+            graplingcon.hookController.isRetrieving = true;
+        }
         this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * shrinkSpeed;
 
         if (transform.localScale.x < 0.1)
@@ -162,7 +168,7 @@ public class Suckable : MonoBehaviour
             }
             else
             {
-                gameManager.AddTrashPoints(1);
+                gameManager.AddTrashPoints(weight);
                 gameManager.cleannessLevel++;
                 trashChute.streakDisplay.text = $"Streak {gameManager.combos}";
                 //gameManager.UpdateBars();

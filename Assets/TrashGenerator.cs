@@ -69,6 +69,7 @@ public class TrashGenerator : MonoBehaviour
 
     int tW = 1;
 
+    float startTime;
 
 
     // Start is called before the first frame update
@@ -89,12 +90,13 @@ public class TrashGenerator : MonoBehaviour
             item.SetActive(false);
         }
 
-        BakeWaveValues();
+        
 
     }
 
-    void BakeWaveValues()
+    public void BakeWaveValues()
     {
+        startTime = Time.deltaTime;
         maxGameTimeMinute *= 60;
 
         for (int i = 0; i < maxGameTimeMinute; i++)
@@ -153,14 +155,14 @@ public class TrashGenerator : MonoBehaviour
 
     void WaveCalculations()
     {
-        t += Time.deltaTime;
+        t += Time.deltaTime + startTime;
 
         if(waves.Count != 0)
         {
             if (t > tW && t < maxGameTimeMinute)
             {
                 spawnRate = waveIntensityValues[tW];
-                Debug.Log("Value logged : " + tW + " : " + waveIntensityValues[tW]);
+                //Debug.Log("Value logged : " + tW + " : " + waveIntensityValues[tW]);
                 tW++;
             }
         }
@@ -222,7 +224,7 @@ public class TrashGenerator : MonoBehaviour
     void Update()
     {
         //TODO, start within GameStart(); Either change timer or instantiate this prefab.
-        time += Time.deltaTime;
+        time += Time.deltaTime + startTime;
 
         WaveCalculations();
         KeepSpawnRateConsistent();

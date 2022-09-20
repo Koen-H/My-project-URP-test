@@ -32,6 +32,7 @@ public class HookController : MonoBehaviour
                     attachedObj = other.gameObject;
                     this.transform.parent = attachedObj.transform;
                     isShooting = false;
+                    grapplingHookController.audioSource.PlayOneShot(grapplingHookController.hookAttachSound);
                 }
             }
             /*if (other.tag == "SuckableAnimal")

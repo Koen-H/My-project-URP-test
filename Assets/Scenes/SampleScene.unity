@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
-  m_FogColor: {r: 0.050980378, g: 0.35392419, b: 0.50980395, a: 1}
+  m_Fog: 0
+  m_FogColor: {r: 0.050980397, g: 0.3529412, b: 0.50980395, a: 1}
   m_FogMode: 2
-  m_FogDensity: 0.17
+  m_FogDensity: 0.05
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -1622,12 +1622,12 @@ MonoBehaviour:
   perComboValue: 0.25
   objective: 15
   onStreak: 1
-  cleannessLevel: 100
+  cleannessLevel: 0
   trashPointsText: {fileID: 0}
   score: 0
   currentTrashpoints: 0
   cleannessBar: {fileID: 0}
-  maxCleanness: 100
+  maxCleanness: 500
   scoreController: {fileID: 0}
   menuButton:
     m_UseReference: 1
@@ -1643,14 +1643,18 @@ MonoBehaviour:
     m_Reference: {fileID: 6833234262336112822, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   isPaused: 0
-  pauseMenu: {fileID: 1627685613}
-  mainMenu: {fileID: 944546077}
-  backgroundMusic: {fileID: 0}
-  streakAudioClips: []
-  cleanWater: {r: 0, g: 0, b: 0, a: 0}
-  dirtyWater: {r: 0, g: 0, b: 0, a: 0}
-  cleanDensity: 0
-  dirtyDensity: 0
+  pauseMenu: {fileID: 511243237}
+  lightingSettings: {fileID: 0}
+  cleanWater: {r: 0.050980397, g: 0.3529412, b: 0.50980395, a: 0}
+  dirtyWater: {r: 0.32941177, g: 0.3137255, b: 0, a: 0}
+  cleanDensity: 0.05
+  dirtyDensity: 0.3
+  globalVolume: {fileID: 832575518}
+  colorCurve: {fileID: 0}
+  cMaster: {x: 0.467, y: 0.632}
+  dMaster: {x: 0.467, y: 0.12}
+  cBlue: {x: 0, y: 0}
+  dBlue: {x: 0, y: 0}
 --- !u!4 &1918523784
 Transform:
   m_ObjectHideFlags: 0

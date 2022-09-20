@@ -87,6 +87,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Vector2 dBlue;
 
+    [SerializeField] TrashGenerator trashGenerator;
+
 
     void Awake()
     {
@@ -155,15 +157,11 @@ public class GameManager : MonoBehaviour
         Vector2 masterVector = Vector2.Lerp(dMaster, cMaster, t);
         Vector2 blueVector = Vector2.Lerp(dMaster, cMaster, t);
         Vector2 bounds = new Vector2(1, 1);
-        Debug.Log(blueVector);
         TextureCurve masterCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(masterVector.x, masterVector.y, 1f,1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(masterCurve);
 
         TextureCurve blueCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(blueVector.x, blueVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(blueCurve);
-
-        //colorCurve.
-
 
 
     }
@@ -213,6 +211,7 @@ public class GameManager : MonoBehaviour
         
         helmetController.SetUpHelmet();
         ToggleTools(true);
+        trashGenerator.BakeWaveValues();
     }
 
     public void ToggleTools(bool _toggle)

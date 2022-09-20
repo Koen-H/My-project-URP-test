@@ -190,10 +190,11 @@ MonoBehaviour:
   colorTest: {r: 0, g: 0, b: 0, a: 0}
   audioSourceSucking: {fileID: 8514607744714848111}
   suckingSound: {fileID: 0}
-  trashEnterSound: {fileID: 0}
-  trashFullSound: {fileID: 0}
-  overHeatSound: {fileID: 0}
-  trashShootSond: {fileID: 0}
+  trashEnterSound: {fileID: 8300000, guid: e25cfe917614fad438deffa3b23b5151, type: 3}
+  trashFullSound: {fileID: 8300000, guid: ef5e1615f77a7134abf9dfb3b05aeb90, type: 3}
+  overHeatSound: {fileID: 8300000, guid: 995f448628c783b44aa57cdaf81fd716, type: 3}
+  trashShootSound: {fileID: 8300000, guid: ea0a776d7bbe5ac4da674dcd5a1d7e84, type: 3}
+  switchModeSound: {fileID: 8300000, guid: 6fcbdcffa26944045bc8d2f0d2faa490, type: 3}
   suckedObjects: []
 --- !u!82 &8514607744714848111
 AudioSource:

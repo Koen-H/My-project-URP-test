@@ -995,8 +995,8 @@ MonoBehaviour:
   hookObj: {fileID: 5223141760587908040}
   hookEndpoint: {fileID: 5223141761433549052}
   audioSource: {fileID: 0}
-  hookShootSound: {fileID: 0}
-  hookAttachSound: {fileID: 0}
+  hookShootSound: {fileID: 8300000, guid: 7f98b3230efa0844884dc3f8f930fec9, type: 3}
+  hookAttachSound: {fileID: 8300000, guid: 674a5fa941d86aa4daa5df4d9d180b53, type: 3}
 --- !u!120 &5223141761099512618
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -2666,7 +2666,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8315097238929980238}
+  - {fileID: 5426740858979414572}
   - {fileID: 5223141762454387993}
   - {fileID: 5223141760728887634}
   - {fileID: 5223141761626795011}
@@ -3194,7 +3194,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5223141762349878595}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8514822079460682579
+--- !u!1001 &5620555541160419889
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3209,7 +3209,7 @@ PrefabInstance:
     - target: {fileID: 382684418414252061, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 382684418414252061, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
         type: 3}
@@ -3261,41 +3261,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Helmet
       objectReference: {fileID: 0}
-    - target: {fileID: 2001778467949997207, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2001778467949997207, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
+    - target: {fileID: 2801589786645556351, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2001778467949997207, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
+    - target: {fileID: 2801589786645556351, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7322404538659436867, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
-        type: 3}
-      propertyPath: m_RenderShadows
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7472122806521099830, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 170785f6153ee4c469c064f581eb41c1, type: 2}
-    - target: {fileID: 8645078150312037721, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a7b1af926b2ef848861e6ddeb6f51ca, type: 3}
---- !u!4 &8315097238929980238 stripped
+--- !u!4 &5426740858979414572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 382684418414252061, guid: 1a7b1af926b2ef848861e6ddeb6f51ca,
     type: 3}
-  m_PrefabInstance: {fileID: 8514822079460682579}
+  m_PrefabInstance: {fileID: 5620555541160419889}
   m_PrefabAsset: {fileID: 0}

@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public float timerInSeconds;
 
     //public float streak = 0;
-    public float combos;
+    public int combos;
     public float perComboValue = 0.25f;
     public float objective = 10;
     public bool onStreak = true;
@@ -104,7 +104,11 @@ public class GameManager : MonoBehaviour
     public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
     {
         currentTrashpoints += _trashPoints;
-        if (onStreak) combos++;
+        if (onStreak)
+        {
+            combos++;
+            PlayComboSoundEffect();
+        }
         else combos = 0;
         onStreak = true;
         if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
@@ -163,5 +167,12 @@ public class GameManager : MonoBehaviour
         isPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    private void PlayComboSoundEffect()
+    {
+        int listIndex = combos - 2; //Rmove 2 because
+        if(listIndex !<= 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
+
     }
 }

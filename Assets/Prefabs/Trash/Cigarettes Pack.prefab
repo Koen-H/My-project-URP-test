@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3753672223801308650}
-  m_LocalRotation: {x: -0, y: 0.49536216, z: 0, w: -0.8686866}
-  m_LocalPosition: {x: -6.067592, y: 1.3696487, z: 10.4206505}
+  m_LocalRotation: {x: -0, y: 0.97811526, z: -0, w: 0.20806396}
+  m_LocalPosition: {x: 3.6530116, y: -0.9970298, z: 8.942604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53,7 +53,8 @@ MonoBehaviour:
   trashChute: {fileID: 0}
   shrinkSpeed: 0.85
   garbageProperty: 0
-  weight: 0.5
+  weight: 0
+  trashPointsValue: 1
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -62,8 +63,8 @@ MonoBehaviour:
   isGrowing: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 21300000, guid: e8605909598e0ef48b3050532feff707, type: 3}
-  flowDirection: {x: 0.44588202, y: -0.07710563, z: -0.93532395}
-  flowSpeed: 2.2319143
+  flowDirection: {x: -0.45220363, y: 0.07850123, z: -0.98309577}
+  flowSpeed: 1.2998855
   isFlowing: 1
   SwooshIntensity: 8
   SwooshFrequency: 0.2
@@ -78,7 +79,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 3.5
-  m_AngularDrag: 1
+  m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0

@@ -37,6 +37,8 @@ public class SuckingMachineController : MonoBehaviour
     float temp;
 
     [SerializeField]
+    Transform collectionAreaTransform; 
+    [SerializeField]
     SuckingMachineCollectionController collectionController;
 
 
@@ -108,15 +110,19 @@ public class SuckingMachineController : MonoBehaviour
     string warningType;
     [SerializeField]
     SpriteRenderer spriteRenderer;
-
     [SerializeField]
     Color colorTest;
-
     bool storageEmpty;
 
     //These needs some special threatment 
     [SerializeField] AudioSource audioSourceSucking;
     [SerializeField] AudioClip suckingSound;
+
+    float recoilValue;
+    float recoilRotation; 
+
+    
+
 
     AudioSource audioSource;
     [SerializeField] AudioClip trashEnterSound;
@@ -311,6 +317,7 @@ public class SuckingMachineController : MonoBehaviour
 
 
 
+
     void FixedUpdate()
     {
 
@@ -330,6 +337,7 @@ public class SuckingMachineController : MonoBehaviour
         float suckValue = triggerValue * suckPower; 
 
         Vector3 origin = pivot.transform.position;
+        Vector3 collectionPivot = collectionAreaTransform.position;
         RaycastHit[] coneHits = physics.ConeCastAll(origin, radius, transform.forward, depth, angle);
 
         if (coneHits.Length > 0)
@@ -339,7 +347,7 @@ public class SuckingMachineController : MonoBehaviour
                 if (coneHits[i].collider.gameObject.tag == "Suckable")
                 {
 
-                    coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(origin + transform.forward * -0.5f, suckValue, this);
+                    coneHits[i].collider.gameObject.GetComponent<Suckable>().Suck(collectionPivot + transform.forward * -0.5f, suckValue, this);
                 }
                 else if (coneHits[i].collider.gameObject.tag == "SuckableAnimal")
                 {
@@ -407,6 +415,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItemSuckable.flowSpeed = 1;
             suckedItemSuckable.SwooshIntensity = 0;
             suckedObjects.Remove(suckedItem);
+            fanController.AddRecoil(20);
             if (suckedObjects.Count > 0)
             { 
                 collectionController.UpdateDisplay(suckedObjects.Last().GetComponent<Suckable>());
@@ -416,7 +425,6 @@ public class SuckingMachineController : MonoBehaviour
             {
                 collectionController.UpdateDisplay(null, null);
                 warningActive = true;
-                spriteRenderer.sprite = warningEmpty;
                 storageEmpty = true;
             }
             GameManager gamemanager = GameManager.Instance;

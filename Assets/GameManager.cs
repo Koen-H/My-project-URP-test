@@ -53,6 +53,16 @@ public class GameManager : MonoBehaviour
 
     AudioSource streakAudioSource;
     [SerializeField] List<AudioClip> streakAudioClips;
+    [SerializeField]
+    Color cleanWater;
+    [SerializeField]
+    Color dirtyWater;
+
+    [SerializeField]
+    float cleanDensity;
+    [SerializeField]
+    float dirtyDensity; 
+
 
     void Awake()
     {

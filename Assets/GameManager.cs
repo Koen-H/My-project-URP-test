@@ -49,6 +49,16 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
 
+    [SerializeField]
+    Color cleanWater;
+    [SerializeField]
+    Color dirtyWater;
+
+    [SerializeField]
+    float cleanDensity;
+    [SerializeField]
+    float dirtyDensity; 
+
 
     void Awake()
     {

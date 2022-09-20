@@ -62,7 +62,7 @@ public class Suckable : MonoBehaviour
     }
     private void Update()
     {
-        DeleteItem();
+        ReverseFlow();
 
     }
 
@@ -78,13 +78,15 @@ public class Suckable : MonoBehaviour
     }
 
 
-    void DeleteItem()
+    void ReverseFlow()
     {
+        float range = 20; 
 
-        if (transform.position.magnitude > 20)
+        if (transform.position.magnitude > range)
         {
-            flowDirection = -flowDirection;
-            //Destroy(this.gameObject);
+            flowDirection *= -1;
+            rigidbody.velocity *= -1;
+            transform.position = transform.position.normalized * range;
         }
     }
 

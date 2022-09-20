@@ -22,8 +22,9 @@ public class FanController : MonoBehaviour
     float foldingSpeed;
     float foldingRotation;
 
-    float recoil;
+    float recoilRotation;
     float recoilValue;
+    float oldRecoilValue; 
 
 
     // Start is called before the first frame update
@@ -35,8 +36,7 @@ public class FanController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (suckMachine.shooting) recoil = 1; 
-        else recoil = 0;
+        Recoil();
     }
 
 
@@ -74,14 +74,27 @@ public class FanController : MonoBehaviour
         }
     }
 
-    void Shooting()
+    public void AddRecoil(float amount)
     {
-        recoilValue = recoilValue * 0.8f + recoil * 0.2f;
+        amount = amount * 70 / (-recoilValue + 70);
+        recoilValue -= amount;
         foreach (GameObject blade in blades)
         {
-            blade.transform.Rotate(0, 0, recoilValue, Space.Self);
+            blade.transform.Rotate(new Vector3(0, 0, -amount), Space.Self);
         }
+    }
 
+    void Recoil()
+    {
+        oldRecoilValue = recoilValue; 
+        recoilValue *= 0.95f;
+
+        float movement = oldRecoilValue - recoilValue;
+
+        foreach (GameObject blade in blades)
+        {
+            blade.transform.Rotate(new Vector3(0, 0, -movement), Space.Self);
+        }
     }
 
 }

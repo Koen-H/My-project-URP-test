@@ -44,7 +44,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Ambient_Factor: 0.904
-    - _Caustic_Speed: 0.202
+    - _Caustic_Speed: 0.13
     - _Caustic_Texture_Rotation: 124
     - _Caustic_Tile: 0.1
     - _Caustics_Brightness: 1

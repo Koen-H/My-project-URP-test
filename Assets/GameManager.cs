@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
     float streakTimer = 0;
     HelmetController helmetController;
 
+    [HideInInspector]
     public float cleannessLevel = 100;
 
     public TextMeshPro trashPointsText;
@@ -49,6 +53,9 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
 
+
+    [SerializeField]
+    LightingSettings lightingSettings;
     [SerializeField]
     Color cleanWater;
     [SerializeField]
@@ -57,7 +64,22 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float cleanDensity;
     [SerializeField]
-    float dirtyDensity; 
+    float dirtyDensity;
+
+    [SerializeField]
+    Volume globalVolume;
+
+    ColorCurves colorCurve;
+
+    [SerializeField]
+    Vector2 cMaster;
+    [SerializeField]
+    Vector2 dMaster;
+
+    [SerializeField]
+    Vector2 cBlue;
+    [SerializeField]
+    Vector2 dBlue;
 
 
     void Awake()
@@ -69,11 +91,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isPaused = false;
-        //CalculateBarMult();
+        cleannessLevel = maxCleanness;
         helmetController = HelmetController.Instance;
         vacuumTool = GameObject.Find("FinalSuckingMachine");
         hookTool = GameObject.Find("Grapplinghook");
         ToggleTools(false);
+        CalculateBarMult();
+        GetOvverrides();
+
     }
 
     private void Update()
@@ -94,17 +119,46 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void FixedUpdate()
+    {
+        CleannessEffect();
+    }
+
+    void GetOvverrides()
+    {
+        ColorCurves tmp;
+        if (globalVolume.profile.TryGet<ColorCurves>(out tmp))
+        {
+            colorCurve = tmp;
+        }
+    }
 
     void CalculateBarMult()
     {
         cleannessBarMult = 1 / cleannessLevel;
     }
 
-    public void UpdateBars()
+
+    void CleannessEffect()
     {
-        float cleanBarX = cleannessLevel * cleannessBarMult;
-        cleannessBar.transform.localScale = new Vector3(cleanBarX, cleannessBar.transform.localScale.y, cleannessBar.transform.localScale.z);
+        float t = cleannessLevel * cleannessBarMult;
+        RenderSettings.fogDensity = Mathf.Lerp(dirtyDensity, cleanDensity, t);
+        RenderSettings.fogColor = Color.Lerp(dirtyWater, cleanWater, t);
+        Vector2 masterVector = Vector2.Lerp(dMaster, cMaster, t);
+        Vector2 blueVector = Vector2.Lerp(dMaster, cMaster, t);
+        Vector2 bounds = new Vector2(1, 1);
+        TextureCurve masterCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(masterVector.x, masterVector.y, 1f,1f), new Keyframe(1f, 1f)), 0, true, in bounds);
+        colorCurve.master.Override(masterCurve);
+
+        TextureCurve blueCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(blueVector.x, blueVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
+        colorCurve.master.Override(blueCurve);
+
+        //colorCurve.
+
+
+
     }
+   
 
     public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
     {

@@ -92,6 +92,18 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TrashGenerator trashGenerator;
 
+    [SerializeField]
+    ParticleSystem aliveFish;
+
+    [SerializeField]
+    ParticleSystem deadFish;
+
+    [SerializeField]
+    float aliveFishAmount;
+
+    [SerializeField]
+    float deadFishAmount;
+
 
     void Awake()
     {
@@ -165,6 +177,11 @@ public class GameManager : MonoBehaviour
         TextureCurve blueCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(blueVector.x, blueVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(blueCurve);
 
+        ParticleSystem.EmissionModule aliveEM = aliveFish.emission;
+        aliveEM.rateOverTime = Mathf.Lerp(0, aliveFishAmount, t);
+
+        ParticleSystem.EmissionModule deadEM = deadFish.emission;
+        deadEM.rateOverTime = Mathf.Lerp(deadFishAmount, 0, t);
 
     }
    

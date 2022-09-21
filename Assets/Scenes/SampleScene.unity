@@ -2847,6 +2847,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a186a75e117f367419d7232e25825f2c, type: 3}
+--- !u!198 &964646323 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4496659609498677000, guid: a186a75e117f367419d7232e25825f2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 964646322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &964646324 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4496659609593370425, guid: a186a75e117f367419d7232e25825f2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 964646322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &977308336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5486,6 +5498,10 @@ MonoBehaviour:
   cBlue: {x: 0.376, y: 0.883}
   dBlue: {x: 0.376, y: 0.13}
   trashGenerator: {fileID: 767037231}
+  aliveFish: {fileID: 964646324}
+  deadFish: {fileID: 964646323}
+  aliveFishAmount: 5
+  deadFishAmount: 20
 --- !u!4 &1918523784
 Transform:
   m_ObjectHideFlags: 0

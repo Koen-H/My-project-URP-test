@@ -150,7 +150,6 @@ public class GameManager : MonoBehaviour
 
     void CleannessEffect()
     {
-        Debug.Log("thisworks");
         float t = cleannessLevel * cleannessBarMult;
         RenderSettings.fogDensity = Mathf.Lerp(dirtyDensity, cleanDensity, t);
         RenderSettings.fogColor = Color.Lerp(dirtyWater, cleanWater, t);

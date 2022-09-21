@@ -28,11 +28,13 @@ public class GameManager : MonoBehaviour
 
     //public float streak = 0;
     public int combos;
-    public float perComboValue = 0.25f;
+    public float perComboValue = 0.2f;
     public float objective = 10;
     public bool onStreak = true;
     float streakTimer = 0;
     HelmetController helmetController;
+    public float turtleBonus;
+    public float combosScore;
 
     [HideInInspector]
     public float cleannessLevel = 100;
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
     [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject scoreMenu;
 
     [SerializeField] AudioSource backgroundMusic;
 
@@ -166,12 +169,13 @@ public class GameManager : MonoBehaviour
     }
    
 
-    public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
+    public void AddTrashPoints(float _trashPoints, float _streakTime = 4f)
     {
         currentTrashpoints += _trashPoints;
         if (onStreak)
         {
             combos++;
+            combosScore += combos * perComboValue;
             PlayComboSoundEffect();
         }
         else combos = 0;
@@ -200,8 +204,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
-        helmetController.LoadEndOfGame();
-        mainMenu.SetActive(true);
+        //helmetController.LoadEndOfGame();
+        scoreMenu.SetActive(true);
+        scoreMenu.GetComponent<ResultsManager>().LoadValues();
+        //mainMenu.SetActive(true);
         ToggleTools(false);
     }
 

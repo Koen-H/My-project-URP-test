@@ -85,11 +85,12 @@ public class HelmetController : MonoBehaviour
             timer--;
             int minutes = (int)timer / 60;
             int second = (int)timer % 60;
-            timerText.text = $"{minutes}:{second}";//TODO: Format to MM:SS
+            if(second < 10) timerText.text = $"{minutes}:0{second}";
+            else timerText.text = $"{minutes}:{second}";
             yield return new WaitForSeconds(1f);
         }
         Debug.Log("The Game Timer has finished");
-        timerText.text = $"Game Ended";
+        timerText.text = $"Done";
 
         gameManager.EndGame();
     }

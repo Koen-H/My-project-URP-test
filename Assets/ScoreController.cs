@@ -29,9 +29,9 @@ public class ScoreController : MonoBehaviour
         float objective = gameManager.objective;
         Debug.Log("Objective"+ objective);
         objectiveValueText.text = $"{objective}lbs";
-        comboValueText.text = $"{gameManager.combos * gameManager.perComboValue}$";
+        //comboValueText.text = $"{gameManager.combos * gameManager.perComboValue}$";
         extraFromLevelValueText.text = $"{gameManager.score - objective}$";
-        totalValueText.text = $"{objective + (gameManager.combos * gameManager.perComboValue) + (gameManager.score - objective)}$";
+        //totalValueText.text = $"{objective + (gameManager.combos * gameManager.perComboValue) + (gameManager.score - objective)}$";
     }
 
 }

@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3408786753838123372}
   - component: {fileID: 3408786753838123363}
   - component: {fileID: 3408786753838123362}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Plastic Chipsbag
-  m_TagString: Untagged
+  m_TagString: Suckable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3408786753838123360}
-  m_LocalRotation: {x: -0, y: 0.98039377, z: -0, w: 0.19704843}
-  m_LocalPosition: {x: -4.497243, y: -1.4611785, z: 11.411373}
+  m_LocalRotation: {x: -0, y: 0.059839025, z: 0, w: -0.9982081}
+  m_LocalPosition: {x: -9.045754, y: -0.41279793, z: 4.3175974}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53,7 +53,7 @@ MonoBehaviour:
   trashChute: {fileID: 0}
   shrinkSpeed: 0.85
   garbageProperty: 2
-  weight: 0
+  weight: 1
   canBeVacuumed: 1
   canBeSucked: 1
   canBeHooked: 1
@@ -62,8 +62,8 @@ MonoBehaviour:
   isGrowing: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 21300000, guid: cb5006508f68d5f49a5b75e7c15620cc, type: 3}
-  flowDirection: {x: 0.34981182, y: 0.041986473, z: -0.86819404}
-  flowSpeed: 2.9646268
+  flowDirection: {x: 0.8916433, y: 0.11546916, z: -0.49676675}
+  flowSpeed: 2.210563
   isFlowing: 1
   SwooshIntensity: 8
   SwooshFrequency: 0.2
@@ -183,6 +183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ChipsBag-UVMapped
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bbcd245c3292b2a4aa39b1b150c74cb2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbcd245c3292b2a4aa39b1b150c74cb2, type: 3}

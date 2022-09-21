@@ -28,11 +28,13 @@ public class GameManager : MonoBehaviour
 
     //public float streak = 0;
     public int combos;
-    public float perComboValue = 0.25f;
+    public float perComboValue = 0.2f;
     public float objective = 10;
     public bool onStreak = true;
     float streakTimer = 0;
     HelmetController helmetController;
+    public float turtleBonus = 10;
+    public float combosScore = 0;
 
     [HideInInspector]
     public float cleannessLevel = 100;
@@ -54,6 +56,7 @@ public class GameManager : MonoBehaviour
     public bool isPaused;
     [SerializeField]GameObject pauseMenu;
     [SerializeField] GameObject mainMenu;
+    [SerializeField] GameObject scoreMenu;
 
     [SerializeField] AudioSource backgroundMusic;
 
@@ -88,6 +91,18 @@ public class GameManager : MonoBehaviour
     Vector2 dBlue;
 
     [SerializeField] TrashGenerator trashGenerator;
+
+    [SerializeField]
+    ParticleSystem aliveFish;
+
+    [SerializeField]
+    ParticleSystem deadFish;
+
+    [SerializeField]
+    float aliveFishAmount;
+
+    [SerializeField]
+    float deadFishAmount;
 
 
     void Awake()
@@ -162,16 +177,22 @@ public class GameManager : MonoBehaviour
         TextureCurve blueCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(blueVector.x, blueVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(blueCurve);
 
+        ParticleSystem.EmissionModule aliveEM = aliveFish.emission;
+        aliveEM.rateOverTime = Mathf.Lerp(0, aliveFishAmount, t);
+
+        ParticleSystem.EmissionModule deadEM = deadFish.emission;
+        deadEM.rateOverTime = Mathf.Lerp(deadFishAmount, 0, t);
 
     }
    
 
-    public void AddTrashPoints(float _trashPoints, float _streakTime = 0.5f)
+    public void AddTrashPoints(float _trashPoints, float _streakTime = 4f)
     {
         currentTrashpoints += _trashPoints;
         if (onStreak)
         {
             combos++;
+            combosScore += combos * perComboValue;
             PlayComboSoundEffect();
         }
         else combos = 0;
@@ -200,8 +221,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
-        helmetController.LoadEndOfGame();
-        mainMenu.SetActive(true);
+        //helmetController.LoadEndOfGame();
+        scoreMenu.SetActive(true);
+        scoreMenu.GetComponent<ResultsManager>().LoadValues();
+        //mainMenu.SetActive(true);
         ToggleTools(false);
     }
 

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     GameObject hookTool;
     bool toolsEnabled;
 
+    public float totalScore = 0;
+
     private static GameManager _instance;
     public static GameManager Instance
     {
@@ -54,7 +56,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     InputActionProperty menuButton;
     public bool isPaused;
-    [SerializeField]GameObject pauseMenu;
+    [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject scoreMenu;
 
@@ -132,11 +134,11 @@ public class GameManager : MonoBehaviour
             if (!isPaused)
             {
                 PauseGame();
-                
+
             }
             else
             {
-                
+
                 UnPauseGame();
 
             }
@@ -171,7 +173,7 @@ public class GameManager : MonoBehaviour
         Vector2 masterVector = Vector2.Lerp(dMaster, cMaster, t);
         Vector2 blueVector = Vector2.Lerp(dMaster, cMaster, t);
         Vector2 bounds = new Vector2(1, 1);
-        TextureCurve masterCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(masterVector.x, masterVector.y, 1f,1f), new Keyframe(1f, 1f)), 0, true, in bounds);
+        TextureCurve masterCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(masterVector.x, masterVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
         colorCurve.master.Override(masterCurve);
 
         TextureCurve blueCurve = new TextureCurve(new AnimationCurve(new Keyframe(0f, 0f), new Keyframe(blueVector.x, blueVector.y, 1f, 1f), new Keyframe(1f, 1f)), 0, true, in bounds);
@@ -184,7 +186,7 @@ public class GameManager : MonoBehaviour
         deadEM.rateOverTime = Mathf.Lerp(deadFishAmount, 0, t);
 
     }
-   
+
 
     public void AddTrashPoints(float _trashPoints, float _streakTime = 4f)
     {
@@ -192,8 +194,12 @@ public class GameManager : MonoBehaviour
         if (onStreak)
         {
             combos++;
-            combosScore += combos * perComboValue;
-            PlayComboSoundEffect();
+            if (combos > 2)
+            {
+                combosScore += combos * perComboValue;
+                PlayComboSoundEffect();
+            }
+
         }
         else combos = 0;
         onStreak = true;
@@ -206,7 +212,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Streak Timer Started" + onStreak);
         streakTimer = 1.5f;
-        while (streakTimer > 0 )
+        while (streakTimer > 0)
         {
             streakTimer -= 0.1f;
             if (!onStreak) break;
@@ -230,7 +236,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        
+
         helmetController.SetUpHelmet();
         ToggleTools(true);
         trashGenerator.BakeWaveValues();
@@ -263,9 +269,10 @@ public class GameManager : MonoBehaviour
     private void PlayComboSoundEffect()
     {
         int listIndex = combos - 2; //Rmove 2 because
-        if(listIndex > 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
+        if (listIndex > 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
 
     }
+
 
 
 }

@@ -40,8 +40,9 @@ public class ResultsManager : MonoBehaviour
 
     public void LoadValues()
     {
-        gameManager = GameManager.Instance;//Beause it doesn't set it in start?!?
 
+        gameManager = GameManager.Instance;//Beause it doesn't set it in start?!?
+        gameManager.totalScore = gameManager.score + gameManager.turtleBonus + gameManager.combosScore;
         obj1Line1.text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.score}</color>";
         obj1Line2.text = $"$DonationMessage";
         obj1Line3.text = $"ClEARED: Cleaned up <color=#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
@@ -54,7 +55,7 @@ public class ResultsManager : MonoBehaviour
         obj3Line2.text = $"$DonationMessage";
         obj3Line3.text = $"ClEARED: Kept the turtle alive!";
 
-        obj4Line1.text = $"Total: <color=#FBB040>${gameManager.score}</color>";
+        obj4Line1.text = $"Total: <color=#FBB040>${gameManager.totalScore}</color>";
         //objectiveFour.GetNamedChild("SECONDLINE").GetComponent<TextMeshPro>().text = $"$DonationMessage";
         //objectiveFour.GetNamedChild("THIRDLINE").GetComponent<TextMeshPro>().text = $"ClEARED: Cleaned up < color =#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Suckable : MonoBehaviour
@@ -170,7 +171,12 @@ public class Suckable : MonoBehaviour
             {
                 gameManager.AddTrashPoints(weight);
                 gameManager.cleannessLevel++;
-                trashChute.streakDisplay.text = $"Streak {gameManager.combos}";
+                if (gameManager.combos > 2)
+                {
+                    trashChute.streakDisplay.gameObject.SetActive(true);
+                    trashChute.streakDisplay.text = $"{gameManager.combos}";
+                    trashChute.disbleStreakPopupTime = Time.deltaTime + 2.5f;
+                }
                 //gameManager.UpdateBars();
                 Destroy(this.gameObject);
             }

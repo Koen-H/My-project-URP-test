@@ -260,7 +260,7 @@ public class GameManager : MonoBehaviour
         {
             trashItem.GetComponent<Suckable>().isShrinkingForDeath = true;
         }
-        popUpscreen.gameStarted = true;
+        popUpscreen.StartPopup();
     }
 
     public void ToggleTools(bool _toggle)

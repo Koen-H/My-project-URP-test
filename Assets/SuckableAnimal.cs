@@ -20,7 +20,7 @@ public class SuckableAnimal : Suckable
     public float rotateSpeed = 1.3f;
     bool isRotating = false;
     float targetAngle;
-    bool isDead = false;
+    public bool isDead = false;
 
     AudioSource audioSource;
     [SerializeField] AudioClip turtleHit;
@@ -44,7 +44,6 @@ public class SuckableAnimal : Suckable
         {
             AttachTrash(attachedGarbage);
         }
-        GameManager.Instance.turtles.Add(this.gameObject);
     }
 
     void RelaseRandomTrash()

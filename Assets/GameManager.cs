@@ -112,6 +112,9 @@ public class GameManager : MonoBehaviour
     float deadFishAmount;
 
     [SerializeField] GameObject[] trashList;
+    [SerializeField]
+    poupScreen popUpscreen; 
+
 
     void Awake()
     {
@@ -257,6 +260,7 @@ public class GameManager : MonoBehaviour
         {
             trashItem.GetComponent<Suckable>().isShrinkingForDeath = true;
         }
+        popUpscreen.gameStarted = true;
     }
 
     public void ToggleTools(bool _toggle)

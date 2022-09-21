@@ -21,7 +21,9 @@ public class TrashChute : MonoBehaviour
     float ejectDelay; 
     float ejectTime;
 
-    
+    public float disbleStreakPopupTime = 0;
+
+
     public TextMeshPro streakDisplay;
 
 
@@ -34,8 +36,8 @@ public class TrashChute : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
 
+        if (Time.deltaTime > disbleStreakPopupTime) streakDisplay.gameObject.SetActive(false);
     }
 
     private void Update()

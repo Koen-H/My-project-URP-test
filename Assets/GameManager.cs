@@ -106,6 +106,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float deadFishAmount;
 
+    [SerializeField]
+    poupScreen popUpscreen; 
+
 
     void Awake()
     {
@@ -240,6 +243,7 @@ public class GameManager : MonoBehaviour
         helmetController.SetUpHelmet();
         ToggleTools(true);
         trashGenerator.BakeWaveValues();
+        popUpscreen.gameStarted = true;
     }
 
     public void ToggleTools(bool _toggle)

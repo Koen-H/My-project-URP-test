@@ -33,8 +33,8 @@ public class GameManager : MonoBehaviour
     public bool onStreak = true;
     float streakTimer = 0;
     HelmetController helmetController;
-    public float turtleBonus;
-    public float combosScore;
+    public float turtleBonus = 10;
+    public float combosScore = 0;
 
     [HideInInspector]
     public float cleannessLevel = 100;

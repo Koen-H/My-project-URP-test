@@ -62,7 +62,7 @@ public class HelmetController : MonoBehaviour
     {
         currentTrashpoints = _currentTrashpoints;
         slider.value = currentTrashpoints;
-        if(currentTrashpoints > objective) objText.text = $"< color =#FBB040>{currentTrashpoints}</color> / {objective} lbs";
+        if(currentTrashpoints > objective) objText.text = $"<color=#FBB040>{currentTrashpoints}</color> / {objective} lbs";
         else objText.text = $"{currentTrashpoints} / {objective} lbs";
     }
     

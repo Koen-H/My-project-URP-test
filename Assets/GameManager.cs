@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     GameObject hookTool;
     bool toolsEnabled;
 
+
     public float totalScore = 0;
 
     private static GameManager _instance;
@@ -82,6 +83,8 @@ public class GameManager : MonoBehaviour
 
     ColorCurves colorCurve;
 
+    public List<GameObject> turtles;
+
     [SerializeField]
     Vector2 cMaster;
     [SerializeField]
@@ -100,12 +103,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     ParticleSystem deadFish;
 
+    [SerializeField] float _volume = 1;
+
     [SerializeField]
     float aliveFishAmount;
 
     [SerializeField]
     float deadFishAmount;
 
+    [SerializeField] GameObject[] trashList;
     [SerializeField]
     poupScreen popUpscreen; 
 
@@ -119,6 +125,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        turtles = new List<GameObject>();
         isPaused = false;
         cleannessLevel = maxCleanness;
         helmetController = HelmetController.Instance;
@@ -128,10 +135,12 @@ public class GameManager : MonoBehaviour
         CalculateBarMult();
         GetOvverrides();
 
+        streakAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
     private void Update()
     {
+        AudioListener.volume = _volume;
         if (menuButton.action.WasPressedThisFrame())
         {
             if (!isPaused)
@@ -202,12 +211,14 @@ public class GameManager : MonoBehaviour
                 combosScore += combos * perComboValue;
                 PlayComboSoundEffect();
             }
+            if (combos >= 8) combos = 7;
 
         }
         else combos = 0;
+
         onStreak = true;
         if (0 >= streakTimer) StartCoroutine(StartStreakTimer());
-        else streakTimer += _streakTime;
+        else streakTimer = _streakTime;
         helmetController.UpdateScoreBar(currentTrashpoints);
     }
 
@@ -230,6 +241,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
+        score = currentTrashpoints;
         //helmetController.LoadEndOfGame();
         scoreMenu.SetActive(true);
         scoreMenu.GetComponent<ResultsManager>().LoadValues();
@@ -239,10 +251,15 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-
+        cleannessLevel = maxCleanness;
         helmetController.SetUpHelmet();
         ToggleTools(true);
         trashGenerator.BakeWaveValues();
+        trashList = GameObject.FindGameObjectsWithTag("Suckable");
+        foreach (GameObject trashItem in trashList)
+        {
+            trashItem.GetComponent<Suckable>().isShrinkingForDeath = true;
+        }
         popUpscreen.gameStarted = true;
     }
 
@@ -272,7 +289,9 @@ public class GameManager : MonoBehaviour
 
     private void PlayComboSoundEffect()
     {
-        int listIndex = combos - 2; //Rmove 2 because
+        int listIndex = combos - 2; //Rmove 2 because the first two don't give streaks is what the designers decided
+        
+        if (listIndex >= 8) listIndex = 7;
         if (listIndex > 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
 
     }

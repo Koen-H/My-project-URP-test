@@ -6,35 +6,55 @@ using UnityEngine;
 
 public class ResultsManager : MonoBehaviour
 {
-    [SerializeField] GameObject objectiveOne;
-    [SerializeField] GameObject objectiveTwo;
-    [SerializeField] GameObject objectiveThree;
-    [SerializeField] GameObject objectiveFour;
-    [SerializeField] GameObject objectiveFive;
+
+
+    [SerializeField] TextMeshProUGUI obj1Line1;
+    [SerializeField] TextMeshProUGUI obj1Line2;
+    [SerializeField] TextMeshProUGUI obj1Line3;
+    [SerializeField] TextMeshProUGUI obj2Line1;
+    [SerializeField] TextMeshProUGUI obj2Line2;
+    [SerializeField] TextMeshProUGUI obj2Line3;
+    [SerializeField] TextMeshProUGUI obj3Line1;
+    [SerializeField] TextMeshProUGUI obj3Line2;
+    [SerializeField] TextMeshProUGUI obj3Line3;
+    [SerializeField] TextMeshProUGUI obj4Line1;
+    [SerializeField] TextMeshProUGUI obj4Line2;
+    [SerializeField] TextMeshProUGUI obj4Line3;
+
+
+
+
+
+
+
+
+
 
     GameManager gameManager;
 
     public void Start()
     {
         gameManager = GameManager.Instance;
+
     }
 
     public void LoadValues()
     {
         gameManager = GameManager.Instance;//Beause it doesn't set it in start?!?
-        objectiveOne.GetNamedChild("FIRSTLINE").GetComponent<TextMeshPro>().text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.score}</color>";
-        objectiveOne.GetNamedChild("SECONDLINE").GetComponent<TextMeshPro>().text = $"$DonationMessage";
-        objectiveOne.GetNamedChild("THIRDLINE").GetComponent<TextMeshPro>().text = $"ClEARED: Cleaned up < color =#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
 
-        objectiveTwo.GetNamedChild("FIRSTLINE").GetComponent<TextMeshPro>().text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.combosScore}</color>";
-        objectiveTwo.GetNamedChild("SECONDLINE").GetComponent<TextMeshPro>().text = $"$DonationMessage";
-        objectiveTwo.GetNamedChild("THIRDLINE").GetComponent<TextMeshPro>().text = $"ClEARED: Quick and correct recycling < color =#FBB040>{gameManager.combos}</color>";
+        obj1Line1.text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.score}</color>";
+        obj1Line2.text = $"$DonationMessage";
+        obj1Line3.text = $"ClEARED: Cleaned up <color=#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
 
-        objectiveThree.GetNamedChild("FIRSTLINE").GetComponent<TextMeshPro>().text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.turtleBonus}</color>";
-        objectiveThree.GetNamedChild("SECONDLINE").GetComponent<TextMeshPro>().text = $"$DonationMessage";
-        objectiveThree.GetNamedChild("THIRDLINE").GetComponent<TextMeshPro>().text = $"ClEARED: Kept the turtle alive!";
+        obj2Line1.text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.combosScore}</color>";
+        obj2Line2.text = $"$DonationMessage";
+        obj2Line3.text = $"ClEARED: Quick and correct recycling <color=#FBB040>{gameManager.combos}</color>";
 
-        objectiveFour.GetNamedChild("FIRSTLINE").GetComponent<TextMeshPro>().text = $"Total: <color=#FBB040>${gameManager.score}</color>";
+        obj3Line1.text = $"<color=#FBB040> $Donator </color>donated <color=#FBB040>${gameManager.turtleBonus}</color>";
+        obj3Line2.text = $"$DonationMessage";
+        obj3Line3.text = $"ClEARED: Kept the turtle alive!";
+
+        obj4Line1.text = $"Total: <color=#FBB040>${gameManager.score}</color>";
         //objectiveFour.GetNamedChild("SECONDLINE").GetComponent<TextMeshPro>().text = $"$DonationMessage";
         //objectiveFour.GetNamedChild("THIRDLINE").GetComponent<TextMeshPro>().text = $"ClEARED: Cleaned up < color =#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
 

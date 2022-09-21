@@ -8,7 +8,7 @@ public class Suckable : MonoBehaviour
     public Rigidbody rigidbody;
     public bool sucked;
     public bool trashChuteSucked;
-    public TrashChute trashChute; 
+    public TrashChute trashChute;
     public float shrinkSpeed;//Needs to be below 1
     public GarbageProperty garbageProperty;
     public float weight = 1;
@@ -36,11 +36,12 @@ public class Suckable : MonoBehaviour
 
     public float SwooshFrequency;
     public bool isSwooshing = true;
+    public bool isShrinkingForDeath = false;
 
 
-    GameManager gameManager; 
+    GameManager gameManager;
 
-    Vector3 oldSwoosh; 
+    Vector3 oldSwoosh;
 
     float sX;
     float sY;
@@ -70,18 +71,22 @@ public class Suckable : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isShrinkingForDeath) { Shrink(); }
+        else
+        {
+            if (isFlowing) Flow();
+            if (sucked) Shrink();
+            if (isGrowing) Grow();
+            if (trashChute != null) ShrinkTrashChute();
+            if (isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
+        }
 
-        if (isFlowing) Flow();
-        if (sucked) Shrink();
-        if (isGrowing) Grow();
-        if (trashChute != null) ShrinkTrashChute();
-        if (isSwooshing) Swooshes(SwooshIntensity, SwooshFrequency);
     }
 
 
     void ReverseFlow()
     {
-        float range = 20; 
+        float range = 20;
 
         if (transform.position.magnitude > range)
         {
@@ -118,16 +123,21 @@ public class Suckable : MonoBehaviour
             GrapplingHookShoot graplingcon = transform.Find("Hook").GetComponent<HookController>().grapplingHookController;
             graplingcon.LetGo();
             graplingcon.hookController.isRetrieving = true;
-        } 
+        }
 
         this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * shrinkSpeed;
 
         if (transform.localScale.x < 0.1)
         {
+            if (sucked == false)
+            {
+                Destroy(this.gameObject);
+            }
             GameObject suckedItem = this.gameObject;
             this.gameObject.SetActive(false);
             sucked = false;
             haptic.SendHapticsRightController(0.25f, 0.25f);
+
         }
     }
     public void Grow()
@@ -139,7 +149,7 @@ public class Suckable : MonoBehaviour
             graplingcon.hookController.isRetrieving = true;
         }
 
-        this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * growSpeed ;
+        this.transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z) * growSpeed;
 
         if (transform.localScale.x > 1)
         {
@@ -160,8 +170,8 @@ public class Suckable : MonoBehaviour
 
         if (transform.localScale.x < 0.1)
         {
-            trashChuteSucked = false;     
-            if(trashChute.garbageProperty != garbageProperty)
+            trashChuteSucked = false;
+            if (trashChute.garbageProperty != garbageProperty)
             {
                 trashChute.itemsToEject.Add(this.gameObject);
                 trashChute = null;
@@ -175,7 +185,7 @@ public class Suckable : MonoBehaviour
                 {
                     trashChute.streakDisplay.gameObject.SetActive(true);
                     trashChute.streakDisplay.text = $"{gameManager.combos}";
-                    trashChute.disbleStreakPopupTime = Time.deltaTime + 2.5f;
+                    trashChute.disbleStreakPopupTime = Time.deltaTime + 3.5f;
                 }
                 //gameManager.UpdateBars();
                 Destroy(this.gameObject);

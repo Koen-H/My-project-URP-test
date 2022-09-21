@@ -29,6 +29,7 @@ public class SuckableAnimal : Suckable
 
     public void Start()
     {
+       
         audioSource = gameObject.AddComponent<AudioSource>();
         attachedGarbage = new List<Suckable>();
         playerObj = GameObject.FindGameObjectWithTag("Player");
@@ -43,6 +44,7 @@ public class SuckableAnimal : Suckable
         {
             AttachTrash(attachedGarbage);
         }
+        GameManager.Instance.turtles.Add(this.gameObject);
     }
 
     void RelaseRandomTrash()

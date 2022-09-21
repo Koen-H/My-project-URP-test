@@ -55,7 +55,6 @@ public class SuckingMachineCollectionController : MonoBehaviour
         {
             if (other.gameObject.GetComponent<Suckable>().canBeVacuumed)
             {
-                Debug.Log("Object SHould be sucked " + other.gameObject.name);
                 Suckable suckable = other.gameObject.GetComponent<Suckable>();
                 suckable.sucked = true;
                 GameManager gamemanager = GameManager.Instance;

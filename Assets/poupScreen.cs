@@ -12,6 +12,7 @@ public class poupScreen : MonoBehaviour
     [SerializeField]
     List<PopUpSettings> popUps = new List<PopUpSettings>();
 
+    [SerializeField]
     GameObject popUpScreen;
 
     int index; 
@@ -28,7 +29,6 @@ public class poupScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        popUpScreen = this.gameObject;
         popUpScreen.SetActive(false);
         if (popUps.Count > 0)
         {
@@ -39,23 +39,35 @@ public class poupScreen : MonoBehaviour
     }
 
 
-    // Update is called once per frame
-    private void FixedUpdate()
+    public void StartPopup()
     {
-        if (!gameStarted) return;
-        time += Time.fixedDeltaTime; 
-        if(time > nextTime && !popUpActive)
+
+        StartCoroutine(Popup(nextTime));
+    }
+
+
+    // Update is called once per frame
+
+
+    public IEnumerator Popup(float _nextTime)
+    {
+
+        yield return new WaitForSeconds(_nextTime);
+
+        index++;
+        StartCoroutine(ActivatePopUp(nextDuration));
+
+        if (popUps.Count < index)
         {
-            popUpActive = true;
-            index++;
-            StartCoroutine(ActivatePopUp(nextSprite, nextDuration));
+            nextTime = popUps[index].timeSeconds;
+            nextSprite = popUps[index].sprite;
+            nextDuration = popUps[index].durationSeconds;
+            StartCoroutine(Popup(nextTime));
         }
     }
 
-    public IEnumerator ActivatePopUp(Sprite image, float duration)
+    public IEnumerator ActivatePopUp(float duration)
     {
-        Debug.Log("Bruh " + image.name);
-
         popUpScreen.SetActive(true);
         popUpSprite.sprite = nextSprite; 
 
@@ -64,12 +76,6 @@ public class poupScreen : MonoBehaviour
         popUpScreen.SetActive(false);
         popUpActive = false;
 
-        if (popUps.Count < index + 1)
-        {
-            nextTime = popUps[index].timeSeconds;
-            nextSprite = popUps[index].sprite;
-            nextDuration = popUps[index].durationSeconds;
-        }
-        else popUpActive = true;
+
     }
 }

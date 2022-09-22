@@ -52,9 +52,10 @@ public class poupScreen : MonoBehaviour
     public IEnumerator Popup(float _nextTime)
     {
         yield return new WaitForSeconds(_nextTime);
-
+        bool lastPopup = false;
         index++;
-        StartCoroutine(ActivatePopUp(nextDuration));
+        if(index == popUps.Count) lastPopup = true;
+        StartCoroutine(ActivatePopUp(nextDuration, lastPopup));
 
         if (index < popUps.Count)
         {
@@ -63,15 +64,18 @@ public class poupScreen : MonoBehaviour
             nextDuration = popUps[index].durationSeconds;
             StartCoroutine(Popup(index > 0 ? nextTime - popUps[index - 1].timeSeconds : nextTime));
         }
+
     }
 
-    public IEnumerator ActivatePopUp(float duration)
+    public IEnumerator ActivatePopUp(float duration, bool _lastPopup)
     {
         popUpScreen.SetActive(true);
         popUpSprite.sprite = nextSprite; 
 
         yield return new WaitForSeconds(duration);
         
+        if(_lastPopup) GameManager.Instance.StartGame();
+
         popUpScreen.SetActive(false);
         popUpActive = false;
 

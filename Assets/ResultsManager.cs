@@ -52,7 +52,7 @@ public class ResultsManager : MonoBehaviour
         gameManager = GameManager.Instance;//Beause it doesn't set it in start?!?
         gameManager.totalScore = gameManager.score + gameManager.turtleBonus + gameManager.combosScore;
 
-        //If the main objective is completed
+        //If the main objective is completed and there's more!
         if (gameManager.objective < gameManager.score)
         {
             string donatorName = donatorNames[Random.Range(0, donatorNames.Count)];
@@ -61,6 +61,16 @@ public class ResultsManager : MonoBehaviour
             obj1Line1.text = $"<color=#FBB040> {donatorName} </color>donated <color=#FBB040>${gameManager.score}</color>";
             obj1Line2.text = $"{textMessage}";
             obj1Line3.text = $"Cleaned up <color=#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
+        }
+        //If the main objective is completed
+        else if (gameManager.objective == gameManager.score)
+        {
+            string donatorName = donatorNames[Random.Range(0, donatorNames.Count)];
+            string textMessage = mainGoalTexts[Random.Range(0, mainGoalTexts.Count)];
+            obj1Line1.gameObject.transform.parent.GetComponent<Image>().color = achievedColor;
+            obj1Line1.text = $"<color=#FBB040> {donatorName} </color>donated <color=#FBB040>${gameManager.score}</color>";
+            obj1Line2.text = $"{textMessage}";
+            obj1Line3.text = $"Cleaned up <color=#FBB040>{gameManager.objective} lbs</color>";
         }
         else
         {

@@ -121,6 +121,10 @@ public class SuckingMachineController : MonoBehaviour
     [SerializeField] AudioSource audioSourceSucking;
     [SerializeField] AudioClip suckingSound;
 
+    [SerializeField] AudioClip succStart;
+    [SerializeField] AudioClip succMiddle;
+    [SerializeField] AudioClip succEnd;
+
     float recoilValue;
     float recoilRotation;
 
@@ -132,9 +136,12 @@ public class SuckingMachineController : MonoBehaviour
     [SerializeField] AudioClip trashFullSound;
     [SerializeField] AudioClip overHeatSound;
     [SerializeField] AudioClip trashShootSound;
-    [SerializeField] AudioClip switchModeSound; 
+    [SerializeField] AudioClip switchModeSound;
 
 
+    bool succStartPlaying;
+    bool succMiddlePlaying;
+    bool succEndPlaying;
 
     /*    public TextMeshPro powerText;
         public TextMeshPro suckingModeText;
@@ -322,7 +329,8 @@ public class SuckingMachineController : MonoBehaviour
         }
         float alpha = warningValue * warningAlphaMult * warningDirection;
         spriteRenderer.color += new Color(0, 0, 0, alpha);
-        
+        if(alpha >= 1f) audioSource.PlayOneShot(overHeatSound);
+
     }
 
 
@@ -341,6 +349,7 @@ public class SuckingMachineController : MonoBehaviour
         CheckWarning();
         if (warningActive) WarningBlinking();
 
+        succSound();
         Tornado();
 
     }
@@ -380,7 +389,7 @@ public class SuckingMachineController : MonoBehaviour
         {
             coolingDown = true;
             spriteRenderer.sprite = warningOverheating;
-            audioSource.PlayOneShot(overHeatSound);
+           
         }
 
         temp -= 0.05f;
@@ -451,5 +460,35 @@ public class SuckingMachineController : MonoBehaviour
             audioSource.PlayOneShot(trashFullSound);
         }
         
+    }
+    void succSound()
+    {
+        audioSourceSucking.volume = temp / 10;
+        audioSourceSucking.pitch = 1 + temp / 20;
+        if (sucking && !succStartPlaying)
+        {
+            Debug.Log("Suck start is playing !");
+            //audioSourceSucking.PlayOneShot(succStart);
+            succStartPlaying = true;
+        }
+        if (succStartPlaying)
+        {
+            if (!audioSourceSucking.isPlaying)
+            {
+                Debug.Log("Suck Middle is playing !");
+                succStartPlaying = false;
+                succMiddlePlaying = true;
+                audioSource.loop = true;
+                audioSourceSucking.PlayOneShot(succMiddle);
+            }
+        }
+        if (!sucking && succMiddlePlaying)
+        {
+            Debug.Log("Suck End is playing !");
+            audioSource.loop = false;
+            succMiddlePlaying = false;
+           //audioSourceSucking.Stop();
+            //audioSourceSucking.PlayOneShot(succEnd);
+        }
     }
 }

@@ -268,6 +268,12 @@ public class GameManager : MonoBehaviour
         ToggleTools(false);
     }
 
+    public void StartGameWithTurtorial()
+    {
+        popUpscreen.StartPopup();
+
+    }
+
     public void StartGame()
     {
         gameState = GameState.Playing;
@@ -287,7 +293,7 @@ public class GameManager : MonoBehaviour
         }
         turtles.Clear();
         SpawnTurtle();
-        popUpscreen.StartPopup();
+        
     }
 
     public void ToggleTools(bool _toggle)

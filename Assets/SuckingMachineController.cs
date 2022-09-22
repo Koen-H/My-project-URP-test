@@ -6,6 +6,7 @@ using TMPro;
 using System.Linq;
 using UnityEngine.Sprites;
 using Unity.VisualScripting;
+using UnityEditor;
 
 public class SuckingMachineController : MonoBehaviour
 {
@@ -256,7 +257,7 @@ public class SuckingMachineController : MonoBehaviour
 
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpSuckingSprite));
             StartCoroutine(HelpPopUpDeactivate(popUpDuration));
-            helpShootingWait *= 1.5f;
+            helpShootingWait *= 2f;
 
         }
 
@@ -266,7 +267,7 @@ public class SuckingMachineController : MonoBehaviour
             popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpHookSprite));
             StartCoroutine(HelpPopUpDeactivate(popUpDuration));
-            helpHookWait *= 1.5f;
+            helpHookWait *= 2f;
 
         }
 
@@ -276,7 +277,7 @@ public class SuckingMachineController : MonoBehaviour
             popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpShootingSprite));
             StartCoroutine(HelpPopUpDeactivate(popUpDuration));
-            helpShootingWait *= 1.5f;
+            helpShootingWait *= 2f;
 
         }
 
@@ -286,7 +287,7 @@ public class SuckingMachineController : MonoBehaviour
             popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpTrashSortingSprite));
             StartCoroutine(HelpPopUpDeactivate(popUpDuration));
-            helpTrashSortingWait *= 1.5f;
+            helpTrashSortingWait *= 2f;
 
         }
 
@@ -301,6 +302,14 @@ public class SuckingMachineController : MonoBehaviour
 
         //Debug.Log($"{helpPopUpActive}, {helpSuckingTime} , {helpHookTime}, {helpShootingTime}, {helpTrashSortingTime}");
     }
+
+    public void ResetHelp()
+    {
+        helpShootingWait = 5;
+        helpTrashSortingWait = 5;
+        helpHookWait = 5;
+    }
+
     public IEnumerator HelpPopUpDeactivate(float duration)
     {
         yield return new WaitForSeconds(duration);
@@ -631,5 +640,9 @@ public class SuckingMachineController : MonoBehaviour
         collectionController.UpdateDisplay(null, null);
         warningActive = true;
         storageEmpty = true;
+
+
     }
+
+
 }

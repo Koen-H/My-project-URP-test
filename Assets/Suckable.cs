@@ -70,6 +70,7 @@ public class Suckable : MonoBehaviour
     }
 
 
+
     private void FixedUpdate()
     {
         if (isShrinkingForDeath) { Shrink(); }

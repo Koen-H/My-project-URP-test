@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16210832999405898}
-  m_LocalRotation: {x: -0, y: -0.9911861, z: -0, w: 0.13247697}
-  m_LocalPosition: {x: -8.576814, y: -1.8109543, z: 8.817573}
+  m_LocalRotation: {x: -0, y: -0.32443112, z: -0, w: 0.9459094}
+  m_LocalPosition: {x: 11.184481, y: -0.9121113, z: 1.0703416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -63,8 +63,8 @@ MonoBehaviour:
   isShot: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 21300000, guid: f7695fc95b2600442beae4d2a3f65ff7, type: 3}
-  flowDirection: {x: 0.5881792, y: 0.2435656, z: -0.6444118}
-  flowSpeed: 1.8583386
+  flowDirection: {x: -1.079988, y: 0.15916173, z: -0.16210835}
+  flowSpeed: 2.7576451
   isFlowing: 1
   SwooshIntensity: 8
   SwooshFrequency: 0.2

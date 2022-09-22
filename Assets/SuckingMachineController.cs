@@ -415,7 +415,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedItemSuckable.isGrowing = true;
             suckedItemSuckable.wasAttached = false;
             suckedItemSuckable.flowDirection = transform.forward;
-            suckedItemSuckable.flowSpeed = 1;
+            suckedItemSuckable.flowSpeed = 1.3f;
             suckedItemSuckable.SwooshIntensity = 0;
             suckedObjects.Remove(suckedItem);
             fanController.AddRecoil(20);

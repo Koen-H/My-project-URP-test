@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/Scenes/TestScene.unity
     guid: 12babb8317890ea47a6b652e6ea83ca3
+  - enabled: 1
+    path: Assets/Scenes/LostParadise.unity
+    guid: 8180de0976007d54c8d372d8d74b8dfd
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3202e6debd7501046bee12e4267df440,
       type: 2}

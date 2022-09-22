@@ -818,6 +818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalScore: 0
   gameState: 0
+  wrongStreak: 0
   timerInSeconds: 200
   combos: 0
   perComboValue: 0.2
@@ -863,7 +864,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f74cd71370f42042b0b83338ad50f20, type: 3}
   - {fileID: 8300000, guid: 0ed25778ece81204eb2050837682230f, type: 3}
   - {fileID: 8300000, guid: bfe110a5c4fefe948bfc19aca1c86174, type: 3}
-  streakLostAudioClip: {fileID: 0}
+  streakLostAudioClip: {fileID: 8300000, guid: 50fc0ef592b46174484280f23a1abb4e, type: 3}
+  correctBin: {fileID: 8300000, guid: 12fe36d887f89c441b91e924c14cc09b, type: 3}
   lightingSettings: {fileID: 0}
   cleanWater: {r: 0.050980397, g: 0.3529412, b: 0.50980395, a: 0}
   dirtyWater: {r: 0.32941177, g: 0.3137255, b: 0, a: 0}
@@ -1211,7 +1213,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 18f67b48c92c4f747ae2db423bb766a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 18f67b48c92c4f747ae2db423bb766a5,
         type: 3}
@@ -1451,7 +1453,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e1628dc166ead004785b201c5209d5ef,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e1628dc166ead004785b201c5209d5ef,
         type: 3}
@@ -2174,7 +2176,7 @@ RectTransform:
   m_GameObject: {fileID: 373669691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89534837, y: 0.77241653, z: 0.88426}
+  m_LocalScale: {x: 0.9447891, y: 0.81506896, z: 0.93308824}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1790089331}
@@ -2185,7 +2187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.4792786, y: -0.000038146973}
+  m_AnchoredPosition: {x: 0.00018310547, y: -0.00005340576}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373669693
@@ -2749,13 +2751,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450388418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.584, y: 1.088, z: 2.576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.11, y: 1.088, z: 2.576}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1745784503268702626}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466795622
 GameObject:
@@ -3662,7 +3664,7 @@ RectTransform:
   m_GameObject: {fileID: 652889449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.0565257, y: 5.855571, z: 2.3249102}
+  m_LocalScale: {x: 3.844249, y: 5.549151, z: 2.2032485}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 373669692}
@@ -3671,7 +3673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 319, y: -105.55346}
+  m_AnchoredPosition: {x: 325, y: -105.55346}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &652889451
@@ -3687,15 +3689,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.8438448, b: 0, a: 0.8666667}
+  m_Color: {r: 0.0066697598, g: 1, b: 0, a: 0.8666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8ded8a711323cc40acbe61bf7e7484b, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 0909adbb84aec184f9f0b3ea8ae9a04f, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6312,7 +6314,7 @@ Transform:
   - {fileID: 1983999087}
   - {fileID: 905233801}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: -21.475, z: 0}
 --- !u!1 &1207342257
 GameObject:
@@ -9566,7 +9568,7 @@ Transform:
   - {fileID: 1069529807}
   - {fileID: 728083180}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
 --- !u!114 &1820400666
 MonoBehaviour:
@@ -12092,7 +12094,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 501bbb82d1e892f40acba8aba7d21ffb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 501bbb82d1e892f40acba8aba7d21ffb,
         type: 3}
@@ -13677,6 +13679,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1745784504738151046}
+  - {fileID: 450388422}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19020,7 +19023,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit to Main
+  m_text: End Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8b67d1e616ebfc04bb1307ef658a8084, type: 2}
   m_sharedMaterial: {fileID: -2337242235569040859, guid: 8b67d1e616ebfc04bb1307ef658a8084,
@@ -19677,7 +19680,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2298568133192795195}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 152266697}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: UnPauseGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 152266697}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &2298568133192795193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50631,16 +50658,16 @@ MonoBehaviour:
     intesity: 1.5
   - timeSeconds: 30
     duration: 25
-    intesity: 2
+    intesity: 0.7
   - timeSeconds: 70
     duration: 30
-    intesity: 1.2
+    intesity: 2
   - timeSeconds: 100
     duration: 30
-    intesity: 1.8
+    intesity: 0.2
   - timeSeconds: 130
-    duration: 70
-    intesity: 1.2
+    duration: 30
+    intesity: 0.4
 --- !u!33 &8875902488724645654
 MeshFilter:
   m_ObjectHideFlags: 0

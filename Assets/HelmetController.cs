@@ -56,7 +56,7 @@ public class HelmetController : MonoBehaviour
         objective = gameManager.objective;
         slider.maxValue = objective;
         slider.value = 0;
-        objText.text = $"{currentTrashpoints} / {objective} lbs";
+        objText.text = $"0 / {objective} lbs";
         StartCoroutine(StartGameTimer(gameManager.timerInSeconds));
         scoreController.gameObject.SetActive(false);
     }

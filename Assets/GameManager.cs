@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     GameObject hand;
     GameObject hand2;
     bool toolsEnabled;
+    
 
 
     public float totalScore = 0;
@@ -32,6 +33,8 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState gameState;
+
+    public int wrongStreak;
 
     public float timerInSeconds;
 
@@ -77,6 +80,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<AudioClip> streakAudioClips;
 
     public AudioClip streakLostAudioClip;
+    public AudioClip correctBin;
 
     [SerializeField]
     LightingSettings lightingSettings;
@@ -229,6 +233,8 @@ public class GameManager : MonoBehaviour
     public void AddTrashPoints(float _trashPoints, float _streakTime = 4f)
     {
         currentTrashpoints += _trashPoints;
+        currentTrashpoints = (float)System.Math.Round((float)currentTrashpoints, 2);
+
         if (onStreak)
         {
             combos++;
@@ -267,6 +273,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
+        vacuumTool.GetComponent<SuckingMachineController>().EmptyGun();
         gameState = GameState.Finished;
         score = currentTrashpoints;
         //helmetController.LoadEndOfGame();

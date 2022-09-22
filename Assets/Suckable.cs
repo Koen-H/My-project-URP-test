@@ -70,6 +70,7 @@ public class Suckable : MonoBehaviour
     }
 
 
+
     private void FixedUpdate()
     {
         if (isShrinkingForDeath) { Shrink(); }
@@ -178,10 +179,12 @@ public class Suckable : MonoBehaviour
                 trashChute = null;
                 this.gameObject.SetActive(false);
                 
+
             }
             else if (trashChute.garbageProperty != garbageProperty)
             {
                 trashChute.itemsToEject.Add(this.gameObject);
+                gameManager.wrongStreak++;
                 trashChute = null;
                 this.gameObject.SetActive(false);
                 gameManager.onStreak = false;
@@ -189,6 +192,7 @@ public class Suckable : MonoBehaviour
             }
             else
             {
+                gameManager.wrongStreak = 0;
                 gameManager.AddTrashPoints(weight);
                 gameManager.cleannessLevel++;
                 if (gameManager.combos > 2)
@@ -197,6 +201,7 @@ public class Suckable : MonoBehaviour
                     trashChute.streakDisplay.text = $"{gameManager.combos}";
                     trashChute.disbleStreakPopupTime = Time.time + 3.5f;
                 }
+                else gameManager.streakAudioSource.PlayOneShot(gameManager.correctBin);
                 //gameManager.UpdateBars();
                 Destroy(this.gameObject);
             }

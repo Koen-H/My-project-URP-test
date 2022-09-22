@@ -51,18 +51,17 @@ public class poupScreen : MonoBehaviour
 
     public IEnumerator Popup(float _nextTime)
     {
-
         yield return new WaitForSeconds(_nextTime);
 
         index++;
         StartCoroutine(ActivatePopUp(nextDuration));
 
-        if (popUps.Count < index)
+        if (index < popUps.Count)
         {
             nextTime = popUps[index].timeSeconds;
             nextSprite = popUps[index].sprite;
             nextDuration = popUps[index].durationSeconds;
-            StartCoroutine(Popup(nextTime));
+            StartCoroutine(Popup(index > 0 ? nextTime - popUps[index - 1].timeSeconds : nextTime));
         }
     }
 

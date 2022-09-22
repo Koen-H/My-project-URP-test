@@ -467,7 +467,7 @@ public class SuckingMachineController : MonoBehaviour
         }
         float alpha = warningValue * warningAlphaMult * warningDirection;
         spriteRenderer.color += new Color(0, 0, 0, alpha);
-        if (alpha >= 1f) audioSource.PlayOneShot(overHeatSound);
+        if (alpha > 0.95f) audioSource.PlayOneShot(overHeatSound);
 
     }
 
@@ -634,9 +634,11 @@ public class SuckingMachineController : MonoBehaviour
     {
         foreach (GameObject suckedObject in suckedObjects)
         {
+            ChangeTrashItemAmount(-1);
             Destroy(suckedObject);
         }
         suckedObjects.Clear();
+        UpdateBars();
         collectionController.UpdateDisplay(null, null);
         warningActive = true;
         storageEmpty = true;

@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class Suckable : MonoBehaviour
@@ -198,7 +197,7 @@ public class Suckable : MonoBehaviour
                 if (gameManager.combos > 2)
                 {
                     trashChute.streakDisplay.gameObject.SetActive(true);
-                    trashChute.streakDisplay.text = $"{gameManager.combos}";
+                    trashChute.streakDisplay.text = $" x{gameManager.combos}";
                     trashChute.disbleStreakPopupTime = Time.time + 3.5f;
                 }
                 else gameManager.streakAudioSource.PlayOneShot(gameManager.correctBin);

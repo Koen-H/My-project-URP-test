@@ -33914,8 +33914,8 @@ MonoBehaviour:
   isRetrieving: 0
   isShooting: 0
   attachedObj: {fileID: 0}
-  hookPower: 0.1
-  pullBackSpeed: 0.2
+  hookPower: 0.3
+  pullBackSpeed: 0.3
 --- !u!1 &5223141760924253846
 GameObject:
   m_ObjectHideFlags: 0

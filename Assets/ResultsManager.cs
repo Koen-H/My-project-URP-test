@@ -93,7 +93,7 @@ public class ResultsManager : MonoBehaviour
             obj2Line1.gameObject.transform.parent.GetComponent<Image>().color = achievedColor;
             obj2Line1.text = $"<color=#FBB040> {donatorName} </color>donated <color=#FBB040>${gameManager.combosScore}</color>";
             obj2Line2.text = $"{textMessage}";
-            obj2Line3.text = $"Quick and correct recycling <color=#FBB040>{gameManager.combos}</color>";
+            obj2Line3.text = $"Quick and correct recycling bonus donation <color=#FBB040>{gameManager.combosScore}</color>";
         }
         else
         {

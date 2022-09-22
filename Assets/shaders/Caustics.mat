@@ -47,7 +47,7 @@ Material:
     - _Caustic_Speed: 0.13
     - _Caustic_Texture_Rotation: 124
     - _Caustic_Tile: 0.1
-    - _Caustics_Brightness: 0.64
+    - _Caustics_Brightness: 1
     - _Caustics_Distortion_Factor: 3
     - _Caustics_Distortion_Speed: -1
     - _Intensity: 1.41

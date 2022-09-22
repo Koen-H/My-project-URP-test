@@ -504,9 +504,9 @@ public class SuckingMachineController : MonoBehaviour
         }
 
         temp -= 0.05f;
-        if(coolingDown) temp -= 0.15f;
+        if (coolingDown) temp -= 0.005f;
 
-        if(temp < 0)
+        if (temp < 0)
         {
             coolingDown = false;
             temp = 0; 
@@ -579,7 +579,7 @@ public class SuckingMachineController : MonoBehaviour
         audioSourceSucking.pitch = 1 + temp / 20;
         if (sucking && !succStartPlaying)
         {
-            Debug.Log("Suck start is playing !");
+            //Debug.Log("Suck start is playing !");
             //audioSourceSucking.PlayOneShot(succStart);
             succStartPlaying = true;
         }
@@ -587,7 +587,7 @@ public class SuckingMachineController : MonoBehaviour
         {
             if (!audioSourceSucking.isPlaying)
             {
-                Debug.Log("Suck Middle is playing !");
+                //Debug.Log("Suck Middle is playing !");
                 succStartPlaying = false;
                 succMiddlePlaying = true;
                 audioSource.loop = true;
@@ -596,7 +596,7 @@ public class SuckingMachineController : MonoBehaviour
         }
         if (!sucking && succMiddlePlaying)
         {
-            Debug.Log("Suck End is playing !");
+            //Debug.Log("Suck End is playing !");
             audioSource.loop = false;
             succMiddlePlaying = false;
            //audioSourceSucking.Stop();

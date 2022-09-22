@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject scoreMenu;
+    [SerializeField] public GameObject popUpMenu;
 
     [SerializeField] AudioSource backgroundMusic;
 
@@ -83,6 +84,9 @@ public class GameManager : MonoBehaviour
     Color cleanWater;
     [SerializeField]
     Color dirtyWater;
+
+    [SerializeField]
+    Material castics;
 
     [SerializeField]
     float cleanDensity;
@@ -217,6 +221,8 @@ public class GameManager : MonoBehaviour
         ParticleSystem.EmissionModule deadEM = deadFish.emission;
         deadEM.rateOverTime = Mathf.Lerp(deadFishAmount, 0, t);
 
+        castics.SetFloat("_Caustics_Brightness",t);
+
     }
 
 
@@ -272,12 +278,17 @@ public class GameManager : MonoBehaviour
 
     public void StartGameWithTurtorial()
     {
+        popUpMenu.SetActive(true);
         popUpscreen.StartPopup();
+
 
     }
 
     public void StartGame()
     {
+        currentTrashpoints = 0;
+        score = 0;
+        combosScore = 0;
         Debug.Log("The game has been started!");
         gameState = GameState.Playing;
         cleannessLevel = maxCleanness;

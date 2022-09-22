@@ -467,7 +467,7 @@ public class SuckingMachineController : MonoBehaviour
         }
         float alpha = warningValue * warningAlphaMult * warningDirection;
         spriteRenderer.color += new Color(0, 0, 0, alpha);
-        if (alpha >= 1f) audioSource.PlayOneShot(overHeatSound);
+        if (alpha > 0.95f) audioSource.PlayOneShot(overHeatSound);
 
     }
 

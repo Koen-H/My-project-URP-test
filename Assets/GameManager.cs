@@ -286,6 +286,7 @@ public class GameManager : MonoBehaviour
     public void StartGameWithTurtorial()
     {
         popUpMenu.SetActive(true);
+        vacuumTool.GetComponent<SuckingMachineController>().ResetHelp();
         popUpscreen.StartPopup();
 
 

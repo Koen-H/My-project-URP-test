@@ -19,6 +19,7 @@ public class poupScreen : MonoBehaviour
     Sprite nextSprite;
     float nextTime;
     float nextDuration;
+    bool startGame;
 
     bool popUpActive = false; 
     float time;
@@ -29,7 +30,7 @@ public class poupScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        popUpScreen.SetActive(false);
+        
         if (popUps.Count > 0)
         {
             nextTime = popUps[0].timeSeconds;
@@ -39,10 +40,11 @@ public class poupScreen : MonoBehaviour
     }
 
 
-    public void StartPopup()
+    public void StartPopup(bool _startGame = true)
     {
-
+        startGame = _startGame;
         StartCoroutine(Popup(nextTime));
+
     }
 
 
@@ -73,8 +75,13 @@ public class poupScreen : MonoBehaviour
         popUpSprite.sprite = nextSprite; 
 
         yield return new WaitForSeconds(duration);
-        
-        if(_lastPopup) GameManager.Instance.StartGame();
+
+        if (_lastPopup)
+        {
+            //GameManager.Instance.popUpMenu.SetActive(true);
+            if(startGame) GameManager.Instance.StartGame();
+            this.transform.parent.transform.parent.gameObject.SetActive(false);
+        }
 
         popUpScreen.SetActive(false);
         popUpActive = false;

@@ -37,7 +37,7 @@ public class TrashChute : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (Time.deltaTime > disbleStreakPopupTime)
+        if (Time.time > disbleStreakPopupTime)
         {
             streakDisplay.gameObject.SetActive(false);
         }

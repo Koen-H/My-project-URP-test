@@ -87,7 +87,7 @@ public class Suckable : MonoBehaviour
 
     void ReverseFlow()
     {
-        float range = 20;
+        float range = 8;
 
         if (transform.position.magnitude > range)
         {
@@ -195,7 +195,7 @@ public class Suckable : MonoBehaviour
                 {
                     trashChute.streakDisplay.gameObject.SetActive(true);
                     trashChute.streakDisplay.text = $"{gameManager.combos}";
-                    trashChute.disbleStreakPopupTime = Time.deltaTime + 3.5f;
+                    trashChute.disbleStreakPopupTime = Time.time + 3.5f;
                 }
                 //gameManager.UpdateBars();
                 Destroy(this.gameObject);

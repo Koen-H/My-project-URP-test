@@ -6,12 +6,16 @@ using UnityEngine.InputSystem;
 using Newtonsoft.Json;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.XR;
+using Unity.VisualScripting;
 
 
 public class GameManager : MonoBehaviour
 {
     GameObject vacuumTool;
     GameObject hookTool;
+    GameObject hand;
+    GameObject hand2;
     bool toolsEnabled;
 
 
@@ -136,6 +140,8 @@ public class GameManager : MonoBehaviour
         helmetController = HelmetController.Instance;
         vacuumTool = GameObject.Find("FinalSuckingMachine");
         hookTool = GameObject.Find("Grapplinghook");
+        hand = GameObject.Find("hand1");
+        hand2 = GameObject.Find("hand2");
         ToggleTools(false);
         CalculateBarMult();
         GetOvverrides();
@@ -146,7 +152,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         AudioListener.volume = _volume;
-        if (menuButton.action.WasPressedThisFrame() && gameState == GameState.Playing)
+        if (menuButton.action.WasPressedThisFrame() && (gameState == GameState.Playing|| gameState == GameState.Paused))
         {
             if (!isPaused)
             {
@@ -253,6 +259,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
+        gameState = GameState.Finished;
         score = currentTrashpoints;
         //helmetController.LoadEndOfGame();
         scoreMenu.SetActive(true);
@@ -263,6 +270,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        gameState = GameState.Playing;
         cleannessLevel = maxCleanness;
         helmetController.SetUpHelmet();
         ToggleTools(true);
@@ -272,12 +280,12 @@ public class GameManager : MonoBehaviour
         {
             trashItem.GetComponent<Suckable>().isShrinkingForDeath = true;
         }
-        popUpscreen.gameStarted = true;
+        //popUpscreen.gameStarted = true;
         foreach(GameObject turtle in turtles)
         {
             turtle.GetComponent<Suckable>().isShrinkingForDeath = true;
         }
-
+        turtles.Clear();
         SpawnTurtle();
     }
 
@@ -285,11 +293,14 @@ public class GameManager : MonoBehaviour
     {
         vacuumTool.SetActive(_toggle);
         hookTool.SetActive(_toggle);
+        hand.SetActive(!_toggle);
+        hand2.SetActive(!_toggle);
         toolsEnabled = _toggle;
     }
 
     public void PauseGame()
     {
+        gameState = GameState.Paused;
         Debug.Log($"Game paused");
         ToggleTools(false);
         isPaused = true;
@@ -298,6 +309,7 @@ public class GameManager : MonoBehaviour
     }
     public void UnPauseGame()
     {
+        gameState = GameState.Playing;
         Debug.Log($"Game unpaused");
         ToggleTools(true);
         isPaused = false;

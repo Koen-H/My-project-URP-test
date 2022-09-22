@@ -136,7 +136,7 @@ public class Suckable : MonoBehaviour
             GameObject suckedItem = this.gameObject;
             this.gameObject.SetActive(false);
             sucked = false;
-            haptic.SendHapticsRightController(0.25f, 0.25f);
+            //haptic.SendHapticsRightController(0.25f, 0.25f);
 
         }
     }

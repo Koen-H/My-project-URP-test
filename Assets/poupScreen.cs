@@ -57,7 +57,7 @@ public class poupScreen : MonoBehaviour
         bool lastPopup = false;
         index++;
         if(index == popUps.Count) lastPopup = true;
-        StartCoroutine(ActivatePopUp(nextDuration, lastPopup));
+        StartCoroutine(ActivatePopUp(nextDuration, lastPopup, nextSprite));
 
         if (index < popUps.Count)
         {
@@ -69,10 +69,10 @@ public class poupScreen : MonoBehaviour
 
     }
 
-    public IEnumerator ActivatePopUp(float duration, bool _lastPopup)
+    public IEnumerator ActivatePopUp(float duration, bool _lastPopup, Sprite _nextSprite)
     {
         popUpScreen.SetActive(true);
-        popUpSprite.sprite = nextSprite; 
+        popUpSprite.sprite = _nextSprite; 
 
         yield return new WaitForSeconds(duration);
 

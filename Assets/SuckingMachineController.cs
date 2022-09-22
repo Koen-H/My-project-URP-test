@@ -26,6 +26,8 @@ public class SuckingMachineController : MonoBehaviour
     [SerializeField]
     GameObject pivot;
 
+    [SerializeField]
+    HookController hookController; 
 
 
     [SerializeField]
@@ -144,6 +146,44 @@ public class SuckingMachineController : MonoBehaviour
     bool succMiddlePlaying;
     bool succEndPlaying;
 
+
+    bool helpPopUpActive; 
+
+    float helpShootingTime;
+    float helpSuckingTime;
+    float helpHookTime;
+    float helpTrashSortingTime;
+    float helpCorrectTrashTime;
+
+
+    [SerializeField]
+    float helpShootingWait;
+    [SerializeField]
+    float helpSuckingWait;
+    [SerializeField]
+    float helpHookWait;
+    [SerializeField]
+    float helpTrashSortingWait;
+
+    [SerializeField]
+    Sprite helpShootingSprite;
+    [SerializeField]
+    Sprite helpSuckingSprite;
+    [SerializeField]
+    Sprite helpHookSprite;
+    [SerializeField]
+    Sprite helpTrashSortingSprite;
+    [SerializeField]
+    Sprite helpCorrectTrashSprite;
+
+
+
+    [SerializeField]
+    poupScreen popUpScreen; 
+
+
+
+
     /*    public TextMeshPro powerText;
         public TextMeshPro suckingModeText;
         public TextMeshPro suckedItemsCountText;*/
@@ -179,8 +219,77 @@ public class SuckingMachineController : MonoBehaviour
 
         warningAlphaMult = 1 / warningFrequency; 
         warningValue = 0;
-
     }
+
+    void HelpPlayer()
+    {
+        if (!sucking && !storageFull && !coolingDown && hookController.IsAttached()) // for sucking
+        {
+            helpSuckingTime += Time.deltaTime;
+        }
+        else helpSuckingTime = 0;
+
+        if (hookController.IsAttached()) // for hook
+        {
+            helpHookTime += Time.deltaTime;
+        }
+        else helpHookTime = 0;
+
+        if(machineModeSucking && suckedObjects.Count > 0)
+        {
+            helpShootingTime += Time.deltaTime; 
+        }
+        else helpShootingTime = 0;
+
+        if (storageFull && !hookController.IsAttached()) // for storage full
+        {
+            helpTrashSortingTime += Time.deltaTime;
+        }
+        else helpTrashSortingTime = 0;
+
+        float popUpDuration = 3; 
+
+        if(helpSuckingTime > helpShootingWait && !helpPopUpActive)
+        {
+            helpPopUpActive = true;
+            popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpSuckingSprite));
+            HelpPopUpDeactivate(popUpDuration);
+        }
+
+        if(helpHookTime > helpHookWait && !helpPopUpActive)
+        {
+            helpPopUpActive = true;
+            popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpHookSprite));
+            HelpPopUpDeactivate(popUpDuration);
+        }
+
+        if(helpShootingTime > helpShootingWait && !helpPopUpActive)
+        {
+            helpPopUpActive = true;
+            popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpShootingSprite));
+            HelpPopUpDeactivate(popUpDuration);
+        }
+
+        if(helpTrashSortingTime > helpTrashSortingWait && !helpPopUpActive)
+        {
+            helpPopUpActive = true;
+            popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpTrashSortingSprite));
+            HelpPopUpDeactivate(popUpDuration);
+        }
+
+        if(GameManager.Instance.wrongStreak > 5 && !helpPopUpActive)
+        {
+            helpPopUpActive = true;
+            popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpCorrectTrashSprite));
+            HelpPopUpDeactivate(popUpDuration);
+        }
+    }
+    public IEnumerator HelpPopUpDeactivate(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        helpPopUpActive = false;
+    }
+
 
     public void ChangeTrashItemAmount(float amount, bool isAdding = false)
     {
@@ -241,6 +350,8 @@ public class SuckingMachineController : MonoBehaviour
 
 
         UpdateBars();
+
+        HelpPlayer();
 
 
     }

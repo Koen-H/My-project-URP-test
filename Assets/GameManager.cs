@@ -6,12 +6,16 @@ using UnityEngine.InputSystem;
 using Newtonsoft.Json;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.XR;
+using Unity.VisualScripting;
 
 
 public class GameManager : MonoBehaviour
 {
     GameObject vacuumTool;
     GameObject hookTool;
+    GameObject hand;
+    GameObject hand2;
     bool toolsEnabled;
 
 
@@ -27,6 +31,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public GameState gameState;
+
     public float timerInSeconds;
 
     //public float streak = 0;
@@ -38,6 +44,9 @@ public class GameManager : MonoBehaviour
     HelmetController helmetController;
     public float turtleBonus = 10;
     public float combosScore = 0;
+
+    [SerializeField] GameObject turtlePrefab;
+    [SerializeField] GameObject turtleSpawnPoint;
 
     [HideInInspector]
     public float cleannessLevel = 100;
@@ -113,7 +122,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject[] trashList;
     [SerializeField]
-    poupScreen popUpscreen; 
+    poupScreen popUpscreen;
 
 
     void Awake()
@@ -131,6 +140,8 @@ public class GameManager : MonoBehaviour
         helmetController = HelmetController.Instance;
         vacuumTool = GameObject.Find("FinalSuckingMachine");
         hookTool = GameObject.Find("Grapplinghook");
+        hand = GameObject.Find("hand1");
+        hand2 = GameObject.Find("hand2");
         ToggleTools(false);
         CalculateBarMult();
         GetOvverrides();
@@ -141,7 +152,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         AudioListener.volume = _volume;
-        if (menuButton.action.WasPressedThisFrame())
+        if (menuButton.action.WasPressedThisFrame() && (gameState == GameState.Playing|| gameState == GameState.Paused))
         {
             if (!isPaused)
             {
@@ -174,6 +185,13 @@ public class GameManager : MonoBehaviour
     void CalculateBarMult()
     {
         cleannessBarMult = 1 / cleannessLevel;
+    }
+
+    void SpawnTurtle()
+    {
+        GameObject turtle = Instantiate(turtlePrefab, turtleSpawnPoint.transform.position, turtleSpawnPoint.transform.rotation);
+        turtle.SetActive(true);
+        turtles.Add(turtle);
     }
 
 
@@ -241,6 +259,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void EndGame()
     {
+        gameState = GameState.Finished;
         score = currentTrashpoints;
         //helmetController.LoadEndOfGame();
         scoreMenu.SetActive(true);
@@ -249,8 +268,15 @@ public class GameManager : MonoBehaviour
         ToggleTools(false);
     }
 
+    public void StartGameWithTurtorial()
+    {
+        popUpscreen.StartPopup();
+
+    }
+
     public void StartGame()
     {
+        gameState = GameState.Playing;
         cleannessLevel = maxCleanness;
         helmetController.SetUpHelmet();
         ToggleTools(true);
@@ -260,18 +286,28 @@ public class GameManager : MonoBehaviour
         {
             trashItem.GetComponent<Suckable>().isShrinkingForDeath = true;
         }
-        popUpscreen.StartPopup();
+        //popUpscreen.gameStarted = true;
+        foreach(GameObject turtle in turtles)
+        {
+            turtle.GetComponent<Suckable>().isShrinkingForDeath = true;
+        }
+        turtles.Clear();
+        SpawnTurtle();
+        
     }
 
     public void ToggleTools(bool _toggle)
     {
         vacuumTool.SetActive(_toggle);
         hookTool.SetActive(_toggle);
+        hand.SetActive(!_toggle);
+        hand2.SetActive(!_toggle);
         toolsEnabled = _toggle;
     }
 
     public void PauseGame()
     {
+        gameState = GameState.Paused;
         Debug.Log($"Game paused");
         ToggleTools(false);
         isPaused = true;
@@ -280,6 +316,7 @@ public class GameManager : MonoBehaviour
     }
     public void UnPauseGame()
     {
+        gameState = GameState.Playing;
         Debug.Log($"Game unpaused");
         ToggleTools(true);
         isPaused = false;
@@ -290,7 +327,7 @@ public class GameManager : MonoBehaviour
     private void PlayComboSoundEffect()
     {
         int listIndex = combos - 2; //Rmove 2 because the first two don't give streaks is what the designers decided
-        
+
         if (listIndex >= 8) listIndex = 7;
         if (listIndex > 0) streakAudioSource.PlayOneShot(streakAudioClips[listIndex]);
 
@@ -298,4 +335,13 @@ public class GameManager : MonoBehaviour
 
 
 
+}
+
+//It's own file?
+public enum GameState
+{
+    MainMenu,
+    Playing,
+    Paused,
+    Finished,
 }

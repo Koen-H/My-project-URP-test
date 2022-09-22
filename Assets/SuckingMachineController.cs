@@ -114,6 +114,9 @@ public class SuckingMachineController : MonoBehaviour
     Color colorTest;
     bool storageEmpty;
 
+    [SerializeField]
+    Material tornadoMat; 
+
     //These needs some special threatment 
     [SerializeField] AudioSource audioSourceSucking;
     [SerializeField] AudioClip suckingSound;
@@ -233,6 +236,11 @@ public class SuckingMachineController : MonoBehaviour
 
 
     }
+    void Tornado()
+    {
+        tornadoMat.SetFloat("_NoisePower", sucking ? 1.8f : 0);
+
+    }
 
     void ChangeGunMode(bool shooting)
     {
@@ -332,6 +340,8 @@ public class SuckingMachineController : MonoBehaviour
 
         CheckWarning();
         if (warningActive) WarningBlinking();
+
+        Tornado();
 
     }
 

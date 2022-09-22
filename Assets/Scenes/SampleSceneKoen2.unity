@@ -859,7 +859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   totalScore: 0
   gameState: 0
-  timerInSeconds: 6.21
+  timerInSeconds: 70
   combos: 0
   perComboValue: 0.2
   objective: 2
@@ -893,6 +893,7 @@ MonoBehaviour:
   mainMenu: {fileID: 1745784503268702625}
   scoreMenu: {fileID: 390047892}
   backgroundMusic: {fileID: 0}
+  streakAudioSource: {fileID: 0}
   streakAudioClips:
   - {fileID: 8300000, guid: a7f21aa662ef9b24891b61a48f44d193, type: 3}
   - {fileID: 8300000, guid: 5f6ca80be5f20864e9855b9e4575b389, type: 3}
@@ -902,6 +903,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f74cd71370f42042b0b83338ad50f20, type: 3}
   - {fileID: 8300000, guid: 0ed25778ece81204eb2050837682230f, type: 3}
   - {fileID: 8300000, guid: bfe110a5c4fefe948bfc19aca1c86174, type: 3}
+  streakLostAudioClip: {fileID: 0}
   lightingSettings: {fileID: 0}
   cleanWater: {r: 0.050980397, g: 0.3529412, b: 0.50980395, a: 0}
   dirtyWater: {r: 0.32941177, g: 0.3137255, b: 0, a: 0}
@@ -5877,6 +5879,7 @@ MonoBehaviour:
   wasAttached: 0
   isHooked: 0
   isGrowing: 0
+  isShot: 0
   originalScale: {x: 0, y: 0, z: 0}
   thumbnail: {fileID: 0}
   flowDirection: {x: 0, y: 0, z: 0}
@@ -14748,7 +14751,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 152266697}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: StartGameWithTurtorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

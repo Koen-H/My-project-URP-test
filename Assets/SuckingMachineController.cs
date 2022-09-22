@@ -433,6 +433,7 @@ public class SuckingMachineController : MonoBehaviour
             Suckable suckedItemSuckable = suckedItem.gameObject.GetComponent<Suckable>();
             suckedItemSuckable.isGrowing = true;
             suckedItemSuckable.wasAttached = false;
+            suckedItemSuckable.isShot = true;
             suckedItemSuckable.flowDirection = transform.forward;
             suckedItemSuckable.flowSpeed = 1.3f;
             suckedItemSuckable.SwooshIntensity = 0;

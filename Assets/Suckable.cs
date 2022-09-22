@@ -22,6 +22,7 @@ public class Suckable : MonoBehaviour
     public bool isHooked = false;
     private float growSpeed;
     public bool isGrowing;
+    public bool isShot = false;
 
     public Vector3 originalScale;
 
@@ -171,11 +172,20 @@ public class Suckable : MonoBehaviour
         if (transform.localScale.x < 0.1)
         {
             trashChuteSucked = false;
-            if (trashChute.garbageProperty != garbageProperty)
+            if (!isShot)
             {
                 trashChute.itemsToEject.Add(this.gameObject);
                 trashChute = null;
                 this.gameObject.SetActive(false);
+                
+            }
+            else if (trashChute.garbageProperty != garbageProperty)
+            {
+                trashChute.itemsToEject.Add(this.gameObject);
+                trashChute = null;
+                this.gameObject.SetActive(false);
+                gameManager.onStreak = false;
+                gameManager.streakAudioSource.PlayOneShot(gameManager.streakLostAudioClip);
             }
             else
             {

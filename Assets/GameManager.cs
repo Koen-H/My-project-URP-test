@@ -72,8 +72,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] AudioSource backgroundMusic;
 
-    AudioSource streakAudioSource;
+    public AudioSource streakAudioSource;
     [SerializeField] List<AudioClip> streakAudioClips;
+
+    public AudioClip streakLostAudioClip;
 
     [SerializeField]
     LightingSettings lightingSettings;
@@ -276,6 +278,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        Debug.Log("The game has been started!");
         gameState = GameState.Playing;
         cleannessLevel = maxCleanness;
         helmetController.SetUpHelmet();

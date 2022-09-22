@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using System.Linq;
 using UnityEngine.Sprites;
+using Unity.VisualScripting;
 
 public class SuckingMachineController : MonoBehaviour
 {
@@ -491,5 +492,16 @@ public class SuckingMachineController : MonoBehaviour
            //audioSourceSucking.Stop();
             //audioSourceSucking.PlayOneShot(succEnd);
         }
+    }
+    public void EmptyGun()
+    {
+        foreach(GameObject suckedObject in suckedObjects)
+        {
+            Destroy(suckedObject);
+        }
+        suckedObjects.Clear();
+        collectionController.UpdateDisplay(null, null);
+        warningActive = true;
+        storageEmpty = true;
     }
 }

@@ -27,7 +27,7 @@ public class SuckingMachineController : MonoBehaviour
     GameObject pivot;
 
     [SerializeField]
-    HookController hookController; 
+    HookController hookController;
 
 
     [SerializeField]
@@ -40,7 +40,7 @@ public class SuckingMachineController : MonoBehaviour
     float temp;
 
     [SerializeField]
-    Transform collectionAreaTransform; 
+    Transform collectionAreaTransform;
     [SerializeField]
     SuckingMachineCollectionController collectionController;
 
@@ -118,7 +118,7 @@ public class SuckingMachineController : MonoBehaviour
     bool storageEmpty;
 
     [SerializeField]
-    Material tornadoMat; 
+    Material tornadoMat;
 
     //These needs some special threatment 
     [SerializeField] AudioSource audioSourceSucking;
@@ -147,7 +147,7 @@ public class SuckingMachineController : MonoBehaviour
     bool succEndPlaying;
 
 
-    bool helpPopUpActive; 
+    bool helpPopUpActive;
 
     float helpShootingTime;
     float helpSuckingTime;
@@ -179,7 +179,7 @@ public class SuckingMachineController : MonoBehaviour
 
 
     [SerializeField]
-    poupScreen popUpScreen; 
+    poupScreen popUpScreen;
 
 
 
@@ -217,72 +217,89 @@ public class SuckingMachineController : MonoBehaviour
         capacityBarMult = capacityBar.transform.localScale.x / maxCapacity;
         trashItemAmount = 0;
 
-        warningAlphaMult = 1 / warningFrequency; 
+        warningAlphaMult = 1 / warningFrequency;
         warningValue = 0;
     }
 
     void HelpPlayer()
     {
-        if (!sucking && !storageFull && !coolingDown && hookController.IsAttached()) // for sucking
+        if (!sucking && !storageFull && !coolingDown && !hookController.IsAttached() && !helpPopUpActive) // for sucking
         {
             helpSuckingTime += Time.deltaTime;
         }
         else helpSuckingTime = 0;
 
-        if (hookController.IsAttached()) // for hook
+        if (hookController.IsAttached() && !helpPopUpActive) // for hook
         {
             helpHookTime += Time.deltaTime;
         }
         else helpHookTime = 0;
 
-        if(machineModeSucking && suckedObjects.Count > 0)
+        if (machineModeSucking && suckedObjects.Count > 0 && !helpPopUpActive)
         {
-            helpShootingTime += Time.deltaTime; 
+            helpShootingTime += Time.deltaTime;
         }
         else helpShootingTime = 0;
 
-        if (storageFull && !hookController.IsAttached()) // for storage full
+        if (storageFull && !hookController.IsAttached() && !helpPopUpActive) // for storage full
         {
             helpTrashSortingTime += Time.deltaTime;
         }
         else helpTrashSortingTime = 0;
 
-        float popUpDuration = 3; 
+        float popUpDuration = 4;
 
-        if(helpSuckingTime > helpShootingWait && !helpPopUpActive)
+        if (helpSuckingTime > helpShootingWait && !helpPopUpActive)
         {
             helpPopUpActive = true;
+            popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
+
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpSuckingSprite));
-            HelpPopUpDeactivate(popUpDuration);
+            StartCoroutine(HelpPopUpDeactivate(popUpDuration));
+            helpShootingWait *= 1.5f;
+
         }
 
-        if(helpHookTime > helpHookWait && !helpPopUpActive)
+        if (helpHookTime > helpHookWait && !helpPopUpActive)
         {
             helpPopUpActive = true;
+            popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpHookSprite));
-            HelpPopUpDeactivate(popUpDuration);
+            StartCoroutine(HelpPopUpDeactivate(popUpDuration));
+            helpHookWait *= 1.5f;
+
         }
 
-        if(helpShootingTime > helpShootingWait && !helpPopUpActive)
+        if (helpShootingTime > helpShootingWait && !helpPopUpActive)
         {
             helpPopUpActive = true;
+            popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpShootingSprite));
-            HelpPopUpDeactivate(popUpDuration);
+            StartCoroutine(HelpPopUpDeactivate(popUpDuration));
+            helpShootingWait *= 1.5f;
+
         }
 
-        if(helpTrashSortingTime > helpTrashSortingWait && !helpPopUpActive)
+        if (helpTrashSortingTime > helpTrashSortingWait && !helpPopUpActive)
         {
             helpPopUpActive = true;
+            popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpTrashSortingSprite));
-            HelpPopUpDeactivate(popUpDuration);
+            StartCoroutine(HelpPopUpDeactivate(popUpDuration));
+            helpTrashSortingWait *= 1.5f;
+
         }
 
-        if(GameManager.Instance.wrongStreak > 5 && !helpPopUpActive)
+        if (GameManager.Instance.wrongStreak > 5 && !helpPopUpActive)
         {
+            popUpScreen.transform.parent.transform.parent.gameObject.SetActive(true);
             helpPopUpActive = true;
             popUpScreen.StartCoroutine(popUpScreen.ActivatePopUp(popUpDuration, false, helpCorrectTrashSprite));
-            HelpPopUpDeactivate(popUpDuration);
+            StartCoroutine(HelpPopUpDeactivate(popUpDuration));
+            GameManager.Instance.wrongStreak = 0;
         }
+
+        //Debug.Log($"{helpPopUpActive}, {helpSuckingTime} , {helpHookTime}, {helpShootingTime}, {helpTrashSortingTime}");
     }
     public IEnumerator HelpPopUpDeactivate(float duration)
     {
@@ -334,7 +351,7 @@ public class SuckingMachineController : MonoBehaviour
             machineModeSucking = machineModeSucking ? false : true;
             ChangeGunMode(machineModeSucking);
             fanController.machineModeChanging = true;
-            fanController.machineModeSucking = machineModeSucking; 
+            fanController.machineModeSucking = machineModeSucking;
             //suckingModeText.text = $"{machineModeSucking}";
         }
         else if (!suckingMachineModeInput.action.IsPressed()) modeButtonBeingPressed = false;
@@ -351,7 +368,7 @@ public class SuckingMachineController : MonoBehaviour
 
         UpdateBars();
 
-        HelpPlayer();
+        if (GameManager.Instance.gameState == GameState.Playing) HelpPlayer();
 
 
     }
@@ -372,7 +389,7 @@ public class SuckingMachineController : MonoBehaviour
         }
         else
         {
-            shootingModeDirection = 0; 
+            shootingModeDirection = 0;
         }
     }
     void ArrowChanging()
@@ -387,27 +404,27 @@ public class SuckingMachineController : MonoBehaviour
         }
         else if (modeChangingTime < modeChangingDelay / 2)
         {
-            modeArrow.transform.position -= modeArrow.transform.forward * arrowSpeed; 
+            modeArrow.transform.position -= modeArrow.transform.forward * arrowSpeed;
         }
-        if(modeChangingTime < modeChangingDelay * 2 - modeChangingDelay / 2 && modeChangingTime > modeChangingDelay / 2)
+        if (modeChangingTime < modeChangingDelay * 2 - modeChangingDelay / 2 && modeChangingTime > modeChangingDelay / 2)
         {
             modeArrow.transform.localRotation = Quaternion.Euler(0, -7, shootingModeDirection);
         }
         if (modeChangingTime > modeChangingDelay)
         {
-            gunModeChanging = false; 
+            gunModeChanging = false;
 
         }
 
     }
-    
+
 
     void UpdateBars()
     {
         float capacityBarX = trashItemAmount * capacityBarMult;
         capacityBar.transform.localScale = new Vector3(capacityBarX, capacityBar.transform.localScale.y, capacityBar.transform.localScale.z);
 
-        Color rgb = Color.Lerp(Color.green, Color.red, capacityBarX/100);
+        Color rgb = Color.Lerp(Color.green, Color.red, capacityBarX / 100);
         capacityMaterial.color = rgb;
     }
     void CheckWarning()
@@ -429,9 +446,9 @@ public class SuckingMachineController : MonoBehaviour
         warningValue += Time.fixedDeltaTime * warningDirection;
 
 
-        if(warningValue > warningFrequency)
+        if (warningValue > warningFrequency)
         {
-            warningDirection *= -1; 
+            warningDirection *= -1;
             warningValue = warningFrequency;
         }
         if (warningValue < -warningFrequency)
@@ -441,7 +458,7 @@ public class SuckingMachineController : MonoBehaviour
         }
         float alpha = warningValue * warningAlphaMult * warningDirection;
         spriteRenderer.color += new Color(0, 0, 0, alpha);
-        if(alpha >= 1f) audioSource.PlayOneShot(overHeatSound);
+        if (alpha >= 1f) audioSource.PlayOneShot(overHeatSound);
 
     }
 
@@ -452,7 +469,7 @@ public class SuckingMachineController : MonoBehaviour
     void FixedUpdate()
     {
 
-        if(sucking) Sucking();
+        if (sucking) Sucking();
 
         CooldownMechanics();
 
@@ -468,7 +485,7 @@ public class SuckingMachineController : MonoBehaviour
 
     void Sucking()
     {
-        float suckValue = triggerValue * suckPower; 
+        float suckValue = triggerValue * suckPower;
 
         Vector3 origin = pivot.transform.position;
         Vector3 collectionPivot = collectionAreaTransform.position;
@@ -489,7 +506,7 @@ public class SuckingMachineController : MonoBehaviour
                     coneHits[i].collider.gameObject.GetComponent<SuckableAnimal>().SuckedAnimal();
                 }
             }
-        }      
+        }
     }
 
 
@@ -501,7 +518,7 @@ public class SuckingMachineController : MonoBehaviour
         {
             coolingDown = true;
             spriteRenderer.sprite = warningOverheating;
-           
+
         }
 
         temp -= 0.05f;
@@ -510,7 +527,7 @@ public class SuckingMachineController : MonoBehaviour
         if (temp < 0)
         {
             coolingDown = false;
-            temp = 0; 
+            temp = 0;
         }
         UpdateRadiatorMaterial();
     }
@@ -518,19 +535,19 @@ public class SuckingMachineController : MonoBehaviour
     void UpdateRadiatorMaterial()
     {
         float tempPercentage = temp * tempBarMult;
-        heatColor.texture.SetPixel(1, 1, Color.Lerp(Color.gray,heatAlbedoColor, tempPercentage));
+        heatColor.texture.SetPixel(1, 1, Color.Lerp(Color.gray, heatAlbedoColor, tempPercentage));
         heatColor.texture.Apply();
 
         heatEmmision.texture.SetPixel(1, 1, Color.Lerp(Color.black, heatEmmisionColor, tempPercentage));
         heatEmmision.texture.Apply();
 
-        haptic.SendHapticsRightController(tempPercentage/2,0.1f * Time.deltaTime);
+        haptic.SendHapticsRightController(tempPercentage / 2, 0.1f * Time.deltaTime);
     }
 
 
     void Shoot()
     {
-        
+
         if (suckedObjects.Count > 0)
         {
             audioSource.PlayOneShot(trashShootSound);
@@ -552,7 +569,7 @@ public class SuckingMachineController : MonoBehaviour
             suckedObjects.Remove(suckedItem);
             fanController.AddRecoil(20);
             if (suckedObjects.Count > 0)
-            { 
+            {
                 collectionController.UpdateDisplay(suckedObjects.Last().GetComponent<Suckable>());
                 storageEmpty = false;
             }
@@ -566,13 +583,13 @@ public class SuckingMachineController : MonoBehaviour
             gamemanager.cleannessLevel--;
             //gamemanager.UpdateBars();
             ChangeTrashItemAmount(-1);
-            haptic.SendHapticsRightController(1,0.25f);
+            haptic.SendHapticsRightController(1, 0.25f);
         }
         else
         {
             audioSource.PlayOneShot(trashFullSound);
         }
-        
+
     }
     void succSound()
     {
@@ -600,13 +617,13 @@ public class SuckingMachineController : MonoBehaviour
             //Debug.Log("Suck End is playing !");
             audioSource.loop = false;
             succMiddlePlaying = false;
-           //audioSourceSucking.Stop();
+            //audioSourceSucking.Stop();
             //audioSourceSucking.PlayOneShot(succEnd);
         }
     }
     public void EmptyGun()
     {
-        foreach(GameObject suckedObject in suckedObjects)
+        foreach (GameObject suckedObject in suckedObjects)
         {
             Destroy(suckedObject);
         }

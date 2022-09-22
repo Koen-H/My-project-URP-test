@@ -8725,13 +8725,16 @@ MonoBehaviour:
   popUpSprite: {fileID: 765203407}
   popUps:
   - timeSeconds: 0
-    sprite: {fileID: 21300000, guid: 083bc7e386e17184da2fb754da06f08e, type: 3}
+    sprite: {fileID: 21300000, guid: 6652ae2c880d3024e89086aab5164de5, type: 3}
     durationSeconds: 5
   - timeSeconds: 5
     sprite: {fileID: 21300000, guid: b82f2364e9883cc41b0cef1e31ee020b, type: 3}
     durationSeconds: 8
   - timeSeconds: 13
     sprite: {fileID: 21300000, guid: c2f9b90cb3b899644af768ed91fd1acd, type: 3}
+    durationSeconds: 8
+  - timeSeconds: 21
+    sprite: {fileID: 21300000, guid: 083bc7e386e17184da2fb754da06f08e, type: 3}
     durationSeconds: 8
   popUpScreen: {fileID: 765203405}
   gameStarted: 0
@@ -36700,6 +36703,7 @@ MonoBehaviour:
     m_Reference: {fileID: -2283684445721794425, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   pivot: {fileID: 4218034134804472868}
+  hookController: {fileID: 5223141760924253841}
   maxOpTemp: 20
   coolingDown: 0
   collectionAreaTransform: {fileID: 5337165020366222486}
@@ -36741,6 +36745,18 @@ MonoBehaviour:
   overHeatSound: {fileID: 8300000, guid: 8615defb4b15b9148a55d1ff66839a33, type: 3}
   trashShootSound: {fileID: 8300000, guid: 443f4a52f5cb92a43a8dd3c7ad761826, type: 3}
   switchModeSound: {fileID: 8300000, guid: 09bca7936ce96d545a2113b12b482861, type: 3}
+  helpShootingWait: 5
+  helpSuckingWait: 5
+  helpHookWait: 5
+  helpTrashSortingWait: 5
+  helpShootingSprite: {fileID: 21300000, guid: 44ac8e73957987d4f92d9090cd666e29, type: 3}
+  helpSuckingSprite: {fileID: 21300000, guid: bbd08747d47c3734cb7dfb46e7818734, type: 3}
+  helpHookSprite: {fileID: 21300000, guid: e0912a0c6b4a91247b80d3f69101d2c6, type: 3}
+  helpTrashSortingSprite: {fileID: 21300000, guid: 5a739db0d3a95c5468d4b00f80bdbe73,
+    type: 3}
+  helpCorrectTrashSprite: {fileID: 21300000, guid: 5748274c7139aeb4e86ea86d0f025365,
+    type: 3}
+  popUpScreen: {fileID: 1762941842}
   suckedObjects: []
 --- !u!4 &5337165019750752125
 Transform:

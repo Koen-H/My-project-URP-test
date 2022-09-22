@@ -917,6 +917,7 @@ MonoBehaviour:
   - timeSeconds: 5
     sprite: {fileID: 21300000, guid: 6feab224c5425ac489e80e15df03ff52, type: 3}
     durationSeconds: 5
+  popUpScreen: {fileID: 1710179911}
   gameStarted: 0
 --- !u!1 &169553128
 GameObject:

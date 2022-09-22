@@ -287,6 +287,7 @@ public class GameManager : MonoBehaviour
         }
         turtles.Clear();
         SpawnTurtle();
+        popUpscreen.StartPopup();
     }
 
     public void ToggleTools(bool _toggle)

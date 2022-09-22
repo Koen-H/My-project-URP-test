@@ -634,9 +634,11 @@ public class SuckingMachineController : MonoBehaviour
     {
         foreach (GameObject suckedObject in suckedObjects)
         {
+            ChangeTrashItemAmount(-1);
             Destroy(suckedObject);
         }
         suckedObjects.Clear();
+        UpdateBars();
         collectionController.UpdateDisplay(null, null);
         warningActive = true;
         storageEmpty = true;

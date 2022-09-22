@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrashGenerator : MonoBehaviour
@@ -98,6 +99,8 @@ public class TrashGenerator : MonoBehaviour
     {
         startTime = Time.deltaTime;
         maxGameTimeMinute *= 60;
+        tW = 0;
+        time = 0;
 
         for (int i = 0; i < maxGameTimeMinute; i++)
         {
@@ -155,7 +158,7 @@ public class TrashGenerator : MonoBehaviour
 
     void WaveCalculations()
     {
-        t += Time.deltaTime + startTime;
+        t += Time.deltaTime;
 
         if(waves.Count != 0)
         {
@@ -226,7 +229,7 @@ public class TrashGenerator : MonoBehaviour
         //TODO, start within GameStart(); Either change timer or instantiate this prefab.
         time += Time.deltaTime + startTime;
 
-        WaveCalculations();
+        if (GameManager.Instance.gameState == GameState.Playing)WaveCalculations();
         KeepSpawnRateConsistent();
 
         if (time > 1/ consistentSpawnRate)

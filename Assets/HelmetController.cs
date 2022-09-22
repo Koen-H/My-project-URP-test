@@ -46,6 +46,9 @@ public class HelmetController : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         defaultPosition = UICamera.transform.localPosition;
+        objText.text = "0 / 0 lbs";
+        timerText.text = "0:00";
+
     }
 
     public void SetUpHelmet()

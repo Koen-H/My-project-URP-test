@@ -23,6 +23,8 @@ public class ResultsManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI obj4Line2;
     [SerializeField] TextMeshProUGUI obj4Line3;
 
+    [SerializeField] GameObject saveScoreButton;
+
 
 
     [SerializeField] Color32 achievedColor = new Color32(15, 169, 209, 221);
@@ -121,7 +123,7 @@ public class ResultsManager : MonoBehaviour
             obj3Line3.text = $"The turtle died...";
         }
 
-
+        saveScoreButton.SetActive(true);
         obj4Line1.text = $"Your total: <color=#FBB040>${gameManager.totalScore}</color>";
         //objectiveFour.GetNamedChild("SECONDLINE").GetComponent<TextMeshPro>().text = $"$DonationMessage";
         //objectiveFour.GetNamedChild("THIRDLINE").GetComponent<TextMeshPro>().text = $"ClEARED: Cleaned up < color =#FBB040>{gameManager.objective} + {gameManager.score - gameManager.objective}lbs</color>";
